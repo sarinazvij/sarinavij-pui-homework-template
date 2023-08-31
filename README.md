@@ -1,5 +1,5 @@
 # PUI homework
 
-Deployed website: `add the URL to your deployed website`
+Deployed website: https://sarinazvij.github.io/sarinavij-pui-homework-template/hw0-solutions/index.html
 
-Repository link: `add the URL to this repository`
+Repository link: https://github.com/sarinazvij/sarinavij-pui-homework-template

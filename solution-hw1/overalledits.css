@@ -29,8 +29,12 @@
     display: flex;
     justify-content: center;
     align-items: center; 
+    flex-direction: column; 
     width: 1600px; 
-    flex-direction: row; 
+    margin-bottom: 1em; 
+    margin-top: 1em; 
+
+   
 }
 
 .originalimage, .raisinimage, .appleimage, .walnutimage, .doublechocimage, .strawberryimage{
@@ -44,6 +48,8 @@
     text-align: left; 
     position: relative; 
     color: black; 
+    margin-bottom: -10px;
+
 }
 
 #originalprice, #appleprice, #raisinprice, #walnutprice, #doublechocprice, #strawberryprice{
@@ -51,15 +57,13 @@
     text-align: left; 
     position: relative; 
     color: black; 
-    bottom: 13px; 
+   
+    
 }
 
-#original:hover{
- 
-    border-style: solid; 
-    border-color: yellow; 
-    border-left: 700 px; 
-    padding: 10 px; 
+.originalimage:hover{
+    outline: 4 px; 
+    outline-color: yellow;
     
 }
 

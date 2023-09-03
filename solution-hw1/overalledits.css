@@ -1,4 +1,101 @@
-#products {
+#products{
     font-family: sans-serif; 
     font-size: 15px; 
+   text-align: center; 
+
 }
+#hey{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    width: 1600px; 
+    flex-direction: row; 
+}
+
+#sup{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    width: 1600px; 
+    flex-direction: row; 
+}
+
+.yellow{
+    background-color: yellow;
+}
+
+
+#original, #apple, .raisin, .walnut, .doublechoc, .strawberry {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    width: 1600px; 
+    flex-direction: row; 
+}
+
+.originalimage, .raisinimage, .appleimage, .walnutimage, .doublechocimage, .strawberryimage{
+    border-style: solid; 
+    border-color: black; 
+    border-width: 5px; 
+}
+
+#originaltext, #raisintext, #appletext, #walnuttext, #doublechoctext, #strawberrytext{
+    font-family: sans-serif; 
+    text-align: left; 
+    position: relative; 
+    color: black; 
+}
+
+#originalprice, #appleprice, #raisinprice, #walnutprice, #doublechocprice, #strawberryprice{
+    font-family: sans-serif; 
+    text-align: left; 
+    position: relative; 
+    color: black; 
+    bottom: 13px; 
+}
+
+#original:hover{
+ 
+    border-style: solid; 
+    border-color: yellow; 
+    border-left: 700 px; 
+    padding: 10 px; 
+    
+}
+
+
+#cartbox{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    width: 1600px; 
+    flex-direction: row; 
+}
+
+#cart{
+    font-family: sans-serif; 
+    text-align: center; 
+    position: relative; 
+    bottom: 10px; 
+}
+
+
+
+#mainheading{
+    text-align: center;
+
+
+}
+
+#logopicture{
+    width: 400px;
+    margin-left: 20px; 
+}
+
+hr{
+    width: 1500px;
+    font-weight: 10px; 
+}
+
+
+

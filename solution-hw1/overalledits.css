@@ -122,12 +122,15 @@ width: 1600px;
 
 
 
-#originaltextorder{
-    font-family: sans-serif; 
-    text-align: left; 
-    position: relative; 
+#originaltextorder, #optionslist{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1600px;
+    font-family: sans-serif;  
     color: black; 
-    margin-bottom: -13px;
+    margin-bottom: 5px;
+    border-radius: 16px; 
 
 }
 
@@ -136,3 +139,15 @@ border-style: solid;
     border-color: black; 
     border-width: 5px; 
 }
+
+#optionslist2{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1600px;
+    font-family: sans-serif; 
+    color: black; 
+    margin-bottom: 5px;
+    border-radius: 16px; 
+}
+

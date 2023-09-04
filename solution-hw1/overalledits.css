@@ -28,21 +28,26 @@
 
 
 #original, #apple, .raisin, .walnut, .doublechoc, .strawberry {
-    display: flex-container;
-    justify-content: flex-start;
-    align-items: center; 
-    flex-direction: column; 
-    align-content: center; 
-    flex-wrap: nowrap; 
-    width: 1600 px; 
-
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 600px; 
+    margin-right: 600px; 
+    margin-bottom: 10px; 
+    padding: 5 5 1 5px; 
+    border: 1px;
    
+   
+
+    
+    
 }
 
 .originalimage, .raisinimage, .appleimage, .walnutimage, .doublechocimage, .strawberryimage{
     border-style: solid; 
     border-color: black; 
     border-width: 5px; 
+    
 }
 
 #originaltext, #raisintext, #appletext, #walnuttext, #doublechoctext, #strawberrytext{
@@ -50,7 +55,7 @@
     text-align: left; 
     position: relative; 
     color: black; 
-    margin-bottom: -10px;
+    margin-bottom: -13px;
 
 }
 
@@ -58,16 +63,17 @@
     font-family: sans-serif; 
     text-align: left; 
     position: relative; 
-    color: black; 
+ 
    
     
 }
 
-.originalimage:hover{
-    background-color: yellow; 
-
+#original:hover{
+    background-color: yellow;
+  
     
-}
+  }
+
 
 
 #cartbox{

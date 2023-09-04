@@ -111,3 +111,28 @@ hr{
     font-size: 23px; 
 }
 
+#originalorder{
+
+display: inline-flex;
+align-items: center;
+justify-content: center;
+width: 1600px;
+
+}
+
+
+
+#originaltextorder{
+    font-family: sans-serif; 
+    text-align: left; 
+    position: relative; 
+    color: black; 
+    margin-bottom: -13px;
+
+}
+
+.originalimageorder{
+border-style: solid; 
+    border-color: black; 
+    border-width: 5px; 
+}

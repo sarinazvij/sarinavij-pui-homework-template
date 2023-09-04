@@ -127,6 +127,7 @@ width: 1600px;
     margin-left: 700px; 
     margin-right: 300px; 
     margin-bottom: 3px; 
+    font-family: sans-serif;  
     
     
 }
@@ -140,10 +141,49 @@ border-style: solid;
 
 
 #pricec{
-    margin-right: 1rem; 
+    margin-right: 1.5rem; 
+    margin-left: 1rem; 
+    font-weight: bold; 
+    
+   
 }
 
 #addtocart{
     background-color: yellow;
+    width: 6rem; 
+  
+    
+
+}
+
+#Packsize, #options{
+    width: 11rem; 
+
+}
+
+#cartoriginal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1600px; 
+
+  
+
+}
+
+
+#originaltext2{
+
+    margin-bottom: -10px;
+    font-family: sans-serif;
+    font-size: 10px;
+
+}
+
+.checkout{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1600px; 
 
 }

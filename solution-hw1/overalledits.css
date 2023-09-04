@@ -120,19 +120,26 @@ width: 1600px;
 
 }
 
-
-
-#originaltextorder, #optionslist{
-    display: inline-flex;
+#originaltextorder{
+    display: flex;
     align-items: center;
     justify-content: center;
-    width: 1600px;
-    font-family: sans-serif;  
+    margin: 0rem 9rem -3rem 10rem; 
+    
+}
+
+
+#optionslist{
+    font-family: sans-serif; 
+    text-align: left; 
+    position: relative; 
     color: black; 
-    margin-bottom: 5px;
-    border-radius: 16px; 
+    margin-bottom: -13px;
+    width: 1600px; 
 
 }
+
+
 
 .originalimageorder{
 border-style: solid; 

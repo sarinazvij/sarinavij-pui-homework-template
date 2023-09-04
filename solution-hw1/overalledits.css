@@ -18,6 +18,8 @@
     align-items: center; 
     width: 1600px; 
     flex-direction: row; 
+    margin-bottom: 1em; 
+    margin-top: 1em; 
 }
 
 .yellow{
@@ -26,13 +28,13 @@
 
 
 #original, #apple, .raisin, .walnut, .doublechoc, .strawberry {
-    display: flex;
-    justify-content: center;
+    display: flex-container;
+    justify-content: flex-start;
     align-items: center; 
     flex-direction: column; 
-    width: 1600px; 
-    margin-bottom: 1em; 
-    margin-top: 1em; 
+    align-content: center; 
+    flex-wrap: nowrap; 
+    width: 1600 px; 
 
    
 }
@@ -62,8 +64,8 @@
 }
 
 .originalimage:hover{
-    outline: 4 px; 
-    outline-color: yellow;
+    background-color: yellow; 
+
     
 }
 

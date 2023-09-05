@@ -1,23 +1,24 @@
+*{
+margin: 0px auto; 
+}
+
+#logopicture{
+    width: 400px; 
+}
+
 #products{
     font-family: sans-serif; 
     font-size: 15px; 
-   text-align: center; 
+    text-align: center; 
 
 }
-#hey{
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    width: 1600px; 
-    flex-direction: row; 
+#mainheading{
+    text-align: center; 
+    font-weight: lighter;
 }
 
-#sup{
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    width: 1600px; 
-    flex-direction: row; 
+#product{
+    text-align: center; 
     margin-bottom: 1em; 
     margin-top: 1em; 
 }
@@ -27,38 +28,33 @@
 }
 
 
-#original, #apple, .raisin, .walnut, .doublechoc, .strawberry {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 600px; 
-    margin-right: 600px; 
+.card{
+  
+    width: 400px; 
     margin-bottom: 30px; 
     padding: 5px 5px 0px 5px; 
     
 }
 
-.originalimage, .raisinimage, .appleimage, .walnutimage, .doublechocimage, .strawberryimage{
-    border-style: solid; 
+.cardimage{
     border-color: black; 
-    border-width: 5px; 
+    border: 5px; 
+    
     
 }
 
-#originaltext, #raisintext, #appletext, #walnuttext, #doublechoctext, #strawberrytext{
+.cardtext{
     font-family: sans-serif; 
-    text-align: left; 
-    position: relative; 
     color: black; 
-    margin-bottom: -13px;
+  
+
 
 }
 
-#originalprice, #appleprice, #raisinprice, #walnutprice, #doublechocprice, #strawberryprice{
+.cardprice {
     font-family: sans-serif; 
     text-align: left; 
-    position: relative; 
- 
+   
    
     
 }
@@ -74,17 +70,13 @@
 
 
 #cartbox{
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    width: 1600px; 
-    flex-direction: row; 
+    width: 1200px; 
 }
 
 #cart{
     font-family: sans-serif; 
     text-align: center; 
-    position: relative; 
+
     bottom: 10px; 
 }
 
@@ -102,7 +94,7 @@
 }
 
 hr{
-    width: 1500px;
+    width: 1200px;
     height: 5px; 
     background-color: black; 
 }
@@ -115,18 +107,12 @@ hr{
 }
 
 #originalorder{
-
-display: inline-flex;
-align-items: center;
-justify-content: center;
 width: 1600px;
 
 }
 
 #originaltextorder, #optionslist, #optionslist2, #packsize, #individualpack, .pricecart{
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+
     margin-left: 700px; 
     margin-right: 300px; 
     margin-bottom: 3px; 
@@ -166,28 +152,18 @@ border-style: solid;
 }
 
 #cartoriginal{
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 1600px; 
-
-  
 
 }
 
 
 #originaltext2{
-
-    margin-bottom: -10px;
     font-family: sans-serif;
     font-size: 10px;
 
 }
 
 .checkout{
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 1600px; 
 
 }

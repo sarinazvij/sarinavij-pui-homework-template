@@ -65,6 +65,8 @@
 
 #original:hover{
     background-color: yellow;
+    font-weight: bold; 
+
   
     
   }
@@ -101,7 +103,8 @@
 
 hr{
     width: 1500px;
-    font-weight: 10px; 
+    height: 5px; 
+    background-color: black; 
 }
 
 #handmade{
@@ -158,6 +161,7 @@ border-style: solid;
 
 #Packsize, #options{
     width: 11rem; 
+    height: 1.5rem; 
 
 }
 

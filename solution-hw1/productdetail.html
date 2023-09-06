@@ -1,83 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-  <meta charset="UTF-8">
-  <title>Page Title</title>
-  <link href= "overalledits.css" rel="stylesheet" type="text/css">
+  <head>
+    <meta charset="UTF-8">
+    <title>Page Title</title>
+    <link href= "overalledits.css" rel="stylesheet" type="text/css">
+  </head>
   
   <body>
 
-    <div id = "hey"> 
-    <h1 id = "mainheading"> Product Detail Page </h1>
-  </div>
-  <hr>
+  <h1 id="mainheading">Product Detail page</h1>
   <br>
-    <div id = "logopicture"> <img src = "../assets/logo/logo-01.svg" />  
+  <hr> 
+  <br>
+  <br>
+  <div id="logopicture"> <a href="./productgallery.html"> <img src="../assets/logo/logo-01.svg"/> </a> </div>
+  <br>
+  <hr> 
+  <div class="productcontainer">
+      <h2 id="products"> <a href="./productgallery.html"> <span id="highlight">PRODUCTS</span></a> </h2>
+  </div>
+  <p id="cart">CART</p> 
+  <br> 
+  <br> 
+  <br>
+  <br>
+  <br>
+  <p id="handmade">Original cinnamon roll</p>
+  <br>
+  <br>
+  <div class="originalorder">
+    <img id="originalimageorder" src="../assets/products/original-cinnamon-roll.jpg"/>
+  </div>
+  <div class="customizecontainer"> 
+    <p class="customizetext">Customize our delicious, hand-made cinnamon roll to your liking!</p>
+  </div> 
+  <br>
+  <br> 
+  <br> 
+  <br>
+<div class="customizecontainer"> 
+  <p class ="customizetext"> <label for="options">Glazing:</label> </p>
 </div>
-<hr> 
-<div id = "sup"> 
-    <h2 id = "products"> <span class = "yellow"> PRODUCTS </span> </h2>
-  </div>
-    
-  <div id = "cartbox"> <p id = "cart"> CART </p>
-  </div>
-
-   
-  <div id = "sup"> 
-    <p> <p id = "handmade"> Original cinnamon roll </p>
-    </div>
-
-    <div id = "originalorder">
-      <img class = "originalimageorder" src = "../assets/products/original-cinnamon-roll.jpg" width= "400" height = "400"/>
-    </div>
-    <div id = "originaltextorder"> 
-      <p id = "customize"> Customize our delicious, hand-made cinnamon roll to your liking! </p>
-      </div> 
-      <br>
-      <br> 
-      <br> 
-<div id = "optionslist"> 
-    <label for = "options"> Glazing: </label> 
-    </div>
-    
-    <div id = "optionslist2">
-    <select name = "options" id = "options">
-      <option value = "Keep original">Keep original </option>
-      <option value = "Sugar milk"> Sugar milk </option>
-      <option value = "Vanilla milk"> Vanilla milk </option>
-      <option value = "Double chocolate"> Double chocolate </option>
-       </select> 
-    </div>
-    <br>
-    <br>
-
-    <div id = "packsize">
-
-      <label for = "Pack size"> Pack size: </label>
-    </div>
-    <div id = "individualpack">
-      <select name = "Packsize" id = "Packsize">
-        <option value = "1"> 1 </option>
-        <option value = "3"> 3 </option>
-        <option value = "6"> 6 </option>
-        <option value = "12"> 12 </option>
-         </select> 
-    </div>
-    <br>
-    <br>
-    <br>
-
+<div class="optionslist">
+  <select name="optionsdropdown" id="glazeoptions">
+    <option value="Keep original">Keep original </option>
+    <option value="Sugar milk">Sugar milk</option>
+    <option value="Vanilla milk">Vanilla milk</option>
+    <option value="Double chocolate">Double chocolate</option>
+  </select> 
+</div>
+<br>
+<br>
+<div class="customizecontainer">
+  <p class ="customizetext"> <label for="options">Pack size:</label> </p>
+</div>
+<div class="optionslist">
+  <select name="optionsdropdown" id="packsize">
+    <option value="1">1</option>
+    <option value="3">3</option>
+    <option value="6">6</option>
+    <option value="12">12</option>
+  </select> 
+</div>
+<br>
+<br>
+<br>
 <div class = "pricecart">
-    <p id ="pricec"> $2.49 </p>
-    
-
-
-  
-    
-      <a href = "./cart.html"> 
-    
-      <button id= "addtocart" type = "Cart"> Add to cart </button>
-
-
-    </div>
-  </body>
+  <p id="pricecartdetail"> $2.49 </p>
+  <a href="./Cart.html">
+  <button id="addtocart">Add to cart</button> </a>
+  </p>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</div>
+</body>
 </html>

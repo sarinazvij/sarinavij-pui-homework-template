@@ -1,89 +1,71 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Shopping cart</title>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Page Title</title>
     <link href= "overalledits.css" rel="stylesheet" type="text/css">
-</head>
-<body>
-    <div id= "hey">
-     <h1 id = "mainheading"> Shopping Cart </h1>
-    </div> 
-    <hr> 
-    <br>
-    <div id = "logopicture"> <img src = "../assets/logo/logo-01.svg"/> 
-    </div>
-    <hr> 
-    <div id = "sup">
-        <h2 id = "products"> <span class = "yellow"> PRODUCTS </span> </h2>
-      </div>
-        <div id = "cartbox"> <p id = "cart"> CART </p>
-          </div>
-         
-          <div id = "sup"> 
-            <p> <p id = "handmade"> Shopping Cart </p>
-            </div>
- 
-    <div id = "originalorder">
-        <img class = "originalimageorder" src = "../assets/products/original-cinnamon-roll.jpg" width= "200px" height = "200px"/>
-      </div>
-      <div id = "cartoriginal"> 
-     
-    <p id = "originaltext2"> Original cinnamon roll </p>
-   </div>
+  </head>
+  
+  <body>
 
-   <div id = "cartoriginal">
-
- 
-    <p id = "originaltext2"> Glazing: Keep original </p>
+  <h1 id="mainheading">Product Detail page</h1>
+  <br>
+  <hr> 
+  <br>
+  <br>
+  <div id="logopicture"> <a href="./productgallery.html"> <img src="../assets/logo/logo-01.svg"/> </a> </div>
+  <br>
+  <hr> 
+  <div class="productcontainer">
+      <h2 id="products"> <a href="./productgallery.html"> <span id="highlight">PRODUCTS</span></a> </h2>
   </div>
-  <div id = "cartoriginal">
-    <p id = "originaltext2"> Pack size: 1 </p>
-    </div>
+  <p id="cart">CART</p> 
+  <br> 
+  <br> 
+  <br>
+  <br>
+  <br>
+  <p id="handmade">Shopping Cart</p>
+  <br>
+  <br>
+  <div class="cartorder">
+    <img class="cartimages" src="../assets/products/original-cinnamon-roll.jpg"/>
+  </div>
+  <p class="remove">Remove</p>
+  <br>
+  <div class="cartdescriptions"> 
+    <p class="cartinfo"> Original Cinnamon Roll </p>
+    <p class="cartinfo"> Glazing: Keep original </p>
+    <p class="cartinfo"> Pack Size: 1 </p>
     <br>
-    <div id = "cartoriginal">
-
-    <p id = "originaltext2"> $2.49 </p>
+    <p class="cartinfo"> $2.49 </p>
 </div>
-
 <br>
 <br>
 <br>
-
-<div id = "originalorder">   
-    <img class = "originalimageorder" src = "../assets/products/double-chocolate-cinnamon-roll.jpg" width= "200" height = "200"/>
-   
-   </div>
-    <div id = "cartoriginal"> 
-     
-        <p id = "originaltext2"> Double Chocolate Cinnamon Roll </p>
-        </div>
-
-    <div id = "cartoriginal">
-
- 
-        <p id = "originaltext2"> Glazing: Sugar milk</p>
-      </div>
-      <div id = "cartoriginal">
-        <p id = "originaltext2"> Pack size: 6 </p>
-        </div>
-        <br>
-        <div id = "cartoriginal">
-    
-        <p id = "originaltext2"> $27.45 </p>
-    </div>
+<div class="cartorder">   
+  <img class="cartimages" src="../assets/products/double-chocolate-cinnamon-roll.jpg"/>
+</div>
+<p class="remove">Remove</p>
+<br>
+<div class="cartdescriptions"> 
+  <p class="cartinfo">Double Chocolate Cinnamon Roll</p>
+  <p class="cartinfo">Glazing: Sugar milk</p>
+  <p class="cartinfo">Pack Size: 6</p>
+  <br>
+  <p class="cartinfo">$27.45</p>
+</div>
 <br>
 <br>
 <br> 
 <hr>
-
-<div id = "cartoriginal">
-    <p id = "originaltext2"> Total: $29.94 </p>
-</div>
-  
 <br>
-
-    <div class = "checkout">
-<button id= "addtocart" type = "Checkout"> Checkout </button>
+<div class="cartorder">
+    <p class="cartinfo">Total: $29.94</p>
+</div>
+<br>
+<div class="cartbutton">
+<button id= "checkout" type="Checkout"> Checkout </button>
 
 </div>
 

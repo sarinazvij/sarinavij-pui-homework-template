@@ -11,10 +11,12 @@ margin: 0px auto;
 hr{
     height: 2px; 
     background-color: black; 
+    width: 1200px; 
 }
 
 #logopicture{
     width: 400px; 
+    margin-left: 20px; 
 }
 
 .productcontainer{
@@ -80,91 +82,121 @@ a:link{
 
 #original:hover{
     background-color: yellow;
-    font-weight: bold; 
-
-  
-    
+    font-weight: bold;   
   }
 
 
-
-
-
-
-
-#mainheading{
-    text-align: center;
-
-
+.originalorder{
+    text-align: center; 
 }
 
-#logopicture{
-    width: 400px;
-    margin-left: 20px; 
-}
-
-
-
-
-
-#originalorder{
-width: 1600px;
-
-}
-
-#originaltextorder, #optionslist, #optionslist2, #packsize, #individualpack, .pricecart{
-
-    margin-left: 700px; 
-    margin-right: 300px; 
-    margin-bottom: 3px; 
-    font-family: sans-serif;  
-    
-    
-}
-
-
-.originalimageorder{
-border-style: solid; 
+#originalimageorder{
+    border: 4px; 
     border-color: black; 
-    border-width: 5px; 
+    border-style: solid;
+    width: 600px;
+    height: 600px; 
+    margin-bottom: 10px; 
 }
 
+.customizecontainer{
+    text-align: left;
+    margin-left: 400px; 
+    margin-right: 400px;
+}
 
-#pricec{
-    margin-right: 1.5rem; 
-    margin-left: 1rem; 
-    font-weight: bold; 
+.customizetext{
+    font-family: sans-serif;
+    font-size: 30px;
+    margin-bottom: 10px; 
     
-   
+}
+
+.optionslist{
+    text-align: left; 
+    margin-left: 400px; 
+    margin-right: 400px;
+}
+
+#glazeoptions, #packsize{
+    font-family: sans-serif;
+    width: 23rem; 
+    font-size: 30px; 
+    height: 3.5rem;
+    border: 4px solid black; 
+}
+
+#addtocart{
+    margin-left: 3rem; 
+}
+    
+
+.pricecart{
+    margin-left: 400px; 
+}
+
+#pricecartdetail{
+    font-size: 30px; 
+    font-weight: bold;
+    margin-left: 3rem; 
 }
 
 #addtocart{
     background-color: yellow;
-    width: 6rem; 
-  
-    
-
+    width: 12.25rem; 
+    font-size: 30px;
+    font-weight: bold; 
+    height: 60px; 
+    border: 4px solid black
 }
 
 #Packsize, #options{
     width: 11rem; 
     height: 1.5rem; 
+}
+
+.cartorder{
+    width: 200px; 
+    margin-bottom: 7px; 
+    padding: 5px 5px 0px 5px; 
+}
+
+.cartimages{
+    border: 4px; 
+    border-color: black; 
+    border-style: solid;
+    width: 200px;
+    height: 200px; 
+    margin-bottom: 1px;    
+}
+
+.cartdescriptions{
+    text-align: center;
+}
+
+.remove{
+    text-align: center;
+    font-weight: bold; 
+    text-decoration: underline;
 
 }
 
-#cartoriginal{
-    width: 1600px; 
-
-}
-
-
-#originaltext2{
+.cartinfo{
     font-family: sans-serif;
-    font-size: 10px;
-
+    font-size: 30px; 
+    text-align: center; 
 }
 
-.checkout{
-    width: 1600px; 
+.cartbutton{
+    text-align: center;
+}
 
+#checkout{
+    background-color: yellow;
+    width: 12.25rem; 
+    font-size: 30px;
+    font-weight: bold; 
+    height: 60px; 
+    border: 4px solid black
+    
 }

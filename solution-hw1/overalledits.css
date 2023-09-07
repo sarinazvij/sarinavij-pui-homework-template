@@ -11,6 +11,7 @@ margin: 0px auto;
 hr{
     height: 2px; 
     background-color: black; 
+    width: 1200px; 
 }
 
 #logopicture{
@@ -28,8 +29,6 @@ hr{
     font-family: sans-serif; 
     font-size: 30px; 
     text-align: center; 
-    color: black; 
-    
 }
 
 #highlight{
@@ -41,7 +40,6 @@ hr{
     text-align: center; 
     bottom: 10px; 
     font-size: 30px;
-    color: black; 
 }
 
 #handmade{
@@ -86,6 +84,7 @@ a:link{
 .card:hover{
     background-color: yellow;
     padding: 0.5rem 1rem 0.5rem 0.5rem;  
+   
   }
 
 .card:hover span{
@@ -114,7 +113,8 @@ a:link{
 .customizetext{
     font-family: sans-serif;
     font-size: 30px;
-    margin-bottom: 10px;  
+    margin-bottom: 10px; 
+    
 }
 
 .optionslist{
@@ -159,23 +159,6 @@ a:link{
     height: 1.5rem; 
 }
 
-#cartforcart{
-    font-family: sans-serif; 
-    text-align: center; 
-    bottom: 10px; 
-    font-size: 30px;
-    color: black; 
-    font-weight: bold; 
-}
-
-#productsforcart{
-    font-family: sans-serif; 
-    font-size: 30px; 
-    text-align: center; 
-    color: black; 
-    font-weight: normal; 
-}
-
 .cartorder{
     width: 200px; 
     margin-bottom: 2px; 
@@ -199,6 +182,7 @@ a:link{
     text-align: center;
     font-weight: bold; 
     text-decoration: underline;
+
 }
 
 .cartinfo{
@@ -219,12 +203,4 @@ a:link{
     height: 60px; 
     border: 4px solid black
     
-}
-
-a:visited{
-    color: black; 
-}
-
-#checkoutline{
-    width: 700px; 
 }

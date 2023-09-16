@@ -18,21 +18,15 @@
     #picturecontainer{
         display: flex; 
         margin-top: 30px; 
-    
-
     }
     
     #logopicture{
-        width: 400px; 
-        
+        width: 400px;  
     }
     
     
     .productcontainer{
-        display: flex; 
-        
-      
-       
+        display: flex;   
     }
 
     #productsandcart{

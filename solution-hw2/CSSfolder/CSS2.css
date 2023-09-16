@@ -147,9 +147,13 @@
     .card:hover span{
         font-weight: bold; 
     }
+
+
+    
     
     .originalorder{
         text-align: center; 
+        display: flex; 
     }
     
     #originalimageorder{
@@ -199,6 +203,16 @@
         font-weight: bold;
         margin-left: 3rem; 
     }
+
+
+  
+
+    #secondcontainer{
+        display: flex; 
+
+    }
+
+
     
     #addtocart{
         background-color: yellow;

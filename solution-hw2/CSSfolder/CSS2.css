@@ -264,33 +264,54 @@
         width: 200px; 
         margin-bottom: 2px; 
         padding: 5px 5px 0px 5px; 
+        display: flex; 
+      
     }
     
     .cartimages{
         border: 4px; 
         border-color: black; 
         border-style: solid;
-        width: 200px;
-        height: 200px; 
+        width: 250px;
+        height: 250px; 
         margin-bottom: 1px;    
     }
     
-    .cartdescriptions{
+    .cartdescriptions1{
+        display: flex; 
+        flex-direction: column;
+       
+        font-family: sans-serif;
+        font-size: 20px; 
+       justify-content: flex-start;
+       padding: 20px; 
+
+       
+       
+
+    }
+
+    /* .cartinfo{
+
+        align-items: flex-start;
+      
+    } */
+    .cartdescriptions2{
         text-align: center;
+        display: flex; 
+        flex-direction: column;
     }
     
     .remove{
         text-align: center;
         font-weight: bold; 
         text-decoration: underline;
+        display: flex;
+        flex-direction: column;
     
     }
     
-    .cartinfo{
-        font-family: sans-serif;
-        font-size: 30px; 
-        text-align: center; 
-    }
+   
     
     .cartbutton{
         text-align: center;
@@ -302,8 +323,7 @@
         font-size: 30px;
         font-weight: bold; 
         height: 60px; 
-        border: 4px solid black
-        
+        border: 4px solid black;
     }
     
     a:visited{
@@ -311,20 +331,59 @@
     
     }
     
-    #productsforcart{
-        font-weight: normal;
-        font-family: sans-serif; 
-        font-size: 30px; 
-    }
-    
-    #cartforcartpage{
-        font-weight: bold; 
-        font-family: sans-serif; 
-        text-align: center; 
-        bottom: 10px; 
-        font-size: 30px;
-    }
+   
     
     #checkoutline{
         width: 700px;
+    }
+
+
+
+    #productforcart{
+        
+        margin-left: 370px; 
+        margin-right: 30px; 
+        
+    }
+
+    #highlightforcart{
+        background-color: yellow;
+        font-weight: bold; 
+        margin-left: 80px; 
+        font-family: Arial, Helvetica, sans-serif; 
+        font-weight: bold; 
+
+    } 
+
+    #handmadeforcart{
+        color: black;
+        text-align: left;  
+        margin-top: 70px;  
+        font-family: Arial, Helvetica, sans-serif;  
+        font-size: 35px; 
+        
+    }
+
+
+    #cartbox{
+        display: flex; 
+        margin-left: 325px; 
+     
+     
+  
+       
+
+    }
+
+    
+    .removeflex{
+
+        display: flex; 
+        flex-direction:column; 
+    }
+
+    .cartinfoprice{
+        display: flex; 
+        flex-direction: column;
+
     }

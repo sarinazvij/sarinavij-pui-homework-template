@@ -261,53 +261,53 @@
     }
     
     .cartorder{
-        width: 200px; 
+        width: 225px; 
         margin-bottom: 2px; 
         padding: 5px 5px 0px 5px; 
         display: flex; 
-      
+        
     }
     
     .cartimages{
         border: 4px; 
         border-color: black; 
         border-style: solid;
-        width: 250px;
-        height: 250px; 
-        margin-bottom: 1px;    
+        width: 255px;
+        height: 255px; 
+        margin-bottom: 1px;
+        
+         
     }
     
     .cartdescriptions1{
         display: flex; 
         flex-direction: column;
-       
         font-family: sans-serif;
-        font-size: 20px; 
-       justify-content: flex-start;
-       padding: 20px; 
-
-       
-       
-
+        font-size: 25px; 
+        margin-top: 20px; 
+        margin-left: 0px; 
     }
 
-    /* .cartinfo{
+     .cartinfo{
 
-        align-items: flex-start;
-      
-    } */
+      margin-left: 0px; 
+      margin-top: 17px; 
+    } 
+
+ 
     .cartdescriptions2{
-        text-align: center;
+        
         display: flex; 
         flex-direction: column;
     }
     
     .remove{
-        text-align: center;
+        
         font-weight: bold; 
         text-decoration: underline;
-        display: flex;
-        flex-direction: column;
+        margin-left: 404px; 
+        margin-top: 20px; 
+        font-size: 25px; 
     
     }
     
@@ -367,7 +367,9 @@
 
     #cartbox{
         display: flex; 
-        margin-left: 325px; 
+        margin-left: 280px;
+        
+    
      
      
   
@@ -376,14 +378,11 @@
     }
 
     
-    .removeflex{
-
-        display: flex; 
-        flex-direction:column; 
-    }
 
     .cartinfoprice{
-        display: flex; 
-        flex-direction: column;
+        
+        margin-top: 100px; 
+        font-size: 25px; 
+        margin-right: 120px; 
 
     }

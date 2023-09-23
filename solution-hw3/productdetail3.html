@@ -3,16 +3,17 @@
   <head>
     <meta charset="UTF-8">
     <title>Page Title</title>
-    <link href="./CSSfolder/CSS2.css" rel="stylesheet" type="text/css">
+    <link href="./CSS/CSS3.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="JS/js3.js" defer></script>
   </head>
   
   <body>
   <div class="productcontainer">
   <div id="picturecontainer">
-    <p id="logopicture"> <a href="./Productgallery2.html"> <img src="../assets/logo/logo-01.svg" alt="Bun Bun shop logo"></a></p>
+    <p id="logopicture"> <a href="./productgallery3.html"> <img src="../assets/logo/logo-01.svg" alt="Bun Bun shop logo"></a></p>
   </div>
   <div id="topleftinfo">
-    <p id="productsandcart"> <a href="./Productgallery2.html"> <span id="highlight">PRODUCTS</span> </a> <a href="./Cart2.html"> <span id="cartpg"> CART </span></a></p> 
+    <p id="productsandcart"> <a href="./productgallery3.html"> <span id="highlight">PRODUCTS</span> </a> <a href="./cart3.html"> <span id="cartpg"> CART </span></a></p> 
     <hr>
     <p id="handmade">Original cinnamon roll</p>
   </div>
@@ -29,22 +30,14 @@
     <br>
     <br>
     <div class="optionslist">
-    <p class ="customizetext"> <label for="glazeoptions">Glazing:</label> </p>
+    <p class ="customizetext"> <label>Glazing:</label> </p>
     <select name="optionsdropdown" id="glazeoptions">
-      <option value="Keep original">Keep original </option>
-      <option value="Sugar milk">Sugar milk</option>
-      <option value="Vanilla milk">Vanilla milk</option>
-      <option value="Double chocolate">Double chocolate</option>
     </select> 
   </div>
   <br>
   <div class="optionslist">
   <p class ="customizetext"> <label for="packsize">Pack size:</label> </p>
     <select name="optionsdropdown" id="packsize">
-     <option value="1">1</option>
-      <option value="3">3</option>
-      <option value="6">6</option>
-      <option value="12">12</option>
     </select> 
   </div>
   <br>
@@ -52,7 +45,7 @@
   <br>
   <br>
   <br>
-  <p id="pricecartdetail"> $ 2.49
+  <p id="pricecartdetail"> $ <span id="finalprice">2.49</span>
     <a href="./Cart2.html"> <button id="addtocart">Add to Cart</button> </a>
   </p>
   </div>

@@ -39,39 +39,46 @@ let packSizeAdapt = {
 console.log(glazeInfo[1]);
 
 let basePrice = 2.49; 
-
-
-
-
+let glazeOption = document.getElementById("glazeoptions");
+//console.log(glazeOption); 
+glazeOption.addEventListener('change', glazeChange); 
 
 let packOption = document.getElementById("packsize");
 packOption.addEventListener('change', packChange, glazeChange);  
+function packChange(event){
 
-let hello = packOption.options[packOption.selectedIndex].value
-   console.log(hello); 
-  
-    let totalPrice = packSizeAdapt[hello].price; 
-
-function packChange(){
-
-   
+   let current = event.target.value; 
+    let totalPrice = basePrice * packAdapt[current].price; 
     finalprice.innerHTML = totalPrice;
-    //let blah = parseInt(packSizeAdapt[current].price); 
-  console.log(totalPrice);
+    //let blah = parseInt(packAdapt[current].price); 
+  return totalPrice;
  }
- packChange(); 
 
  let glazeOption = document.getElementById("glazeoptions");
  glazeOption.addEventListener('change', glazeChange, packChange); 
 
 function glazeChange(event){
- 
+//     // console.log(Object.values(glazeInfo)[3].price)
+//     // let blah = abc.price; 
+//     // let blah = glazeInfo.abc[1];
+//     // console.log(blah); 
+//     //console.log("did it reach here"+abc);
 let currentoption = event.target.value;
 console.log(currentoption); 
-let newPrice = basePrice + glazeInfo[currentoption].price; 
-finalprice.innerHTML = newPrice;
+let totalPrice = basePrice + glazeInfo[currentoption].price; 
+
+
+finalprice.innerHTML = totalPrice;
+
+return totalPrice; 
+
 }
 
+
+
+
+
+//finalprice.innerHTML = totalPrice;
 
 
 
@@ -90,12 +97,12 @@ for (let glaze in glazeInfo){
 }
 
 //let newPack = document.querySelector("#packsize");
-for (let size in packSizeAdapt){
+for (let size in packAdapt){
     let option = document.createElement('option');
-    option.innerHTML =  packSizeAdapt[size].name; 
+    option.innerHTML =  packAdapt[size].name; 
     option.setAttribute('value', size);
     //console.log(option);
-    packOption.appendChild(option);
+    newPack.appendChild(option);
 }
 
 

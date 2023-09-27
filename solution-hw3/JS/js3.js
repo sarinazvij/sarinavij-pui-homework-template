@@ -39,41 +39,44 @@ let packAdapt = {
 console.log(glazeInfo[1]);
 
 let basePrice = 2.49; 
+let glazingPrice = 0;
+let packPrice = 1;
+
 let glazeOption = document.getElementById("glazeoptions");
-//console.log(glazeOption); 
 glazeOption.addEventListener('change', glazeChange); 
-
 let packOption = document.getElementById("packsize");
-packOption.addEventListener('change', packChange, glazeChange);  
-function packChange(event){
+packOption.addEventListener('change', packChange);  
 
-   let current = event.target.value; 
-    let totalPrice = basePrice * packAdapt[current].price; 
-    finalprice.innerHTML = totalPrice;
-    //let blah = parseInt(packAdapt[current].price); 
-  return totalPrice;
+function packChange(event){
+    let current = event.target.value;
+    packPrice = packAdapt[current].price;
+    updateTotalPrice();
+
+    // let totalPrice = basePrice * packAdapt[current].price; 
+    // finalprice.innerHTML = totalPrice;
+    // return totalPrice;
  }
 
- //let glazeOption = document.getElementById("glazeoptions");
-// glazeOption.addEventListener('change', glazeChange, packChange); 
-
 function glazeChange(event){
-//     // console.log(Object.values(glazeInfo)[3].price)
-//     // let blah = abc.price; 
-//     // let blah = glazeInfo.abc[1];
-//     // console.log(blah); 
-//     //console.log("did it reach here"+abc);
-let currentoption = event.target.value;
-console.log(currentoption); 
-let totalPrice = basePrice + glazeInfo[currentoption].price; 
+    let currentoption = event.target.value;
+    glazingPrice = glazeInfo[currentoption].price;
+    updateTotalPrice();
+
+    // console.log(currentoption); 
+    // let totalPrice = basePrice + glazeInfo[currentoption].price; 
 
 
-finalprice.innerHTML = totalPrice;
+    // finalprice.innerHTML = totalPrice;
 
-return totalPrice; 
-
+    // return totalPrice; 
 }
 
+
+function updateTotalPrice() {
+    const totalPrice = (basePrice + glazingPrice) * packPrice;
+    finalprice.innerHTML = totalPrice;
+    console.log(totalPrice);
+}
 
 
 

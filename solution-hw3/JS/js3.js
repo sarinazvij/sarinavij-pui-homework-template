@@ -39,33 +39,74 @@ let packAdapt = {
 let basePrice = 2.49; 
 
 
+ let packOption = document.getElementById("packsize");
 
-
-
-let packOption = document.getElementById("packsize");
-packOption.addEventListener('change', packChange, glazeChange);  
-function packChange(event){
-
-   let current = event.target.value; 
-    let totalPrice = basePrice * packAdapt[current].price; 
-    finalprice.innerHTML = totalPrice;
-    //let blah = parseInt(packAdapt[current].price); 
-  return totalPrice;
- }
-
- let glazeOption = document.getElementById("glazeoptions");
- glazeOption.addEventListener('change', glazeChange, packChange); 
-
-function glazeChange(event){
+let glazeOption = document.getElementById("glazeoptions");
+glazeOption.addEventListener('change', glazeChange); 
  
-let currentoption = event.target.value;
-console.log(currentoption); 
-let newPrice = basePrice + glazeInfo[currentoption].price; 
-finalprice.innerHTML = newPrice;
+
+function glazeChange(){
+    let abc = this.value; 
+    // console.log(abc);
+    let thingy = glazeInfo[abc]["price"]; 
+
 }
 
 
 
+index = Array.from(glazeOption.children).indexOf(glazeChange.target)
+console.log(index)
+    
+
+
+let glazeOption = document.getElementById("glazeoptions");
+// console.log(glazeOption); 
+glazeOption.addEventListener('change', glazeChange); 
+
+
+
+
+  //console.log(blue); 
+
+ // let totalPrice = basePrice + yellow[2]; 
+    //indexOf(glazeChange.target); 
+   // console.log(newPrice); 
+    //return newPrice; 
+   //finalprice.innerHTML = newPrice;
+   //console.log(totalPrice); 
+
+
+
+
+//document.querySelector("#finalprice"); 
+// glazeOption.addEventListener('change', finalprod); 
+// packOption.addEventListener('change', finalprod); 
+
+
+
+
+// // // console.log(boop);
+
+// function finalprod(event){
+    
+// packChange(event);
+// glazeChange(event) 
+//     //return happy; 
+
+// //console.log(happy) 
+
+// finalprice.innerHTML = (basePrice );
+
+
+   
+
+//     //finalprice.innerHTML = (basePrice + blah);
+// 
+
+
+
+// glazeOption.addEventListener('change', packChange); 
+// packOption.addEventListener('change', glazeChange);  
 
 
 

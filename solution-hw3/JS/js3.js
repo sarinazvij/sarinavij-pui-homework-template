@@ -1,91 +1,131 @@
-
 let glazeInfo = {
-    "Keep Original":{
+    original:{
         name: "Keep Original", 
         price: 0, 
     },
-    "Sugar Milk": {
+    sugarmilk:{
         name: "Sugar Milk", 
         price: 0,
     },
-    "Vanilla Milk":{
+    vanilla:{
         name: "Vanilla Milk", 
         price: 0.50, 
     },
-    "Double Chocolate":{
+    doublechocolate:{
         name: "Double Chocolate",
         price: 1.50, 
     }  
 }; 
 
 let packSizeAdapt = {
-    "one":{
-        num: "1",
+    first:{
+        name: "1",
         price: 1, 
     },
-    "three":{
-        num: "3", 
+    second:{
+        name: "3", 
         price: 3, 
     },
-    "six":{
-        num: "6", 
+    third:{
+        name: "6", 
         price: 5, 
     },
-    "twelve":{
-        num: "12", 
-        price: 10, 
+    fourth:{
+        name: "12", 
+        price: 10,
     }
 }
 
-
+console.log(glazeInfo[1]);
 
 let basePrice = 2.49; 
+let glazeOption = document.getElementById("glazeoptions");
+//console.log(glazeOption); 
+glazeOption.addEventListener('change', glazeChange); 
 
-function glazeChange(){
-    let abc = this.value; 
-    // console.log(abc);
-    console.log(glazeInfo[abc]["price"])
-    // console.log(Object.values(glazeInfo)[3].price)
-    // let blah = abc.price; 
-    // let blah = glazeInfo.abc[1];
-    // console.log(blah); 
-    //console.log("did it reach here"+abc);
-    // let totalPrice = basePrice + blah; 
-    // total.innerHTML = totalPrice;
+let packOption = document.getElementById("packsize");
+packOption.addEventListener('change', packChange);  
+function packChange(event){
+   // glazeChange(); 
+
+   let currentoption = Object.values(packSizeAdapt);
+   console.log(currentoption); 
+ 
+   
+
+
+   // let current = packSizeAdapt.price
+   // console.log(current); 
+    //console.log(currentoption); 
+   // console.log(packSizeAdapt[indexOf(current)]); 
+  //  let totalPrice = basePrice + glazeInfo[current]; 
+
+
+   // console.log(totalPrice); 
+//finalprice.innerHTML = totalPrice;
+   
+
+
+ }
+
+
+
+
+function glazeChange(event){
+//     // console.log(Object.values(glazeInfo)[3].price)
+//     // let blah = abc.price; 
+//     // let blah = glazeInfo.abc[1];
+//     // console.log(blah); 
+//     //console.log("did it reach here"+abc);
+let currentoption = event.target.value;
+console.log(currentoption); 
+let totalPrice = basePrice + glazeInfo[currentoption].price; 
+
+
+finalprice.innerHTML = totalPrice;
+
+return totalPrice; 
+
 }
 
 
-let glazeOption = document.getElementById("glazeoptions");
-// console.log(glazeOption); 
-glazeOption.addEventListener('change', glazeChange); 
 
 
-index = Array.from(glazeOption.children).indexOf(glazeChange.target)
-console.log(index)
+
+//finalprice.innerHTML = totalPrice;
+
+
+
+
+
+
+
+
 
 for (let glaze in glazeInfo){
     let option = document.createElement('option');
     option.innerHTML =  glazeInfo[glaze].name; 
-    console.log(option);
+    option.setAttribute('value', glaze);
+    //console.log(option);
     glazeOption.appendChild(option);
 }
 
 let newPack = document.querySelector("#packsize");
 for (let size in packSizeAdapt){
     let option = document.createElement('option');
-    option.innerHTML =  packSizeAdapt[size].num; 
-    console.log(option);
+    option.innerHTML =  packSizeAdapt[size].name; 
+    //console.log(option);
     newPack.appendChild(option);
 }
 
 
-// packSizeAdapt.addEventListener('change', packChange); 
+//packSizeAdapt.addEventListener('change', packChange); 
 // function packChange(){
-//     let totalPrice = (basePrice + glazeInfo[glaze].price) * packSizeAdapt.price; 
-//     total.innerHTML = totalPrice; 
-// }
+//     let totalPrice = index + basePrice; 
+//     console.log(totalPrice); 
+// }//
 
-let total = document.querySelector("#finalprice");
+//let total = document.querySelector("#finalprice");
 
 
 

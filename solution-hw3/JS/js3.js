@@ -66,50 +66,6 @@ glazeOption.addEventListener('change', glazeChange);
 
 
 
-  //console.log(blue); 
-
- // let totalPrice = basePrice + yellow[2]; 
-    //indexOf(glazeChange.target); 
-   // console.log(newPrice); 
-    //return newPrice; 
-   //finalprice.innerHTML = newPrice;
-   //console.log(totalPrice); 
-
-
-
-
-//document.querySelector("#finalprice"); 
-// glazeOption.addEventListener('change', finalprod); 
-// packOption.addEventListener('change', finalprod); 
-
-
-
-
-// // // console.log(boop);
-
-// function finalprod(event){
-    
-// packChange(event);
-// glazeChange(event) 
-//     //return happy; 
-
-// //console.log(happy) 
-
-// finalprice.innerHTML = (basePrice );
-
-
-   
-
-//     //finalprice.innerHTML = (basePrice + blah);
-// 
-
-
-
-// glazeOption.addEventListener('change', packChange); 
-// packOption.addEventListener('change', glazeChange);  
-
-
-
 
 
 

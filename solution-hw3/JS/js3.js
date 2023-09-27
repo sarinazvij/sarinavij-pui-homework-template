@@ -46,14 +46,20 @@ let basePrice = 2.49;
 
 let packOption = document.getElementById("packsize");
 packOption.addEventListener('change', packChange, glazeChange);  
-function packChange(event){
 
-   let current = event.target.value; 
-    let totalPrice = basePrice * packAdapt[current].price; 
+let hello = packOption.options[packOption.selectedIndex].value
+   console.log(hello); 
+  
+    let totalPrice = packSizeAdapt[hello].price; 
+
+function packChange(){
+
+   
     finalprice.innerHTML = totalPrice;
-    //let blah = parseInt(packAdapt[current].price); 
-  return totalPrice;
+    //let blah = parseInt(packSizeAdapt[current].price); 
+  console.log(totalPrice);
  }
+ packChange(); 
 
  let glazeOption = document.getElementById("glazeoptions");
  glazeOption.addEventListener('change', glazeChange, packChange); 
@@ -83,12 +89,13 @@ for (let glaze in glazeInfo){
     glazeOption.appendChild(option);
 }
 
-let newPack = document.querySelector("#packsize");
+//let newPack = document.querySelector("#packsize");
 for (let size in packSizeAdapt){
     let option = document.createElement('option');
     option.innerHTML =  packSizeAdapt[size].name; 
+    option.setAttribute('value', size);
     //console.log(option);
-    newPack.appendChild(option);
+    packOption.appendChild(option);
 }
 
 

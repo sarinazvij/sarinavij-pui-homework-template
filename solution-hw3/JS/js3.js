@@ -17,7 +17,7 @@ let glazeInfo = {
     }  
 }; 
 
-let packSizeAdapt = {
+let packAdapt = {
     first:{
         name: "1",
         price: 1, 
@@ -54,8 +54,8 @@ function packChange(event){
   return totalPrice;
  }
 
- let glazeOption = document.getElementById("glazeoptions");
- glazeOption.addEventListener('change', glazeChange, packChange); 
+ //let glazeOption = document.getElementById("glazeoptions");
+// glazeOption.addEventListener('change', glazeChange, packChange); 
 
 function glazeChange(event){
 //     // console.log(Object.values(glazeInfo)[3].price)
@@ -102,7 +102,7 @@ for (let size in packAdapt){
     option.innerHTML =  packAdapt[size].name; 
     option.setAttribute('value', size);
     //console.log(option);
-    newPack.appendChild(option);
+    packOption.appendChild(option);
 }
 
 

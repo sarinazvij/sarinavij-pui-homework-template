@@ -17,7 +17,7 @@ let glazeInfo = {
     }  
 }; 
 
-let packAdapt = {
+let packSizeAdapt = {
     first:{
         name: "1",
         price: 1, 
@@ -34,34 +34,39 @@ let packAdapt = {
         name: "12", 
         price: 10,
     }
-}; 
+}
+
+console.log(glazeInfo[1]);
 
 let basePrice = 2.49; 
 
 
- let packOption = document.getElementById("packsize");
 
-let glazeOption = document.getElementById("glazeoptions");
-glazeOption.addEventListener('change', glazeChange); 
+
+
+let packOption = document.getElementById("packsize");
+packOption.addEventListener('change', packChange, glazeChange);  
+function packChange(event){
+
+   let current = event.target.value; 
+    let totalPrice = basePrice * packAdapt[current].price; 
+    finalprice.innerHTML = totalPrice;
+    //let blah = parseInt(packAdapt[current].price); 
+  return totalPrice;
+ }
+
+ let glazeOption = document.getElementById("glazeoptions");
+ glazeOption.addEventListener('change', glazeChange, packChange); 
+
+function glazeChange(event){
  
-
-function glazeChange(){
-    let abc = this.value; 
-    // console.log(abc);
-    let thingy = glazeInfo[abc]["price"]; 
-
+let currentoption = event.target.value;
+console.log(currentoption); 
+let newPrice = basePrice + glazeInfo[currentoption].price; 
+finalprice.innerHTML = newPrice;
 }
 
 
-
-index = Array.from(glazeOption.children).indexOf(glazeChange.target)
-console.log(index)
-    
-
-
-let glazeOption = document.getElementById("glazeoptions");
-// console.log(glazeOption); 
-glazeOption.addEventListener('change', glazeChange); 
 
 
 
@@ -78,13 +83,32 @@ for (let glaze in glazeInfo){
     glazeOption.appendChild(option);
 }
 
-//let newPack = document.querySelector("#packsize");
-for (let size in packAdapt){
+let newPack = document.querySelector("#packsize");
+for (let size in packSizeAdapt){
     let option = document.createElement('option');
-    option.innerHTML =  packAdapt[size].name; 
-    option.setAttribute('value', size);
+    option.innerHTML =  packSizeAdapt[size].name; 
     //console.log(option);
-    packOption.appendChild(option);
+    newPack.appendChild(option);
 }
+
+
+//packSizeAdapt.addEventListener('change', packChange); 
+// function packChange(){
+//     let totalPrice = index + basePrice; 
+//     console.log(totalPrice); 
+// }//
+
+//let total = document.querySelector("#finalprice");
+
+
+
+
+
+// function displayPrice(roll){
+//     let finalPrice = document.getElementById("#pricecartdetail"); 
+//     finalPrice.innerText = roll.cost; 
+// }
+
+
 
 

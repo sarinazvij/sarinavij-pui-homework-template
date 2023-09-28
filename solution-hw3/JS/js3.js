@@ -39,7 +39,6 @@ let packAdapt = {
 let basePrice = 2.49; 
 let glazingPrice = 0;
 let packPrice = 1;
-
 let glazeOption = document.getElementById("glazeoptions");
 glazeOption.addEventListener('change', glazeChange); 
 let packOption = document.getElementById("packsize");
@@ -69,7 +68,6 @@ for (let glaze in glazeInfo){
     let choice = document.createElement('option');
     choice.setAttribute('value', glaze);
     choice.innerHTML = glazeInfo[glaze].name; 
-    console.log(option);
     glazeOption.appendChild(choice);
 }
 
@@ -77,6 +75,5 @@ for (let size in packAdapt){
     let choice = document.createElement('option');
     choice.setAttribute('value', size);
     choice.innerHTML =  packAdapt[size].name; 
-    console.log(option);
     packOption.appendChild(choice);
 }

@@ -14,7 +14,7 @@ let glazeInfo = {
     doublechocolate:{
         name: "Double Chocolate",
         price: 1.50, 
-    }  
+    },
 }; 
 
 let packAdapt = {
@@ -33,10 +33,8 @@ let packAdapt = {
     fourth:{
         name: "12", 
         price: 10,
-    }
-}
-
-console.log(glazeInfo[1]);
+    },
+};
 
 let basePrice = 2.49; 
 let glazingPrice = 0;
@@ -51,81 +49,34 @@ function packChange(event){
     let current = event.target.value;
     packPrice = packAdapt[current].price;
     updateTotalPrice();
-
-    // let totalPrice = basePrice * packAdapt[current].price; 
-    // finalprice.innerHTML = totalPrice;
-    // return totalPrice;
- }
+}
 
 function glazeChange(event){
     let currentoption = event.target.value;
     glazingPrice = glazeInfo[currentoption].price;
     updateTotalPrice();
-
-    // console.log(currentoption); 
-    // let totalPrice = basePrice + glazeInfo[currentoption].price; 
-
-
-    // finalprice.innerHTML = totalPrice;
-
-    // return totalPrice; 
 }
-
 
 function updateTotalPrice() {
     const totalPrice = (basePrice + glazingPrice) * packPrice;
-    finalprice.innerHTML = totalPrice;
+    let eval = (Math.floor(1000 * totalPrice)/1000);
+    let newEval = eval.toFixed(2); // This line of code was inspired by the following website: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed
+    finalprice.innerHTML = newEval; 
     console.log(totalPrice);
 }
 
-
-
-
-//finalprice.innerHTML = totalPrice;
-
-
-
-
-
-
-
-
-
 for (let glaze in glazeInfo){
-    let option = document.createElement('option');
-    option.innerHTML =  glazeInfo[glaze].name; 
-    option.setAttribute('value', glaze);
-    //console.log(option);
-    glazeOption.appendChild(option);
+    let choice = document.createElement('option');
+    choice.setAttribute('value', glaze);
+    choice.innerHTML = glazeInfo[glaze].name; 
+    console.log(option);
+    glazeOption.appendChild(choice);
 }
 
-//let newPack = document.querySelector("#packsize");
 for (let size in packAdapt){
-    let option = document.createElement('option');
-    option.innerHTML =  packAdapt[size].name; 
-    option.setAttribute('value', size);
-    //console.log(option);
-    packOption.appendChild(option);
+    let choice = document.createElement('option');
+    choice.setAttribute('value', size);
+    choice.innerHTML =  packAdapt[size].name; 
+    console.log(option);
+    packOption.appendChild(choice);
 }
-
-
-//packSizeAdapt.addEventListener('change', packChange); 
-// function packChange(){
-//     let totalPrice = index + basePrice; 
-//     console.log(totalPrice); 
-// }//
-
-//let total = document.querySelector("#finalprice");
-
-
-
-
-
-// function displayPrice(roll){
-//     let finalPrice = document.getElementById("#pricecartdetail"); 
-//     finalPrice.innerText = roll.cost; 
-// }
-
-
-
-

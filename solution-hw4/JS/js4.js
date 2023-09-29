@@ -36,7 +36,29 @@ let packAdapt = {
     },
 };
 
-let basePrice = 2.49; 
+
+
+
+let cart = [];
+const queryString = window.location.search; 
+const params = new URLSearchParams(queryString);
+const rollType = params.get("roll");
+console.log(rollType);
+
+
+const headerElement = document.querySelector("#handmade");
+headerElement.innerText = rollType + " Cinnamon Roll"; 
+
+let rollArray = Object.keys(rolls); 
+console.log(rollArray);
+let mainIndex = rollArray.indexOf(rollType); 
+console.log(mainIndex); 
+let basePrice = Object.values(rolls)[mainIndex].basePrice; 
+const rollPicture = document.querySelector("#originalimageorder"); 
+rollPicture.src = '../../assets/products/' + Object.values(rolls)[mainIndex].imageFile; 
+
+
+
 let glazingPrice = 0;
 let packPrice = 1;
 let glazeOption = document.getElementById("glazeoptions");
@@ -77,3 +99,8 @@ for (let size in packAdapt){
     choice.innerHTML =  packAdapt[size].name; 
     packOption.appendChild(choice);
 }
+
+
+
+
+

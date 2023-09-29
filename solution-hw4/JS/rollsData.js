@@ -26,15 +26,4 @@ const rolls = {
 };
 
 
-let cart = [];
-const queryString = window.location.search; 
-const params = new URLSearchParams(queryString);
-const rollType = params.get("roll");
-console.log(rollType);
 
-
-const headerElement = document.querySelector("#handmade");
-headerElement.innerText = rollType + " Cinnamon Roll"; 
-
-const rollPicture = document.querySelector("#originalimageorder"); 
-rollPicture.src = '../../assets/products/' + rollType + "-cinnamon-roll.jpg"; 

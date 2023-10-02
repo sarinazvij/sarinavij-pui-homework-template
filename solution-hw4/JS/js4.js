@@ -49,7 +49,7 @@ let mainIndex = rollArray.indexOf(rollType);
 //console.log(mainIndex); 
 let basePrice = Object.values(rolls)[mainIndex].basePrice; 
 const rollPicture = document.querySelector("#originalimageorder"); 
-rollPicture.src = '../../assets/products/' + Object.values(rolls)[mainIndex].imageFile; 
+rollPicture.src = '../assets/products/' + Object.values(rolls)[mainIndex].imageFile; 
 let packSize = "1"
 let rollGlazing = "Keep original"
 let glazingPrice = 0;

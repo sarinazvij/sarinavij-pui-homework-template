@@ -54,6 +54,7 @@ let packSize = "1"
 let rollGlazing = "Keep original"
 let glazingPrice = 0;
 let packPrice = 1;
+finalprice.innerHTML = basePrice; 
 let glazeOption = document.getElementById("glazeoptions");
 glazeOption.addEventListener('change', glazeChange); 
 let packOption = document.getElementById("packsize");

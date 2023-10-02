@@ -36,19 +36,13 @@ let packAdapt = {
     },
 };
 
-
-
-
 let cart = [];
 const queryString = window.location.search; 
 const params = new URLSearchParams(queryString);
 const rollType = params.get("roll");
 //console.log(rollType);
-
-
 const headerElement = document.querySelector("#handmade");
 headerElement.innerText = rollType + " Cinnamon Roll"; 
-
 let rollArray = Object.keys(rolls); 
 //console.log(rollArray);
 let mainIndex = rollArray.indexOf(rollType); 
@@ -56,10 +50,8 @@ let mainIndex = rollArray.indexOf(rollType);
 let basePrice = Object.values(rolls)[mainIndex].basePrice; 
 const rollPicture = document.querySelector("#originalimageorder"); 
 rollPicture.src = '../../assets/products/' + Object.values(rolls)[mainIndex].imageFile; 
-
 let packSize = "1"
 let rollGlazing = "Keep original"
-
 let glazingPrice = 0;
 let packPrice = 1;
 let glazeOption = document.getElementById("glazeoptions");
@@ -68,7 +60,6 @@ let packOption = document.getElementById("packsize");
 packOption.addEventListener('change', packChange);  
 
 function packChange(event){
-   
     let current = event.target.value;
     packSize = packAdapt[current].name;
     packPrice = packAdapt[current].price;
@@ -122,9 +113,8 @@ function callRoll(){
     let purchase = new Roll(rollType, rollGlazing, packSize, basePrice);
     cart.push(purchase); 
     return purchase; 
-
 }
 
-function hello(){
+function rollToCart(){
     console.log(callRoll());
 }

@@ -119,3 +119,17 @@ function callRoll(){
 function rollToCart(){
     console.log(callRoll());
 }
+
+
+
+
+let cartMain = new Roll ("Original", "Sugar Milk", "1", 2.99)
+let blah = new Roll ("Original", "Sugar Milk", "1", 2.99)
+let hellooo = new Roll ("Original", "Sugar Milk", "1", 2.99)
+let cake = new Roll ("Original", "Sugar Milk", "1", 2.99);
+
+cart = [cartMain, blah, hellooo, cake]; 
+
+
+
+

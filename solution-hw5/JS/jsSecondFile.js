@@ -95,17 +95,18 @@ addRollInfo(sarina);
 
 function addRollInfo(sarina){
     let rollImageElement = sarina.element.querySelector(".cartimages");
-    let rollNameElement = sarina.element.querySelector(".cartinfo");
-    let rollGlazeElement = sarina.element.querySelector(".cartinfo");
-    let rollSizeElement = sarina.element.querySelector(".cartinfo");
-    let endPriceElement = sarina.element.querySelector(".cartinfoprice");
+    let rollNameElement = sarina.element.querySelector(".notecardname");
+    let rollGlazeElement = sarina.element.querySelector(".notecardsize");
+    let rollSizeElement = sarina.element.querySelector(".notecardglaze");
+    let endPriceElement = sarina.element.querySelector(".notecardprice");
 
-    //rollImageElement.src = 
-    rollNameElement.innerText = sarina.type;
+    rollImageElement.src = './../assets/products/' + sarina.type + "-cinnamon-roll.jpg"; 
+   rollNameElement.innerText = sarina.type + " Cinnamon Roll";
     rollGlazeElement.innerText = sarina.glazing; 
-    rollSizeElement.innerText = sarina.size;
+    rollSizeElement.innerText = "Pack Size: " + sarina.size;
     endPriceElement.innerText = sarina.rollPrice;
-
+  
+    
 }
 
 function deleteEntry(sarina){
@@ -114,7 +115,7 @@ function deleteEntry(sarina){
 }
 
 
-const sup = addThing(cartMain); 
+
 
 for (const sarina of finalCart){
 console.log(sarina);

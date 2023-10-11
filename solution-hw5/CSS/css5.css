@@ -178,8 +178,7 @@ a:link{
 
 #finalprice2{
     width: 100px; 
-    margin-right: 78px; 
-    margin-left: 30px;
+    margin-left: 3px;
 }
 
 #highlightforcart{
@@ -211,13 +210,13 @@ a:link{
          */
 }  
 
-  .cartbox{
+  /* .cartbox{
     display: flex; 
     margin-left: 400px;
     margin-bottom: 10px; 
-    flex-direction: column;
+    flex-direction: column; */
     
-}  
+
 
 .cartimg{
     display: flex; 
@@ -234,7 +233,7 @@ a:link{
     margin-top: 22px; 
     margin-left: 12px; 
     font-weight: lighter;
-    margin-bottom: 100px; 
+   
     
    
 }
@@ -245,13 +244,38 @@ a:link{
     margin-bottom: 15px; 
 }
 
+ .new2{
+    display: flex; 
+    flex-direction: column;
+    font-family: sans-serif;
+    font-size: 22px; 
+ margin-top: -10px;  
+
+    font-weight: lighter; 
+   
+    margin-left: 0px; 
+    margin-right: 0px; 
+   text-align: right; 
+   
+
+   
+    
+     
+    
+    
+
+} 
+
+
+
+
 .cartimages{
-    border: 4px; 
+    border: 3px; 
     border-color: black; 
     border-style: solid;
     width: 200px;
     height: 200px; 
-    margin-bottom: 50px;
+    margin-bottom: 23px;
     margin-left: 15px; 
 }
 
@@ -259,20 +283,32 @@ a:link{
 
 .notecardprice{
 
-margin-top: 80px; 
+ margin-top: 80px;  
 font-size: 22px; 
-margin-left: 400px; 
+/* margin-left: 400px;   */
 font-family: 'Helvetica', 'Arial', sans-serif;  
 font-weight: lighter; 
+width: 90px; 
+
 padding: 0px; 
+
+
+/* width: 200px;  */
+
+
 
 
 }
 
-.cartorder{
+#sos{
 display: flex; 
-    margin-left: 10px;
-    margin-right: 20px;    
+    /* margin-left: 10px;
+    margin-right: 20px;   */
+        margin-left: 400px;
+        
+        flex-direction: column; 
+        flex-direction: row; 
+        margin-right: 0px;   
 }
 
 .cartinfo{
@@ -289,10 +325,12 @@ display: flex;
 }
 
 .remove{
+    display: flex; 
+    flex-direction: column; 
     font-weight: bold; 
     text-decoration: underline;
-    margin-left: 410px; 
-    margin-top: 20px; 
+    margin-left: 425px; 
+   margin-bottom: 20px; 
     font-size: 25px; 
 }
 
@@ -304,7 +342,7 @@ display: flex;
     font-weight: bold; 
     height: 70px; 
     border: 2px solid black;
-    margin-left: 927px; 
+    margin-left: 905px; 
     margin-top: 3px; 
 }
 
@@ -315,7 +353,7 @@ a:visited{
 #checkoutline{
     margin-left: 410px;
     margin-top: 20px; 
-    width: 685px; 
+    width: 662px; 
     margin-right: 0px; 
 }
 
@@ -332,12 +370,12 @@ a:visited{
     display: flex; 
     font-family: 'Helvetica', 'Arial', sans-serif;  
     font-size: 23px; 
-    margin-left: 516px; 
+    margin-left: 667px; 
     margin-top: 5px; 
     font-weight: lighter;
 }
 
 #total{
-    margin-right: 295px; 
+    margin-right: 300px; 
 }
 

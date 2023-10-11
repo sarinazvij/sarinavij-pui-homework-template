@@ -46,24 +46,15 @@ class Roll2 {
 }
 
 let priceArray = []; 
-
 let finalCart = new Set ();  
-
 let cartMain2 = new Roll2 ("Walnut", "Vanilla Milk", "12", 3.49)
 let cartMain4 = new Roll2 ("Apple", "Original", "3", 3.49)
 let cartMain3 = new Roll2 ("Raisin", "Sugar Milk", "3", 2.99)
-
-let cartMain = new Roll2 ("Original", "Sugar Milk", "1", 2.49)
-  
+let cartMain1 = new Roll2 ("Original", "Sugar Milk", "1", 2.49) 
 finalCart.add(cartMain4);
 finalCart.add(cartMain3);
 finalCart.add(cartMain2);
-finalCart.add(cartMain);
-
-
-
-
- 
+finalCart.add(cartMain1);
 
 function findPrice(roll){
     let totalPrice = ((roll.rollPrice) + glazeInfo[roll.glazing].price) * packAdapt[roll.size].price;  
@@ -72,99 +63,73 @@ function findPrice(roll){
     return newEval;
 }
 
-console.log(findPrice(cartMain));
-console.log(findPrice(cartMain2));
-
-
-function addThing(rollType, rollGlazing, packSize, rollPrice){
-    const sarina = new Roll2(rollType, rollGlazing, packSize, rollPrice);
-    finalCart.add(sarina);
-    return sarina; 
+function addRoll(rollType, rollGlazing, packSize, rollPrice){
+    const cinroll = new Roll2(rollType, rollGlazing, packSize, rollPrice);
+    finalCart.add(cinroll);
+    return cinroll; 
 }
 
-
-
-
-function appendThing(sarina){
+function appendRoll(cinroll){
     let template = document.querySelector("#cardtemplate");
     let clone = template.content.cloneNode(true);
-    sarina.element = clone.querySelector(".cartorder");
-    const remove = sarina.element.querySelector(".remove");
+    cinroll.element = clone.querySelector(".cartorder");
+    const remove = cinroll.element.querySelector(".remove");
     console.log(remove); 
     remove.addEventListener("click", () => {
-    deleteEntry(sarina);
-}); 
-  
-    
-const yikes = document.querySelector(".cartbox"); 
-yikes.prepend(sarina.element);
-addRollInfo(sarina);
-
+        deleteEntry(cinroll);
+    });     
+    const insertRoll = document.querySelector(".cartbox"); 
+    insertRoll.prepend(cinroll.element);
+    addRollInfo(cinroll);
 }
 
-function addRollInfo(sarina){
-    let rollImageElement = sarina.element.querySelector(".cartimages");
-    let rollNameElement = sarina.element.querySelector(".notecardname");
-    let rollGlazeElement = sarina.element.querySelector(".notecardsize");
-    let rollSizeElement = sarina.element.querySelector(".notecardglaze");
-    let endPriceElement = sarina.element.querySelector(".notecardprice");
-    let totalPriceElement = document.querySelector("#finalprice2"); 
-
-    rollImageElement.src = './../assets/products/' + sarina.type + "-cinnamon-roll.jpg"; 
-   rollNameElement.innerText = sarina.type + " Cinnamon Roll";
-    rollGlazeElement.innerText = sarina.glazing; 
-    rollSizeElement.innerText = "Pack Size: " + sarina.size;
-    endPriceElement.innerText = (findPrice(sarina));;
-    totalPriceElement.innerText = (findPrice(sarina))
-    
-  
-    console.log(endPriceElement); 
-    
+function addRollInfo(cinroll){
+    let rollImageElement = cinroll.element.querySelector(".cartimages");
+    let rollNameElement = cinroll.element.querySelector(".notecardname");
+    let rollSizeElement = cinroll.element.querySelector(".notecardsize");
+    let rollGlazeElement = cinroll.element.querySelector(".notecardglaze");
+    let endPriceElement = cinroll.element.querySelector(".notecardprice");
+    //let totalPriceElement = document.querySelector("#finalprice2"); 
+    rollImageElement.src = './../assets/products/' + cinroll.type + "-cinnamon-roll.jpg"; 
+    rollNameElement.innerText = cinroll.type + " Cinnamon Roll";
+    rollGlazeElement.innerText = "Glazing: " + cinroll.glazing; 
+    rollSizeElement.innerText = "Pack Size: " + cinroll.size;
+    endPriceElement.innerText = "$" + " " + (findPrice(cinroll));;
+   // totalPriceElement.innerText = "$" + (findPrice(cinroll))
+   // console.log(endPriceElement);  
 }
 
-
-
-function deleteEntry(sarina){
-    sarina.element.remove(); 
-    finalCart.delete(sarina);
+function deleteEntry(cinroll){
+    cinroll.element.remove(); 
+    finalCart.delete(cinroll);
     priceArray = [];
-    for (const sarina of finalCart){
-        console.log(sarina);
-        priceArray.push(findPrice(sarina)); 
+    for (const cinroll of finalCart){
+        console.log(cinroll);
+        priceArray.push(findPrice(cinroll)); 
         console.log(priceArray);
-        
-        }
-        
-        let lamp = document.querySelector("#finalprice2"); 
-        let blah = 0;
-        for (let element of priceArray){
-            blah+=parseFloat(element);
-        }
-        lamp.innerText = blah;
-
-
+    }  
+    let finalPrice = document.querySelector("#finalprice2"); 
+    let addPrice = 0;
+    for (let element of priceArray){
+        addPrice+=parseFloat(element);
+    }
+    finalPrice.innerText = addPrice;
 }
 
-
-
-
-for (const sarina of finalCart){
-console.log(sarina);
-appendThing(sarina);
-priceArray.push(findPrice(sarina)); 
+for (const cinroll of finalCart){
+console.log(cinroll);
+appendRoll(cinroll);
+priceArray.push(findPrice(cinroll)); 
 console.log(priceArray);
-
 }
 
-let lamp = document.querySelector("#finalprice2"); 
+let finalPrice = document.querySelector("#finalprice2"); 
 console.log((priceArray[1])); 
-let blah = parseFloat(priceArray[0]) + parseFloat(priceArray[1]) +  parseFloat(priceArray[2]) +  parseFloat(priceArray[3]); 
-console.log(blah); 
-
-blah = (Math.floor(1000 * blah)/1000);
-let newEval = blah.toFixed(2);
-
-lamp.innerText = newEval; 
+let addPrice = parseFloat(priceArray[0]) + parseFloat(priceArray[1]) +  parseFloat(priceArray[2]) +  parseFloat(priceArray[3]); 
+console.log(addPrice); 
+addPrice = (Math.floor(1000 * addPrice)/1000);
+let newEval = addPrice.toFixed(2);
+finalPrice.innerText = newEval; 
 
 
 

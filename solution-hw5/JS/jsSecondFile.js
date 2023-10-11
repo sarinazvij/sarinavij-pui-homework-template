@@ -47,19 +47,21 @@ class Roll2 {
 
 let finalCart = new Set ();  
 
+let cartMain2 = new Roll2 ("Walnut", "Vanilla Milk", "12", 3.49)
+let cartMain4 = new Roll2 ("Apple", "Original", "3", 3.49)
+let cartMain3 = new Roll2 ("Raisin", "Sugar Milk", "3", 2.99)
 
-    let cartMain = new Roll2 ("Original", "Sugar Milk", "1", 2.49)
-    let cartMain2 = new Roll2 ("Walnut", "Vanilla Milk", "12", 3.49)
-    let cartMain3 = new Roll2 ("Raisin", "Sugar Milk", "3", 2.99)
-    let cartMain4 = new Roll2 ("Apple", "Original", "3", 3.49)
-
-finalCart.add(cartMain);
-finalCart.add(cartMain2);
+let cartMain = new Roll2 ("Original", "Sugar Milk", "1", 2.49)
+  
+finalCart.add(cartMain4);
 finalCart.add(cartMain3);
-finalCart.add(cartMain4); 
+finalCart.add(cartMain2);
+finalCart.add(cartMain);
 
-console.log(cartMain);
 
+
+
+ 
 
 function findPrice(roll){
     let totalPrice = ((roll.rollPrice) + glazeInfo[roll.glazing].price) * packAdapt[roll.size].price;  
@@ -85,10 +87,11 @@ function appendThing(sarina){
     let template = document.querySelector("#cardtemplate");
     let clone = template.content.cloneNode(true);
     sarina.element = clone.querySelector(".cartorder");
-    //const remove = sarina.element.querySelector(".remove");
+    // const remove = sarina.element.querySelector(".remove");
     // console.log(remove); 
     // remove.addEventListener("click", deleteEntry(sarina)); 
-    // //);
+  
+
 const yikes = document.querySelector(".cartbox"); 
 yikes.prepend(sarina.element);
 addRollInfo(sarina);

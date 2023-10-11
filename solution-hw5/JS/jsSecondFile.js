@@ -74,7 +74,7 @@ function appendRoll(cinroll){
     let clone = template.content.cloneNode(true);
     cinroll.element = clone.querySelector(".cartorder");
     const remove = cinroll.element.querySelector(".remove");
-    console.log(remove); 
+    //console.log(remove); 
     remove.addEventListener("click", () => {
         deleteEntry(cinroll);
     });     
@@ -119,16 +119,13 @@ function deleteEntry(cinroll){
 }
 
 for (const cinroll of finalCart){
-    console.log(cinroll);
     appendRoll(cinroll);
     priceArray.push(findPrice(cinroll)); 
-    console.log(priceArray);
 }
 
 let finalPrice = document.querySelector("#finalprice2"); 
-console.log((priceArray[1])); 
 let addPrice = parseFloat(priceArray[0]) + parseFloat(priceArray[1]) +  parseFloat(priceArray[2]) +  parseFloat(priceArray[3]); 
-console.log(addPrice); 
+//console.log(addPrice); 
 addPrice = (Math.floor(1000 * addPrice)/1000);
 let newEval = addPrice.toFixed(2);
 finalPrice.innerText = "$ " + newEval; 

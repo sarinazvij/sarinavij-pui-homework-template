@@ -106,24 +106,33 @@ function addRollInfo(sarina){
     let rollGlazeElement = sarina.element.querySelector(".notecardsize");
     let rollSizeElement = sarina.element.querySelector(".notecardglaze");
     let endPriceElement = sarina.element.querySelector(".notecardprice");
+    let totalPriceElement = document.querySelector("#finalprice2"); 
 
     rollImageElement.src = './../assets/products/' + sarina.type + "-cinnamon-roll.jpg"; 
    rollNameElement.innerText = sarina.type + " Cinnamon Roll";
     rollGlazeElement.innerText = sarina.glazing; 
     rollSizeElement.innerText = "Pack Size: " + sarina.size;
     endPriceElement.innerText = (findPrice(sarina));;
+    totalPriceElement.innerText = (findPrice(sarina))
+    
   
     console.log(endPriceElement); 
     
 }
 
 
+// function updatePrice(event){
+// let totalPriceElement = document.querySelector("#finalprice2"); 
+// totalPriceElement.innerText = 
+//      -findPrice(sarina); 
+
+//  }
 
 function deleteEntry(sarina){
     sarina.element.remove(); 
     finalCart.delete(sarina);
+    
 }
-
 
 
 
@@ -133,6 +142,7 @@ appendThing(sarina);
 
 
 }
+
 
 
 

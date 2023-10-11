@@ -89,7 +89,8 @@ function addRollInfo(cinroll){
     let rollSizeElement = cinroll.element.querySelector(".rollsize");
     let rollGlazeElement = cinroll.element.querySelector(".rollglaze");
     let endPriceElement = cinroll.element.querySelector(".rollfinalprice");
-    rollImageElement.src = './../assets/products/' + cinroll.type.toLowerCase() + "-cinnamon-roll.jpg"; 
+    rollImageElement.src = './../assets/products/' + cinroll.type.toLowerCase() + "-cinnamon-roll.jpg";
+    console.log(rollImageElement.src); 
     rollNameElement.innerText = cinroll.type + " Cinnamon Roll";
     rollGlazeElement.innerText = "Glazing: " + cinroll.glazing; 
     rollSizeElement.innerText = "Pack Size: " + cinroll.size;

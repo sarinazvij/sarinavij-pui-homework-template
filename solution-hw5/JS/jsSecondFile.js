@@ -7,7 +7,7 @@ let glazeInfo = {
         name: "Sugar Milk", 
         price: 0,
     },
-    "Vanilla":{
+    "Vanilla Milk":{
         name: "Vanilla Milk", 
         price: 0.50, 
     },
@@ -62,12 +62,14 @@ console.log(cartMain);
 
 
 function findPrice(roll){
-    let totalPrice = (roll.rollPrice) + glazeInfo[roll.glazing].price * packAdapt[roll.size].price;  
-    return totalPrice;
+    let totalPrice = ((roll.rollPrice) + glazeInfo[roll.glazing].price) * packAdapt[roll.size].price;  
+    eval = (Math.floor(1000 * totalPrice)/1000);
+    let newEval = eval.toFixed(2); // This line of code was inspired by the following website: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed
+    return newEval;
 }
 
 console.log(findPrice(cartMain));
-console.log(findPrice(cartMain4));
+console.log(findPrice(cartMain2));
 
 
 function addThing(rollType, rollGlazing, packSize, rollPrice){
@@ -83,7 +85,7 @@ function appendThing(sarina){
     let template = document.querySelector("#cardtemplate");
     let clone = template.content.cloneNode(true);
     sarina.element = clone.querySelector(".cartorder");
-    // const remove = sarina.element.querySelector(".remove");
+    //const remove = sarina.element.querySelector(".remove");
     // console.log(remove); 
     // remove.addEventListener("click", deleteEntry(sarina)); 
     // //);
@@ -104,10 +106,13 @@ function addRollInfo(sarina){
    rollNameElement.innerText = sarina.type + " Cinnamon Roll";
     rollGlazeElement.innerText = sarina.glazing; 
     rollSizeElement.innerText = "Pack Size: " + sarina.size;
-    endPriceElement.innerText = sarina.rollPrice;
+    endPriceElement.innerText = (findPrice(sarina));;
   
+    console.log(endPriceElement); 
     
 }
+
+
 
 function deleteEntry(sarina){
     sarina.element.remove(); 

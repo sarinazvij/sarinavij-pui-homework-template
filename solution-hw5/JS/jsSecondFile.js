@@ -45,6 +45,8 @@ class Roll2 {
     }
 }
 
+let priceArray = []; 
+
 let finalCart = new Set ();  
 
 let cartMain2 = new Roll2 ("Walnut", "Vanilla Milk", "12", 3.49)
@@ -121,28 +123,42 @@ function addRollInfo(sarina){
 }
 
 
-// function updatePrice(event){
-// let totalPriceElement = document.querySelector("#finalprice2"); 
-// totalPriceElement.innerText = 
-//      -findPrice(sarina); 
-
-//  }
 
 function deleteEntry(sarina){
     sarina.element.remove(); 
     finalCart.delete(sarina);
-    
+    priceArray = [];
+    for (const sarina of finalCart){
+        console.log(sarina);
+        priceArray.push(findPrice(sarina)); 
+        console.log(priceArray);
+        
+        }
+        
+        let lamp = document.querySelector("#finalprice2"); 
+        let blah = 0;
+        for (let element of priceArray){
+            blah+=element;
+        }
+        lamp.innerText = blah;
+
+
 }
+
 
 
 
 for (const sarina of finalCart){
 console.log(sarina);
-appendThing(sarina); 
-
+appendThing(sarina);
+priceArray.push(findPrice(sarina)); 
+console.log(priceArray);
 
 }
 
+let lamp = document.querySelector("#finalprice2"); 
+let blah = parseInt(priceArray[0]) + parseInt(priceArray[1]) +  parseInt(priceArray[2]) +  parseInt(priceArray[3]); 
+lamp.innerText = blah; 
 
 
 

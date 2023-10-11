@@ -198,7 +198,7 @@ a:link{
     margin-right: 0px; 
 }
 
- .cartdescriptions{
+.cartdescriptions{
     display: flex; 
     margin-left: 12px;
     margin-right: 20px;
@@ -206,58 +206,31 @@ a:link{
     font-family: sans-serif;
     font-size: 22px; 
     margin-top: 22px; 
-   
     font-weight: lighter;
-
 }  
-
-  /* .cartbox{
-    display: flex; 
-    margin-left: 400px;
-    margin-bottom: 10px; 
-    flex-direction: column; */
-    
-
 
 .cartimg{
     display: flex; 
     margin-left: 10px;
-    margin-right: 20px;  
-
+    margin-right: 20px;
 }
 
-
 .rollname, .rollglaze, .rollsize{
-   
     width: 300px; 
     margin-bottom: 15px; 
 }
 
- .pricedescription{
+.pricedescription{
     display: flex; 
     flex-direction: column;
     font-family: sans-serif;
     font-size: 22px; 
- margin-top: -10px;  
-
+    margin-top: -10px;  
     font-weight: lighter; 
-   
     margin-left: 25px; 
     margin-right: 0px; 
-    
-   text-align: right; 
-   
-
-   
-    
-     
-    
-    
-
+    text-align: right;   
 } 
-
-
-
 
 .cartimages{
     border: 3px; 
@@ -269,50 +242,18 @@ a:link{
     margin-left: 15px; 
 }
 
-
-
 .rollfinalprice{
-
- margin-top: 80px;  
-font-size: 22px; 
-/* margin-left: 400px;   */
-font-family: 'Helvetica', 'Arial', sans-serif;  
-font-weight: lighter; 
-width: 90px; 
-
-
-padding: 0px; 
-
-
-/* width: 200px;  */
-
-
-
-
+    margin-top: 80px;  
+    font-size: 22px; 
+    font-family: 'Helvetica', 'Arial', sans-serif;  
+    font-weight: lighter; 
+    width: 90px; 
 }
 
 #overallrollholder{
-display: flex; 
-    /* margin-left: 10px;
-    margin-right: 20px;   */
-        margin-left: 400px;
-        
-        flex-direction: column; 
-        flex-direction: row; 
-        margin-right: 0px;   
-}
-
-.cartinfo{
-    margin-left: 0px; 
-    margin-top: 20px; 
-} 
-
-.cartinfoprice{
-    margin-top: 80px; 
-    font-size: 22px; 
-    margin-right: 102px; 
-    font-family: 'Helvetica', 'Arial', sans-serif;  
-    font-weight: lighter; 
+    display: flex; 
+    margin-left: 400px;
+    flex-direction: row; 
 }
 
 .remove{
@@ -321,7 +262,7 @@ display: flex;
     font-weight: bold; 
     text-decoration: underline;
     margin-left: 425px; 
-   margin-bottom: 20px; 
+    margin-bottom: 20px; 
     font-size: 25px; 
 }
 

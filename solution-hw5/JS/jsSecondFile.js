@@ -138,7 +138,7 @@ function deleteEntry(sarina){
         let lamp = document.querySelector("#finalprice2"); 
         let blah = 0;
         for (let element of priceArray){
-            blah+=element;
+            blah+=parseInt(element);
         }
         lamp.innerText = blah;
 

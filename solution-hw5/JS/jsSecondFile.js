@@ -1,38 +1,36 @@
-
-
 let glazeInfo = {
-    original:{
+    "Original":{
         name: "Keep Original", 
         price: 0, 
     },
-    sugarmilk:{
+    "Sugar Milk":{
         name: "Sugar Milk", 
         price: 0,
     },
-    vanilla:{
+    "Vanilla":{
         name: "Vanilla Milk", 
         price: 0.50, 
     },
-    doublechocolate:{
+    "Double Chocolate":{
         name: "Double Chocolate",
         price: 1.50, 
     },
 }; 
 
 let packAdapt = {
-    first:{
+    "1":  {
         name: "1",
         price: 1, 
     },
-    second:{
+    "3":{
         name: "3", 
         price: 3, 
     },
-    third:{
+    "6":{
         name: "6", 
         price: 5, 
     },
-    fourth:{
+    "12":{
         name: "12", 
         price: 10,
     },
@@ -58,12 +56,16 @@ finalCart.add(cartMain2);
 finalCart.add(cartMain3);
 finalCart.add(cartMain4); 
 
+console.log(cartMain);
 
-function findPrice(){
-    let totalPrice = (this.rollPrice) + glazeInfo[this.rollType].price * packAdapt[this.packSize].price;  
-    console.log(totalPrice); 
+
+function findPrice(roll){
+    let totalPrice = (roll.rollPrice) + glazeInfo[roll.glazing].price * packAdapt[roll.size].price;  
+    return totalPrice;
 }
-   
+
+console.log(findPrice(cartMain));
+console.log(findPrice(cartMain4));
 
 
 function appendThing(){
@@ -72,4 +74,4 @@ function appendThing(){
 
 
 
- }
+}

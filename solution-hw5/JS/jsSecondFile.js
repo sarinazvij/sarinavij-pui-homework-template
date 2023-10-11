@@ -112,15 +112,20 @@ function deleteEntry(cinroll){
     let addPrice = 0;
     for (let element of priceArray){
         addPrice+=parseFloat(element);
+            }
+    if (priceArray.length == "0"){
+        finalPrice.innerText = "$ 0.00";
     }
-    finalPrice.innerText = addPrice;
+    else {
+        finalPrice.innerText = "$ " + addPrice;
+     }
 }
 
 for (const cinroll of finalCart){
-console.log(cinroll);
-appendRoll(cinroll);
-priceArray.push(findPrice(cinroll)); 
-console.log(priceArray);
+    console.log(cinroll);
+    appendRoll(cinroll);
+    priceArray.push(findPrice(cinroll)); 
+    console.log(priceArray);
 }
 
 let finalPrice = document.querySelector("#finalprice2"); 
@@ -129,7 +134,7 @@ let addPrice = parseFloat(priceArray[0]) + parseFloat(priceArray[1]) +  parseFlo
 console.log(addPrice); 
 addPrice = (Math.floor(1000 * addPrice)/1000);
 let newEval = addPrice.toFixed(2);
-finalPrice.innerText = newEval; 
+finalPrice.innerText = "$ " + newEval; 
 
 
 

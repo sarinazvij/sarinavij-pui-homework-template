@@ -99,7 +99,25 @@ for (let size in packAdapt){
     packOption.appendChild(choice);
 }
 
+class Roll {
+    constructor(rollType, rollGlazing, packSize, basePrice) {
+        this.type = rollType;
+        this.glazing = rollGlazing;
+        this.size = packSize;
+        this.basePrice = basePrice;
+    }
+}
 
+function callRoll(){
+    //console.log(packSize); 
+    //console.log(rollGlazing); 
+    let purchase = new Roll(rollType, rollGlazing, packSize, basePrice);
+    cart.push(purchase); 
+    return purchase; 
+}
 
+function rollToCart(){
+    console.log(callRoll());
+}
 
 

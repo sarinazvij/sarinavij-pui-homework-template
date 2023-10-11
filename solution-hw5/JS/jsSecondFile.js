@@ -47,10 +47,10 @@ class Roll2 {
 
 let priceArray = []; 
 let finalCart = new Set ();  
-let cartMain2 = new Roll2 ("Walnut", "Vanilla Milk", "12", 3.49)
-let cartMain4 = new Roll2 ("Apple", "Original", "3", 3.49)
-let cartMain3 = new Roll2 ("Raisin", "Sugar Milk", "3", 2.99)
-let cartMain1 = new Roll2 ("Original", "Sugar Milk", "1", 2.49) 
+let cartMain2 = new Roll2 ("Walnut", "Vanilla Milk", "12", 3.49);
+let cartMain4 = new Roll2 ("Apple", "Original", "3", 3.49);
+let cartMain3 = new Roll2 ("Raisin", "Sugar Milk", "3", 2.99);
+let cartMain1 = new Roll2 ("Original", "Sugar Milk", "1", 2.49);
 finalCart.add(cartMain4);
 finalCart.add(cartMain3);
 finalCart.add(cartMain2);
@@ -85,18 +85,15 @@ function appendRoll(cinroll){
 
 function addRollInfo(cinroll){
     let rollImageElement = cinroll.element.querySelector(".cartimages");
-    let rollNameElement = cinroll.element.querySelector(".notecardname");
-    let rollSizeElement = cinroll.element.querySelector(".notecardsize");
-    let rollGlazeElement = cinroll.element.querySelector(".notecardglaze");
-    let endPriceElement = cinroll.element.querySelector(".notecardprice");
-    //let totalPriceElement = document.querySelector("#finalprice2"); 
+    let rollNameElement = cinroll.element.querySelector(".rollname");
+    let rollSizeElement = cinroll.element.querySelector(".rollsize");
+    let rollGlazeElement = cinroll.element.querySelector(".rollglaze");
+    let endPriceElement = cinroll.element.querySelector(".rollfinalprice");
     rollImageElement.src = './../assets/products/' + cinroll.type + "-cinnamon-roll.jpg"; 
     rollNameElement.innerText = cinroll.type + " Cinnamon Roll";
     rollGlazeElement.innerText = "Glazing: " + cinroll.glazing; 
     rollSizeElement.innerText = "Pack Size: " + cinroll.size;
-    endPriceElement.innerText = "$" + " " + (findPrice(cinroll));;
-   // totalPriceElement.innerText = "$" + (findPrice(cinroll))
-   // console.log(endPriceElement);  
+    endPriceElement.innerText = "$" + " " + (findPrice(cinroll));; 
 }
 
 function deleteEntry(cinroll){

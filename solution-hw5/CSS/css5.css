@@ -198,18 +198,17 @@ a:link{
     margin-right: 0px; 
 }
 
- .new{
+ .cartdescriptions{
     display: flex; 
-    margin-left: 10px;
+    margin-left: 12px;
     margin-right: 20px;
     flex-direction: column; 
-/*    
-        font-family: sans-serif;
-        font-size: 22px; 
-        margin-top: 3px; 
-        margin-left: 10px; 
-        font-weight: lighter;
-         */
+    font-family: sans-serif;
+    font-size: 22px; 
+    margin-top: 22px; 
+   
+    font-weight: lighter;
+
 }  
 
   /* .cartbox{
@@ -227,26 +226,14 @@ a:link{
 
 }
 
-.new{
-   
-    flex-direction: column;
-    font-family: sans-serif;
-    font-size: 22px; 
-    margin-top: 22px; 
-    margin-left: 12px; 
-    font-weight: lighter;
-   
-    
-   
-}
 
-.notecardname, .notecardglaze, .notecardsize{
+.rollname, .rollglaze, .rollsize{
    
     width: 300px; 
     margin-bottom: 15px; 
 }
 
- .new2{
+ .pricedescription{
     display: flex; 
     flex-direction: column;
     font-family: sans-serif;
@@ -284,7 +271,7 @@ a:link{
 
 
 
-.notecardprice{
+.rollfinalprice{
 
  margin-top: 80px;  
 font-size: 22px; 
@@ -304,7 +291,7 @@ padding: 0px;
 
 }
 
-#sos{
+#overallrollholder{
 display: flex; 
     /* margin-left: 10px;
     margin-right: 20px;   */

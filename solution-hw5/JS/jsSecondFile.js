@@ -87,11 +87,13 @@ function appendThing(sarina){
     let template = document.querySelector("#cardtemplate");
     let clone = template.content.cloneNode(true);
     sarina.element = clone.querySelector(".cartorder");
-    // const remove = sarina.element.querySelector(".remove");
-    // console.log(remove); 
-    // remove.addEventListener("click", deleteEntry(sarina)); 
+    const remove = sarina.element.querySelector(".remove");
+    console.log(remove); 
+    remove.addEventListener("click", () => {
+    deleteEntry(sarina);
+}); 
   
-
+    
 const yikes = document.querySelector(".cartbox"); 
 yikes.prepend(sarina.element);
 addRollInfo(sarina);

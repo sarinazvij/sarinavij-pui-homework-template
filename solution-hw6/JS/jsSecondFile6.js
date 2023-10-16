@@ -51,12 +51,12 @@ let priceArray = [];
 let finalCart = new Set ();  
 
 
-function findPrice(roll){
-    let totalPrice = ((roll.rollPrice) + glazeInfo[roll.glazing].price) * packAdapt[roll.size].price;  
-    eval = (Math.floor(1000 * totalPrice)/1000);
-    let newEval = eval.toFixed(2); // This line of code was inspired by the following website: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed
-    return newEval;
-}
+// function findPrice(roll){
+//     let totalPrice = ((roll.rollPrice) + glazeInfo[roll.glazing].price) * packAdapt[roll.size].price;  
+//     eval = (Math.floor(1000 * totalPrice)/1000);
+//     let newEval = eval.toFixed(2); // This line of code was inspired by the following website: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed
+//     return newEval;
+// }
 
 function addRoll(rollType, rollGlazing, packSize, rollPrice){
     const cinroll = new Roll2(rollType, rollGlazing, packSize, rollPrice);
@@ -91,7 +91,7 @@ function addRollInfo(cinroll){
     rollNameElement.innerText = cinroll.type + " Cinnamon Roll";
     rollGlazeElement.innerText = "Glazing: " + cinroll.glazing; 
     rollSizeElement.innerText = "Pack Size: " + cinroll.size;
-    endPriceElement.innerText = "$" + " " + (findPrice(cinroll));; 
+    // endPriceElement.innerText = "$" + " " + (findPrice(cinroll));
 }
 
 function deleteEntry(cinroll){

@@ -36,6 +36,8 @@ let packAdapt = {
     },
 };
 
+
+
 let cart = [];
 const queryString = window.location.search; 
 const params = new URLSearchParams(queryString);
@@ -65,7 +67,7 @@ function packChange(event){
     packSize = packAdapt[current].name;
     packPrice = packAdapt[current].price;
     updateTotalPrice();
-    callRoll(); 
+    // callRoll(); 
 }
 
 function glazeChange(event){
@@ -74,7 +76,7 @@ function glazeChange(event){
     glazingPrice = glazeInfo[currentoption].price;
     rollGlazing = glazeInfo[currentoption].name;
     updateTotalPrice();
-    callRoll();
+    // callRoll();
 }
 
 function updateTotalPrice() {
@@ -108,14 +110,13 @@ class Roll {
     }
 }
 
-let mainCart = JSON.parse(localStorage.getItem("cart"))||[];
 
 function callRoll(){
     //console.log(packSize); 
     //console.log(rollGlazing); 
     let purchase = new Roll(rollType, rollGlazing, packSize, basePrice);
-    cart.push(purchase); 
-    return purchase; 
+    return (cart.push(purchase)); 
+    
 }
 
 function rollToCart(){
@@ -124,6 +125,7 @@ function rollToCart(){
 }
 
 
+let mainCart = JSON.parse(localStorage.getItem("cart"))||[];
 
 function storeRoll (){
     let cartArray = Array.from(cart);
@@ -132,6 +134,9 @@ function storeRoll (){
     console.log(cartArrayUpdate);
     localStorage.setItem("storedCart", cartArrayUpdate);
 }
+
+
+
 
 
 

@@ -134,5 +134,3 @@ let newEval = addPrice.toFixed(2);
 finalPrice.innerText = "$ " + newEval; 
 
 
-
-

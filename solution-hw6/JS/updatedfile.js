@@ -1,3 +1,45 @@
+let glazeInfo = {
+    original:{
+        name: "Keep Original", 
+        price: 0, 
+    },
+    sugarmilk:{
+        name: "Sugar Milk", 
+        price: 0,
+    },
+    vanilla:{
+        name: "Vanilla Milk", 
+        price: 0.50, 
+    },
+    doublechocolate:{
+        name: "Double Chocolate",
+        price: 1.50, 
+    },
+}; 
+
+let packAdapt = {
+    first:{
+        name: "1",
+        price: 1, 
+    },
+    second:{
+        name: "3", 
+        price: 3, 
+    },
+    third:{
+        name: "6", 
+        price: 5, 
+    },
+    fourth:{
+        name: "12", 
+        price: 10,
+    },
+};
+
+
+
+
+
 class Roll2 {
     constructor(rollType, rollGlazing, packSize, rollPrice) {
         this.type = rollType;
@@ -6,6 +48,14 @@ class Roll2 {
         this.rollPrice = rollPrice;  
     }
 }
+
+
+
+
+// function rollToCart(){
+//     console.log(callRoll());
+// }
+
 
 let priceArray = []; 
 let finalCart = new Set ();  
@@ -17,25 +67,25 @@ function findPrice(roll){
     return newEval;
 }
 
-function addRoll(rollType, rollGlazing, packSize, rollPrice){
-    const cinroll = new Roll2(rollType, rollGlazing, packSize, rollPrice);
-    finalCart.add(cinroll);
-    return cinroll; 
-}
+// function addRoll(rollType, rollGlazing, packSize, rollPrice){
+//     const cinroll = new Roll2(rollType, rollGlazing, packSize, rollPrice);
+//     finalCart.add(cinroll);
+//     return cinroll; 
+// }
 
-function appendRoll(cinroll){
-    let template = document.querySelector("#cardtemplate");
-    let clone = template.content.cloneNode(true);
-    cinroll.element = clone.querySelector(".cartorder");
-    const remove = cinroll.element.querySelector(".remove");
-    //console.log(remove); 
-    remove.addEventListener("click", () => {
-        deleteEntry(cinroll);
-    });     
-    const insertRoll = document.querySelector(".cartbox"); 
-    insertRoll.prepend(cinroll.element);
-    addRollInfo(cinroll);
-}
+// function appendRoll(cinroll){
+//     let template = document.querySelector("#cardtemplate");
+//     let clone = template.content.cloneNode(true);
+//     cinroll.element = clone.querySelector(".cartorder");
+//     const remove = cinroll.element.querySelector(".remove");
+//     //console.log(remove); 
+//     remove.addEventListener("click", () => {
+//         deleteEntry(cinroll);
+//     });     
+//     const insertRoll = document.querySelector(".cartbox"); 
+//     insertRoll.prepend(cinroll.element);
+//     addRollInfo(cinroll);
+// }
 
 
 
@@ -73,7 +123,13 @@ addPrice = (Math.floor(1000 * addPrice)/1000);
 let newEval = addPrice.toFixed(2);
 finalPrice.innerText = "$ " + newEval; 
 
-
+function callRoll(){
+    //console.log(packSize); 
+    //console.log(rollGlazing); 
+    let purchase = new Roll(rollType, rollGlazing, packSize, basePrice);
+    finalCart.push(purchase); 
+    console.log(finalCart); 
+}
 
 
 

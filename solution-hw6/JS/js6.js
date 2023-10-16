@@ -108,6 +108,8 @@ class Roll {
     }
 }
 
+let mainCart = JSON.parse(localStorage.getItem("cart"))||[];
+
 function callRoll(){
     //console.log(packSize); 
     //console.log(rollGlazing); 
@@ -118,7 +120,20 @@ function callRoll(){
 
 function rollToCart(){
     console.log(callRoll());
+    storeRoll(); 
 }
+
+
+
+function storeRoll (){
+    let cartArray = Array.from(cart);
+    console.log(cartArray);
+    let cartArrayUpdate = JSON.stringify(cartArray); 
+    console.log(cartArrayUpdate);
+    localStorage.setItem("storedCart", cartArrayUpdate);
+}
+
+
 
 
 

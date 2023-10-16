@@ -45,16 +45,11 @@ class Roll2 {
     }
 }
 
+
+let mainCart = JSON.parse(localStorage.getItem("cart"))||[];
 let priceArray = []; 
 let finalCart = new Set ();  
-let cartMain2 = new Roll2 ("Walnut", "Vanilla Milk", "12", 3.49);
-let cartMain4 = new Roll2 ("Apple", "Original", "3", 3.49);
-let cartMain3 = new Roll2 ("Raisin", "Sugar Milk", "3", 2.99);
-let cartMain1 = new Roll2 ("Original", "Sugar Milk", "1", 2.49);
-finalCart.add(cartMain4);
-finalCart.add(cartMain3);
-finalCart.add(cartMain2);
-finalCart.add(cartMain1);
+
 
 function findPrice(roll){
     let totalPrice = ((roll.rollPrice) + glazeInfo[roll.glazing].price) * packAdapt[roll.size].price;  
@@ -134,3 +129,15 @@ let newEval = addPrice.toFixed(2);
 finalPrice.innerText = "$ " + newEval; 
 
 
+function getRoll(){
+    let cartArrayUpdate = localStorage.getItem("storedCart");
+    let cartArray = JSON.parse(cartArrayUpdate);
+    for (const info of cartArray){
+        let rollz = addRoll (info.type, info.glazing, info.size); 
+        appendRoll(rollz);
+    }
+}
+
+if (localStorage.getItem("storedCart") != null){
+    getRoll();
+}

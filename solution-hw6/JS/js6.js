@@ -110,29 +110,34 @@ class Roll {
     }
 }
 
+let mainCart = JSON.parse(localStorage.getItem("storedCart"));
+console.log(mainCart); 
+
 
 function callRoll(){
     //console.log(packSize); 
     //console.log(rollGlazing); 
     let purchase = new Roll(rollType, rollGlazing, packSize, basePrice);
-    return (cart.push(purchase)); 
+    cart.push(purchase);
+    mainCart.push(cart); 
+    return mainCart;
     
 }
 
 function rollToCart(){
-    console.log(callRoll());
+    callRoll();
     storeRoll(); 
 }
 
 
-let mainCart = JSON.parse(localStorage.getItem("cart"))||[];
 
 function storeRoll (){
-    let cartArray = Array.from(cart);
+    let cartArray = Array.from(mainCart);
     console.log(cartArray);
     let cartArrayUpdate = JSON.stringify(cartArray); 
     console.log(cartArrayUpdate);
     localStorage.setItem("storedCart", cartArrayUpdate);
+ 
 }
 
 

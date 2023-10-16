@@ -1,1 +1,314 @@
+*{
+    margin: 0px auto;
+}
+    
+hr{
+    height: 3px; 
+    background-color: black; 
+    width: 750px;
+    margin-top: 48px; 
+}
+
+.productcontainer{
+    display: flex;   
+}
+
+#picturecontainer{
+    display: flex; 
+    margin-top: 30px; 
+    margin-left: 25px; 
+}
+
+#logopicture{
+    width: 400px;  
+}
+
+#topleftinfo{
+    margin-top: 25px; 
+    margin-right: 0px; 
+}
+
+#productsandcart{
+    font-family: sans-serif; 
+    font-size: 25px; 
+    color: black;  
+    margin-top: 25px;
+}
+
+#highlight{
+    background-color: yellow;
+    font-weight: bold; 
+    margin-left: 390px; 
+    margin-right: 30px; 
+}
+
+#cartpg{
+    margin-left: 60px; 
+}
+
+#handmade{
+    color: black;
+    text-align: left;  
+    margin-top: 77px;  
+    font-family: sans-serif;  
+    font-size: 35px; 
+    font-weight: normal; 
+}
+
+.toprow{
+    display: flex;
+    margin-left: 70px;
+}
+
+.card{
+    margin: 30px; 
+    padding: 7px; 
+} 
+
+.bottomrow{
+    display: flex;
+    margin-left: 70px; 
+}
+
+.cardimage{
+    border: 4px; 
+    border-color: black; 
+    border-style: solid;
+    width: 285px;
+    height: 285px; 
+    margin-bottom: 8px; 
+}
+
+.cardtext{
+    font-family: sans-serif; 
+    color: black; 
+    font-size: 26px; 
+    text-decoration: underline; 
+    margin-bottom: 5px;    
+}
+
+a:link{
+    text-decoration: none;
+}
+
+.cardprice {
+    font-family: sans-serif;  
+    font-size: 26px;
+    color: black;  
+}
+
+.card:hover{
+    background-color: yellow;
+    padding: 7px 7px 7px 7px; 
+}
+
+.card:hover span{
+    font-weight: bold; 
+    text-decoration: none; 
+}
+
+.originalorder{
+    display: flex;       
+}
+
+#originalimageorder{
+    border: 4px; 
+    border-color: black; 
+    border-style: solid;
+    width: 600px;
+    height: 600px; 
+    margin-left: 115px; 
+}
+
+#secondcontainer{
+    flex-direction: column; 
+    display: flex; 
+    margin-left: 75px; 
+    margin-right: 60px; 
+    width: 400px; 
+    margin-top: 20px; 
+} 
+
+.customizetext{
+    font-family: sans-serif;
+    font-size: 27px;  
+    margin-bottom: 10px; 
+}
+
+.optionslist{
+    margin-left: 0px; 
+    font-family: sans-serif;
+    font-size: 27px; 
+    margin-bottom: 9px; 
+    margin-top: 8px; 
+}
+
+#glazeoptions, #packsize{
+    font-family: sans-serif;
+    width: 350px;  
+    font-size: 27px; 
+    height: 65px; 
+    border: 4px solid black; 
+}
+
+#pricecartdetail{
+    font-size: 27px; 
+    font-weight: bold;
+    font-family: sans-serif; 
+    margin-left: 20px; 
+    font-family: sans-serif;
+}
+
+#addtocart{
+    background-color: yellow;
+    width: 210px; 
+    font-size: 27px;
+    font-weight: bold; 
+    height: 60px; 
+    border: 4px solid black;
+    margin-left: 13px; 
+    margin-right: 0px;
+}
+
+#finalprice{
+    width: 100px; 
+    margin-right: 0px; 
+    margin-left: 15px;
+}
+
+#finalprice2{
+    display: flex;
+    text-align: right; 
+    width: 200px; 
+    margin-left: 7px;
+}
+
+#highlightforcart{
+    background-color: yellow;
+    font-weight: bold; 
+    margin-left: 65px; 
+    font-family: 'Helvetica', 'Arial', sans-serif;  
+    font-weight: bold; 
+} 
+    
+#productforcart{
+    font-family: 'Helvetica', 'Arial', sans-serif;  
+    font-weight: lighter;
+    margin-left: 420px; 
+    margin-right: 0px; 
+}
+
+.cartdescriptions{
+    display: flex; 
+    margin-left: 12px;
+    margin-right: 20px;
+    flex-direction: column; 
+    font-family: sans-serif;
+    font-size: 22px; 
+    margin-top: 22px; 
+    font-weight: lighter;
+}  
+
+.cartimg{
+    display: flex; 
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+.rollname, .rollglaze, .rollsize{
+    width: 300px; 
+    margin-bottom: 15px; 
+}
+
+.pricedescription{
+    display: flex; 
+    flex-direction: column;
+    font-family: sans-serif;
+    font-size: 22px; 
+    margin-top: -10px;  
+    font-weight: lighter; 
+    margin-left: 25px; 
+    margin-right: 0px; 
+    text-align: right;   
+} 
+
+.cartimages{
+    border: 3px; 
+    border-color: black; 
+    border-style: solid;
+    width: 200px;
+    height: 200px; 
+    margin-bottom: 23px;
+    margin-left: 15px; 
+}
+
+.rollfinalprice{
+    margin-top: 80px;  
+    font-size: 22px; 
+    font-family: 'Helvetica', 'Arial', sans-serif;  
+    font-weight: lighter; 
+    width: 90px; 
+}
+
+#overallrollholder{
+    display: flex; 
+    margin-left: 400px;
+    flex-direction: row; 
+}
+
+.remove{
+    display: flex; 
+    flex-direction: column; 
+    font-weight: bold; 
+    text-decoration: underline;
+    margin-left: 425px; 
+    margin-bottom: 20px; 
+    font-size: 25px; 
+}
+
+#checkout{
+    background-color: yellow;
+    width: 170px;
+    font-family: 'Helvetica', 'Arial', sans-serif;  
+    font-size: 22px;
+    font-weight: bold; 
+    height: 70px; 
+    border: 2px solid black;
+    margin-left: 926px; 
+    margin-top: 3px; 
+}
+
+a:visited{
+    color: black; 
+}
+
+#checkoutline{
+    margin-left: 410px;
+    margin-top: 20px; 
+    width: 685px; 
+    margin-right: 0px; 
+}
+
+#handmadeforcart{
+    color: black;
+    text-align: left;  
+    margin-top: 70px;  
+    font-family: 'Helvetica', 'Arial', sans-serif;  
+    font-size: 27px; 
+    font-weight: lighter;  
+}
+
+#totalprice{
+    display: flex; 
+    font-family: 'Helvetica', 'Arial', sans-serif;  
+    font-size: 23px; 
+    margin-left: 667px; 
+    margin-top: 5px; 
+    font-weight: lighter;
+}
+
+#total{
+    margin-right: 300px; 
+}
+
 

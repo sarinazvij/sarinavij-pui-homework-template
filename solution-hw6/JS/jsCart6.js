@@ -18,7 +18,7 @@ let glazeInfo = {
 }; 
 
 let packAdapt = {
-    "1":  {
+    "1":{
         name: "1",
         price: 1, 
     },
@@ -64,14 +64,12 @@ function storeRoll (){
 
 
 function findPrice(roll){ 
-   console.log(packAdapt[roll.size].price); 
-    let totalPrice = ((roll.basePrice) + glazeInfo[roll.glazing].price) * packAdapt[roll.size].price;  
-
+    console.log((glazeInfo[roll.glazing].name)); 
+    // let totalPrice = parseFloat(((roll.basePrice) + glazeInfo[roll.glazing].price) * packAdapt[roll.size].price);  
+    // eval = (Math.floor(1000 * totalPrice)/1000);
+    // let newEval = eval.toFixed(2); // This line of code was inspired by the following website: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed
     
-    eval = (Math.floor(1000 * totalPrice)/1000);
-    let newEval = eval.toFixed(2); // This line of code was inspired by the following website: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed
-    
-    return newEval;
+    // return newEval;
 }
 
 function addRoll(rollType, rollGlazing, packSize, rollPrice){

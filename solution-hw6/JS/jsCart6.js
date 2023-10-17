@@ -37,11 +37,11 @@ let packAdapt = {
 };
 
 class Roll2 {
-    constructor(rollType, rollGlazing, packSize, basePrice) {
+    constructor(rollType, rollGlazing, packSize, rollPrice) {
         this.type = rollType;
         this.glazing = rollGlazing;
         this.size = packSize;
-        this.basePrice = basePrice;  
+        this.rollPrice = rollPrice;  
     }
 }
 
@@ -49,15 +49,16 @@ class Roll2 {
 let mainCart = JSON.parse(localStorage.getItem("storedCart")); 
 let priceArray = []; 
 let finalCart = [];
-console.log(mainCart); 
+//console.log(mainCart); 
 
 
 function storeRoll (){
     let cartArray = Array.from(mainCart);
-   //console.log(cartArray);
+   // console.log(cartArray);
     let cartArrayUpdate = JSON.stringify(cartArray); 
-    console.log(cartArrayUpdate);
+    //console.log(cartArrayUpdate);
     localStorage.setItem("storedCart", cartArrayUpdate);
+<<<<<<< HEAD
    
     
 }
@@ -70,7 +71,15 @@ function findPrice(roll){
     // let newEval = eval.toFixed(2); // This line of code was inspired by the following website: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed
     
     // return newEval;
+=======
+>>>>>>> parent of bd79981 (adding info)
 }
+// function findPrice(roll){ 
+//     let totalPrice = ((roll.rollPrice) + glazeInfo[roll.glazing].price) * packAdapt[roll.size].price;  
+//     eval = (Math.floor(1000 * totalPrice)/1000);
+//     let newEval = eval.toFixed(2); // This line of code was inspired by the following website: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed
+//     return newEval;
+// }
 
 function addRoll(rollType, rollGlazing, packSize, rollPrice){
     const cinroll = new Roll2(rollType, rollGlazing, packSize, rollPrice);
@@ -105,7 +114,7 @@ function addRollInfo(cinroll){
     rollNameElement.innerText = cinroll.type + " Cinnamon Roll";
     rollGlazeElement.innerText = "Glazing: " + cinroll.glazing; 
     rollSizeElement.innerText = "Pack Size: " + cinroll.size;
-    endPriceElement.innerText = "$" + " " + (findPrice(cinroll));
+    // endPriceElement.innerText = "$" + " " + (findPrice(cinroll));
 }
 
 
@@ -126,17 +135,17 @@ cinroll.element.remove();
         }
      
     }
-    console.log(finalCart); 
-    priceArray = [];
+    //console.log(finalCart); 
+    // priceArray = [];
   
   
     
 
-    for (const cinroll of finalCart){
-        console.log(cinroll);
-        priceArray.push(findPrice(cinroll)); 
-        console.log(priceArray);
-    }  
+    // for (const cinroll of finalCart){
+    //     console.log(cinroll);
+    //     // priceArray.push(findPrice(cinroll)); 
+    //     console.log(priceArray);
+    // }  
     let finalPrice = document.querySelector("#finalprice2"); 
     let addPrice = 0;
     for (let element of priceArray){
@@ -168,7 +177,7 @@ function getRoll(){
     let cartArrayUpdate = localStorage.getItem("storedCart");
     let cartArray = JSON.parse(cartArrayUpdate);
     for (const info of cartArray){
-        let rollz = addRoll(info.type, info.glazing, info.size, info.basePrice); 
+        let rollz = addRoll (info.type, info.glazing, info.size); 
         appendRoll(rollz);
     }
 }

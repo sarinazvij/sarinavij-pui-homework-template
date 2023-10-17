@@ -101,31 +101,24 @@ for (let size in packAdapt){
     packOption.appendChild(choice);
 }
 
-// class Roll {
-//     constructor(rollType, rollGlazing, packSize, basePrice) {
-//         this.type = rollType;
-//         this.glazing = rollGlazing;
-//         this.size = packSize;
-//         this.basePrice = basePrice;
-//     }
-// }
-
-
-class Roll2 {
-    constructor(rollType, rollGlazing, packSize, rollPrice) {
+class Roll {
+    constructor(rollType, rollGlazing, packSize, basePrice) {
         this.type = rollType;
         this.glazing = rollGlazing;
         this.size = packSize;
-        this.rollPrice = rollPrice;  
+        this.basePrice = basePrice;
     }
 }
+
+
 
 
 function callRoll(){
     //console.log(packSize); 
     //console.log(rollGlazing); 
-    let purchase = new Roll2(rollType, rollGlazing, packSize, rollPrice);
-    //cart.push(purchase);
+    let purchase = new Roll(rollType, rollGlazing, packSize, basePrice);
+    
+    cart.push(purchase);
     mainCart.push(purchase)
 }
 

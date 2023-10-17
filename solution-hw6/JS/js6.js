@@ -101,27 +101,32 @@ for (let size in packAdapt){
     packOption.appendChild(choice);
 }
 
-class Roll {
-    constructor(rollType, rollGlazing, packSize, basePrice) {
+// class Roll {
+//     constructor(rollType, rollGlazing, packSize, basePrice) {
+//         this.type = rollType;
+//         this.glazing = rollGlazing;
+//         this.size = packSize;
+//         this.basePrice = basePrice;
+//     }
+// }
+
+
+class Roll2 {
+    constructor(rollType, rollGlazing, packSize, rollPrice) {
         this.type = rollType;
         this.glazing = rollGlazing;
         this.size = packSize;
-        this.basePrice = basePrice;
+        this.rollPrice = rollPrice;  
     }
 }
-
-let mainCart = JSON.parse(localStorage.getItem("storedCart"));
-console.log(mainCart); 
 
 
 function callRoll(){
     //console.log(packSize); 
     //console.log(rollGlazing); 
-    let purchase = new Roll(rollType, rollGlazing, packSize, basePrice);
-    cart.push(purchase);
-    mainCart.push(cart); 
-    return mainCart;
-    
+    let purchase = new Roll2(rollType, rollGlazing, packSize, rollPrice);
+    //cart.push(purchase);
+    mainCart.push(purchase)
 }
 
 function rollToCart(){
@@ -137,7 +142,6 @@ function storeRoll (){
     let cartArrayUpdate = JSON.stringify(cartArray); 
     console.log(cartArrayUpdate);
     localStorage.setItem("storedCart", cartArrayUpdate);
- 
 }
 
 
@@ -146,4 +150,6 @@ function storeRoll (){
 
 
 
-
+let mainCart = JSON.parse(localStorage.getItem("storedCart"));
+console.log(mainCart); 
+  

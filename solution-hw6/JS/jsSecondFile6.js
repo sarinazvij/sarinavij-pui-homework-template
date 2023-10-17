@@ -48,20 +48,27 @@ class Roll2 {
 
 let mainCart = JSON.parse(localStorage.getItem("storedCart")); 
 let priceArray = []; 
-let finalCart = new Set (); 
-console.log(mainCart); 
+let finalCart = [];
+//console.log(mainCart); 
 
 
-function findPrice(roll){
-    let totalPrice = ((roll.rollPrice) + glazeInfo[roll.glazing].price) * packAdapt[roll.size].price;  
-    eval = (Math.floor(1000 * totalPrice)/1000);
-    let newEval = eval.toFixed(2); // This line of code was inspired by the following website: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed
-    return newEval;
+function storeRoll (){
+    let cartArray = Array.from(mainCart);
+   // console.log(cartArray);
+    let cartArrayUpdate = JSON.stringify(cartArray); 
+    //console.log(cartArrayUpdate);
+    localStorage.setItem("storedCart", cartArrayUpdate);
 }
+// function findPrice(roll){ 
+//     let totalPrice = ((roll.rollPrice) + glazeInfo[roll.glazing].price) * packAdapt[roll.size].price;  
+//     eval = (Math.floor(1000 * totalPrice)/1000);
+//     let newEval = eval.toFixed(2); // This line of code was inspired by the following website: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed
+//     return newEval;
+// }
 
 function addRoll(rollType, rollGlazing, packSize, rollPrice){
     const cinroll = new Roll2(rollType, rollGlazing, packSize, rollPrice);
-    finalCart.add(cinroll);
+    finalCart.push(cinroll);
     return cinroll; 
 }
 
@@ -95,22 +102,35 @@ function addRollInfo(cinroll){
     // endPriceElement.innerText = "$" + " " + (findPrice(cinroll));
 }
 
+
 function deleteEntry(cinroll){
-  
-    // cinroll.element.remove(); 
-    // finalCart.delete(cinroll);
+
+cinroll.element.remove(); 
+
+    for (let i = 0; i < finalCart.length; i++){
+        //console.log(cinroll)
+
+        if (finalCart[i] === cinroll){
+            finalCart.splice(i,1);
+            mainCart.splice(i,1)
+            console.log(finalCart);
+            console.log(mainCart);
+            storeRoll(); 
+           return
+        }
+     
+    }
+    //console.log(finalCart); 
     // priceArray = [];
-    // let blah = indexOf(); 
-    // console.log(blah); 
- 
+  
   
     
 
-    for (const cinroll of finalCart){
-        console.log(cinroll);
-        priceArray.push(findPrice(cinroll)); 
-        console.log(priceArray);
-    }  
+    // for (const cinroll of finalCart){
+    //     console.log(cinroll);
+    //     // priceArray.push(findPrice(cinroll)); 
+    //     console.log(priceArray);
+    // }  
     let finalPrice = document.querySelector("#finalprice2"); 
     let addPrice = 0;
     for (let element of priceArray){
@@ -127,6 +147,7 @@ function deleteEntry(cinroll){
 for (const cinroll of finalCart){
     appendRoll(cinroll);
     priceArray.push(findPrice(cinroll)); 
+    
 }
 
 let finalPrice = document.querySelector("#finalprice2"); 

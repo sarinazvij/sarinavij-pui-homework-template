@@ -1,5 +1,5 @@
 let glazeInfo = {
-    "Original":{
+    "Keep Original":{
         name: "Keep Original", 
         price: 0, 
     },

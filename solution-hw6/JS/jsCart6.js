@@ -107,37 +107,12 @@ function deleteEntry(cinroll) {
             mainCart.splice(i, 1);
             console.log(finalCart);
             console.log(mainCart);
-            storeRoll();
-            
+            storeRoll(); 
         }
     }
     console.log(finalCart);
-
     calcTotalRoll(); 
-
-
-
-    // for (const element of finalCart){
-    //     console.log(element);
-    //     priceArray.push(findPrice(element)); 
-    //     console.log(priceArray);
-    // }  
-    // calcRoll();
-    // let finalPrice = document.querySelector("#finalprice2").val;
-    // let addPrice = 0;
-    // for (let element of priceArray) {
-    //     addPrice += parseFloat(element);
-    // }
-    // if (priceArray.length == "0") {
-    //     finalPrice.innerText = "$ 0.00";
-    // }
-    // else {
-    //     finalPrice.innerText = "$ " + addPrice;
-    // }
 }
-
-
-
 
 function getRoll() {
     let cartArrayUpdate = localStorage.getItem("storedCart");
@@ -146,42 +121,24 @@ function getRoll() {
         let rollz = addRoll(info.type, info.glazing, info.size, info.basePrice);
         appendRoll(rollz);
     }
-        calcTotalRoll(); 
-
-    
+    calcTotalRoll();  
 }
+
 function calcTotalRoll() {
     let sum = 0; 
     let cartArrayUpdate = localStorage.getItem("storedCart");
     let cartArray = JSON.parse(cartArrayUpdate);
     for (const info of cartArray) {
         let itemPrice = (info.basePrice + glazeInfo[info.glazing].price) * packAdapt[info.size].price;
-        sum+=itemPrice
+        sum+=itemPrice; 
     }
-
-        // priceArray.push(findPrice(rollz));
-     
-    // let sum = 0;
-    // for (let i = 0; i < priceArray.length; i++) {
-    //     sum = sum + priceArray[i];
-    // }
-    //console.log(sum); 
     let finalPrice = document.querySelector("#finalprice2");
     sum = (Math.floor(1000 * sum) / 1000);
-    let newEval = sum.toFixed(2);
+    let newEval = sum.toFixed(2); // This line of code was inspired by the following website: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed
     finalPrice.innerText = "$ " + newEval;
-    
 }
-
 
 if (localStorage.getItem("storedCart") != null) {
     getRoll();
 }
 
-// let finalPrice = document.querySelector("#finalprice2"); 
-// let addPrice = parseFloat(priceArray[0]) + parseFloat(priceArray[1]) +  parseFloat(priceArray[2]) +  parseFloat(priceArray[3]); 
-
-// //console.log(addPrice); 
-// addPrice = (Math.floor(1000 * addPrice)/1000);
-// let newEval = addPrice.toFixed(2);
-// finalPrice.innerText = "$ " + newEval; 

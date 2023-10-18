@@ -36,8 +36,6 @@ let packAdapt = {
     },
 };
 
-
-
 let cart = [];
 const queryString = window.location.search; 
 const params = new URLSearchParams(queryString);
@@ -52,8 +50,8 @@ let mainIndex = rollArray.indexOf(rollType);
 let basePrice = Object.values(rolls)[mainIndex].basePrice; 
 const rollPicture = document.querySelector("#originalimageorder"); 
 rollPicture.src = './../assets/products/' + Object.values(rolls)[mainIndex].imageFile; 
-let packSize = "1"
-let rollGlazing = "Keep Original"
+let packSize = "1"; 
+let rollGlazing = "Keep Original"; 
 let glazingPrice = 0;
 let packPrice = 1;
 finalprice.innerHTML = basePrice; 
@@ -110,16 +108,12 @@ class Roll {
     }
 }
 
-
-
-
 function callRoll(){
     //console.log(packSize); 
     //console.log(rollGlazing); 
-    let purchase = new Roll(rollType, rollGlazing, packSize, basePrice);
-    
+    let purchase = new Roll(rollType, rollGlazing, packSize, basePrice); 
     cart.push(purchase);
-    mainCart.push(purchase)
+    mainCart.push(purchase); 
 }
 
 function rollToCart(){
@@ -127,20 +121,12 @@ function rollToCart(){
     storeRoll(); 
 }
 
-
-
 function storeRoll (){
     let cartArray = Array.from(mainCart);
     console.log(cartArray);
     let cartArrayUpdate = JSON.stringify(cartArray); 
     localStorage.setItem("storedCart", cartArrayUpdate);
 }
-
-
-
-
-
-
 
 let mainCart = JSON.parse(localStorage.getItem("storedCart"));
 console.log(mainCart); 

@@ -38,7 +38,6 @@ let packAdapt = {
 
 class Roll2 {
     constructor(rollType, rollGlazing, packSize, basePrice) {
-        console.log(rollGlazing + "******");
         this.type = rollType;
         this.glazing = rollGlazing;
         this.size = packSize;
@@ -61,15 +60,11 @@ function storeRoll (){
     localStorage.setItem("storedCart", cartArrayUpdate);
 }
 function findPrice(roll){ 
-    console.log(roll); 
-    // roll.glazing = "Original"; 
-    console.log(roll.glazing)
-    console.log(glazeInfo[roll.glazing].price);
     let totalPrice = ((roll.basePrice) + glazeInfo[roll.glazing].price) * packAdapt[roll.size].price;  
     eval = (Math.floor(1000 * totalPrice)/1000);
     let newEval = eval.toFixed(2); // This line of code was inspired by the following website: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed
-    console.log(newEval);
-    return newEval;
+    // console.log(newEval);
+    return parseFloat(newEval);
 }
 
 function addRoll(rollType, rollGlazing, packSize, basePrice){
@@ -99,9 +94,7 @@ function addRollInfo(cinroll){
     let rollGlazeElement = cinroll.element.querySelector(".rollglaze");
     let endPriceElement = cinroll.element.querySelector(".rollfinalprice");
     let picTitle = cinroll.type.toLowerCase();
-    //console.log(picTitle);
     rollImageElement.src = './../assets/products/' + picTitle + "-cinnamon-roll.jpg";
-    //console.log(rollImageElement.src); 
     rollNameElement.innerText = cinroll.type + " Cinnamon Roll";
     rollGlazeElement.innerText = "Glazing: " + cinroll.glazing; 
     rollSizeElement.innerText = "Pack Size: " + cinroll.size;
@@ -114,7 +107,6 @@ function deleteEntry(cinroll){
 cinroll.element.remove(); 
 
     for (let i = 0; i < finalCart.length; i++){
-        //console.log(cinroll)
 
         if (finalCart[i] === cinroll){
             finalCart.splice(i,1);
@@ -127,7 +119,7 @@ cinroll.element.remove();
      
     }
     console.log(finalCart); 
-    priceArray = [];
+ 
   
   
     
@@ -166,7 +158,6 @@ finalPrice.innerText = "$ " + newEval;
 
 function getRoll(){
     let cartArrayUpdate = localStorage.getItem("storedCart");
-    console.log(cartArrayUpdate + "@@@@@@")
     let cartArray = JSON.parse(cartArrayUpdate);
     for (const info of cartArray){
         let rollz = addRoll (info.type, info.glazing, info.size, info.basePrice); 

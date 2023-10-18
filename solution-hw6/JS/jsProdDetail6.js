@@ -133,7 +133,6 @@ function storeRoll (){
     let cartArray = Array.from(mainCart);
     console.log(cartArray);
     let cartArrayUpdate = JSON.stringify(cartArray); 
-    console.log("*** " + cartArrayUpdate);
     localStorage.setItem("storedCart", cartArrayUpdate);
 }
 

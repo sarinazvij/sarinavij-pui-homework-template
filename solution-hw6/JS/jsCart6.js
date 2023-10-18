@@ -53,7 +53,7 @@ console.log(mainCart);
 function storeRoll() {
     let cartArray = Array.from(mainCart);
     let cartArrayUpdate = JSON.stringify(cartArray);
-    console.log(cartArrayUpdate);
+    //console.log(cartArrayUpdate);
     localStorage.setItem("storedCart", cartArrayUpdate);
 }
 
@@ -105,12 +105,12 @@ function deleteEntry(cinroll) {
         if (finalCart[i] === cinroll) {
             finalCart.splice(i, 1);
             mainCart.splice(i, 1);
-            console.log(finalCart);
+            //console.log(finalCart);
             console.log(mainCart);
             storeRoll(); 
         }
     }
-    console.log(finalCart);
+    //console.log(finalCart);
     calcTotalRoll(); 
 }
 

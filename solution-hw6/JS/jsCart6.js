@@ -108,10 +108,13 @@ function deleteEntry(cinroll) {
             console.log(finalCart);
             console.log(mainCart);
             storeRoll();
-            return;
+            
         }
     }
     console.log(finalCart);
+
+    calcTotalRoll(); 
+
 
 
     // for (const element of finalCart){
@@ -119,18 +122,18 @@ function deleteEntry(cinroll) {
     //     priceArray.push(findPrice(element)); 
     //     console.log(priceArray);
     // }  
-    calcRoll();
-    let finalPrice = document.querySelector("#finalprice2").val;
-    let addPrice = 0;
-    for (let element of priceArray) {
-        addPrice += parseFloat(element);
-    }
-    if (priceArray.length == "0") {
-        finalPrice.innerText = "$ 0.00";
-    }
-    else {
-        finalPrice.innerText = "$ " + addPrice;
-    }
+    // calcRoll();
+    // let finalPrice = document.querySelector("#finalprice2").val;
+    // let addPrice = 0;
+    // for (let element of priceArray) {
+    //     addPrice += parseFloat(element);
+    // }
+    // if (priceArray.length == "0") {
+    //     finalPrice.innerText = "$ 0.00";
+    // }
+    // else {
+    //     finalPrice.innerText = "$ " + addPrice;
+    // }
 }
 
 
@@ -142,16 +145,26 @@ function getRoll() {
     for (const info of cartArray) {
         let rollz = addRoll(info.type, info.glazing, info.size, info.basePrice);
         appendRoll(rollz);
-        priceArray.push(findPrice(rollz));
-       calcRoll(); 
+    }
+        calcTotalRoll(); 
 
-    }
+    
 }
-function calcRoll() {
-    let sum = 0;
-    for (let i = 0; i < priceArray.length; i++) {
-        sum = sum + priceArray[i];
+function calcTotalRoll() {
+    let sum = 0; 
+    let cartArrayUpdate = localStorage.getItem("storedCart");
+    let cartArray = JSON.parse(cartArrayUpdate);
+    for (const info of cartArray) {
+        let itemPrice = (info.basePrice + glazeInfo[info.glazing].price) * packAdapt[info.size].price;
+        sum+=itemPrice
     }
+
+        // priceArray.push(findPrice(rollz));
+     
+    // let sum = 0;
+    // for (let i = 0; i < priceArray.length; i++) {
+    //     sum = sum + priceArray[i];
+    // }
     //console.log(sum); 
     let finalPrice = document.querySelector("#finalprice2");
     sum = (Math.floor(1000 * sum) / 1000);

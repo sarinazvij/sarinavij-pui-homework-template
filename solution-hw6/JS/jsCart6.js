@@ -37,11 +37,12 @@ let packAdapt = {
 };
 
 class Roll2 {
-    constructor(rollType, rollGlazing, packSize, rollPrice) {
+    constructor(rollType, rollGlazing, packSize, basePrice) {
+        console.log(rollGlazing + "******");
         this.type = rollType;
         this.glazing = rollGlazing;
         this.size = packSize;
-        this.rollPrice = rollPrice;  
+        this.basePrice = basePrice;  
     }
 }
 
@@ -49,25 +50,30 @@ class Roll2 {
 let mainCart = JSON.parse(localStorage.getItem("storedCart")); 
 let priceArray = []; 
 let finalCart = [];
-//console.log(mainCart); 
+console.log(mainCart); 
 
 
 function storeRoll (){
     let cartArray = Array.from(mainCart);
    // console.log(cartArray);
     let cartArrayUpdate = JSON.stringify(cartArray); 
-    //console.log(cartArrayUpdate);
+    console.log(cartArrayUpdate);
     localStorage.setItem("storedCart", cartArrayUpdate);
 }
-// function findPrice(roll){ 
-//     let totalPrice = ((roll.rollPrice) + glazeInfo[roll.glazing].price) * packAdapt[roll.size].price;  
-//     eval = (Math.floor(1000 * totalPrice)/1000);
-//     let newEval = eval.toFixed(2); // This line of code was inspired by the following website: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed
-//     return newEval;
-// }
+function findPrice(roll){ 
+    console.log(roll); 
+    // roll.glazing = "Original"; 
+    console.log(roll.glazing)
+    console.log(glazeInfo[roll.glazing].price);
+    let totalPrice = ((roll.basePrice) + glazeInfo[roll.glazing].price) * packAdapt[roll.size].price;  
+    eval = (Math.floor(1000 * totalPrice)/1000);
+    let newEval = eval.toFixed(2); // This line of code was inspired by the following website: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed
+    console.log(newEval);
+    return newEval;
+}
 
-function addRoll(rollType, rollGlazing, packSize, rollPrice){
-    const cinroll = new Roll2(rollType, rollGlazing, packSize, rollPrice);
+function addRoll(rollType, rollGlazing, packSize, basePrice){
+    const cinroll = new Roll2(rollType, rollGlazing, packSize, basePrice);
     finalCart.push(cinroll);
     return cinroll; 
 }
@@ -99,7 +105,7 @@ function addRollInfo(cinroll){
     rollNameElement.innerText = cinroll.type + " Cinnamon Roll";
     rollGlazeElement.innerText = "Glazing: " + cinroll.glazing; 
     rollSizeElement.innerText = "Pack Size: " + cinroll.size;
-    // endPriceElement.innerText = "$" + " " + (findPrice(cinroll));
+    endPriceElement.innerText = "$" + " " + (findPrice(cinroll));
 }
 
 
@@ -120,17 +126,17 @@ cinroll.element.remove();
         }
      
     }
-    //console.log(finalCart); 
-    // priceArray = [];
+    console.log(finalCart); 
+    priceArray = [];
   
   
     
 
-    // for (const cinroll of finalCart){
-    //     console.log(cinroll);
-    //     // priceArray.push(findPrice(cinroll)); 
-    //     console.log(priceArray);
-    // }  
+    for (const cinroll of finalCart){
+        console.log(cinroll);
+        priceArray.push(findPrice(cinroll)); 
+        console.log(priceArray);
+    }  
     let finalPrice = document.querySelector("#finalprice2"); 
     let addPrice = 0;
     for (let element of priceArray){
@@ -160,9 +166,10 @@ finalPrice.innerText = "$ " + newEval;
 
 function getRoll(){
     let cartArrayUpdate = localStorage.getItem("storedCart");
+    console.log(cartArrayUpdate + "@@@@@@")
     let cartArray = JSON.parse(cartArrayUpdate);
     for (const info of cartArray){
-        let rollz = addRoll (info.type, info.glazing, info.size); 
+        let rollz = addRoll (info.type, info.glazing, info.size, info.basePrice); 
         appendRoll(rollz);
     }
 }

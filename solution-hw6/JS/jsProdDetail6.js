@@ -53,7 +53,7 @@ let basePrice = Object.values(rolls)[mainIndex].basePrice;
 const rollPicture = document.querySelector("#originalimageorder"); 
 rollPicture.src = './../assets/products/' + Object.values(rolls)[mainIndex].imageFile; 
 let packSize = "1"
-let rollGlazing = "Keep original"
+let rollGlazing = "Keep Original"
 let glazingPrice = 0;
 let packPrice = 1;
 finalprice.innerHTML = basePrice; 
@@ -133,7 +133,7 @@ function storeRoll (){
     let cartArray = Array.from(mainCart);
     console.log(cartArray);
     let cartArrayUpdate = JSON.stringify(cartArray); 
-    console.log(cartArrayUpdate);
+    console.log("*** " + cartArrayUpdate);
     localStorage.setItem("storedCart", cartArrayUpdate);
 }
 

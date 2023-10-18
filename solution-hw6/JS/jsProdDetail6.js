@@ -129,5 +129,5 @@ function storeRoll (){
 }
 
 let mainCart = JSON.parse(localStorage.getItem("storedCart"));
-console.log(mainCart); 
+//console.log(mainCart); 
   

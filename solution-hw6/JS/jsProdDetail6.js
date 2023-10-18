@@ -128,6 +128,6 @@ function storeRoll (){
     localStorage.setItem("storedCart", cartArrayUpdate);
 }
 
-let mainCart = JSON.parse(localStorage.getItem("storedCart"));
+let mainCart = JSON.parse(localStorage.getItem("storedCart")) || [];
 console.log(mainCart); 
   

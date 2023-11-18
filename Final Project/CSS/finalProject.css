@@ -124,9 +124,12 @@ justify-content: center;
 }
 
 .content-box{
-    height: 700px;
+    /* height: 700px; */
     display: flex; 
     margin-top: 39px; 
+    justify-content: space-between;  
+    align-items: center; 
+    flex-grow: 1; 
 }
 
 .picture-box{

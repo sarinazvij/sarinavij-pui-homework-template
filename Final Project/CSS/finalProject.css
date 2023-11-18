@@ -1,6 +1,5 @@
 .mainbox{
     width: 1180px;
-    height: 2808px;
     background: #FCEADE;
 }
 
@@ -67,6 +66,7 @@
     flex-shrink: 0;
     border-radius: 80px;
     background: #D03C28;
+    background-color: rgba(208, 60, 40, 0.80);
     display: flex; 
 }
 
@@ -160,7 +160,7 @@ justify-content: center;
     position: absolute;
     display: flex; 
     flex-shrink: 0; 
-    background-color: #D03C28; 
+    background-color: #D03C28;
     width: 681px; 
     height: 86px; 
     color: white; 
@@ -212,4 +212,18 @@ justify-content: center;
     font-family: "Open Sans";
     font-size: 12px;
 
+}
+
+.globebox{
+display: flex;
+height: 493px; 
+background-color: #D03C28; 
+background-color: rgba(208, 60, 40, 0.80);
+}
+
+.wheredoesitcomefrom{
+    color: white; 
+    font-family: "Open Sans";
+    font-size: 32px;
+    margin-left: 2%; 
 }

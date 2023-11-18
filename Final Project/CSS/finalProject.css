@@ -46,7 +46,7 @@
     margin-right: 10px; 
     margin-left: 20px;
     color: black;
-    font-family: Open Sans;
+    font-family: "Open Sans";
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -72,9 +72,11 @@
 
 #interactivegame{
     display: flex; 
-    align-self: center; 
+    
     font-weight: bold;
     color: white; 
+    align-items: center; 
+justify-content: center;
 
 }
 
@@ -90,8 +92,57 @@
     filter: hue-rotate(10deg);
 }
 
-#blah{
+#maincontainer{ /* inspired by https://www.bannerbear.com/blog/how-to-overlay-text-on-an-image-in-html-and-css/ */ 
     position: absolute;
-  bottom: 8px;
-  left: 16px;
+    display: flex; 
+    flex-shrink: 0; 
+    bottom: 100px;
+    left: 16px;
+    background-color: #D03C28; 
+    width: 681px; 
+    height: 86px; 
+    color: white; 
+    font-family: "Open Sans";
+    font-size: 48px;
+    font-weight: bold; 
+    line-height: normal;
+    align-items: center; 
+    justify-content: center;
+    margin-right: 35px; 
+    z-index: 1; /* z-index information found at https://www.shecodes.io/athena/72599-how-to-bring-an-element-to-the-front-in-css-using-z-index#:~:text=To%20bring%20an%20element%20to%20front%20of%20another%20element%2C%20you,a%20lower%20z%2Dindex%20value. */
+
+}
+
+#secondarycontainer{
+    position: absolute;
+    display: flex; 
+    flex-shrink: 0; 
+    bottom: 85px;
+    background-color:#EF798A; 
+    width: 681px; 
+    height: 86px; 
+}
+
+.content-box{
+    height: 700px;
+    display: flex; 
+    margin-top: 39px; 
+}
+
+.picture-box{
+    display: flex; 
+    width: 503px; 
+    height: 493px; 
+    background-color: #EF798A;
+    margin-left: 35px; 
+    border-radius: 40px; 
+}
+
+.text-box{
+    display: flex; 
+    width: 503px; 
+    height: 493px; 
+    background-color: #EF798A;
+    margin-right: 35px; 
+    border-radius: 40px; 
 }

@@ -9,9 +9,11 @@
 
 #logopicture{
     width: 50px;
+    display: flex; 
     transform: rotate(-10deg);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    margin-left: 10px; 
+    margin-left: 4%; 
+    margin-right: 6%; 
     
 }
 
@@ -22,23 +24,34 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    margin-left: 30px; 
     height: 50px; 
+    align-items: center; 
+    text-decoration: none;
  
 }
-/* #logoname{
-    align-items: center; 
+#logoname{
     display: flex;
-   
+    align-items: center;
+    justify-content: right;
+    margin-left: 6%; 
+    margin-right: 0%;  
+    
+ 
 
-} */
+}
+
+#cuppicture{
+    margin-left: 40%; 
+}
+
 #title{
     display: flex;
     width: 308px;
     height: 82px;
     flex-shrink: 0;
     justify-content: flex-start;
-    /* margin-left: 0px;  */
+    margin-left: 2%; 
+    margin-left: 0px; 
 }
 
 #headercategories{
@@ -54,7 +67,12 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal; 
+    text-decoration: none;
     
+}
+
+#headercategories p{
+    text-decoration: none;
 }
 
 #header{
@@ -195,9 +213,7 @@ justify-content: center;
 
 .coffeemaininfo{
     display: flex; 
-    align-items: flex-start;
     flex-direction: column;
-    margin-left: 2%; 
 }
 
 .coffeetitle{
@@ -205,16 +221,19 @@ justify-content: center;
     color: black; 
     font-family: "Open Sans";
     font-size: 32px;
-    font-style: normal;
-    line-height: normal;
     margin-bottom: 1%; 
     margin-top: 3%; 
+    display: flex; 
+    margin-left: 1.5%;  
+
+ 
 }
 
 .textfordescription{
     color: black; 
     font-family: "Open Sans";
     font-size: 12px;
+    margin-left: 1.5%;  
 
 }
 
@@ -230,4 +249,5 @@ background-color: rgba(208, 60, 40, 0.80);
     font-family: "Open Sans";
     font-size: 32px;
     margin-left: 2%; 
+    margin-top: 2.5%; 
 }

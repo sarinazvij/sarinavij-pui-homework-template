@@ -1,5 +1,6 @@
 *{
-    margin: 0px auto;
+    margin: 0px auto; 
+    text-decoration: none; 
 }
 
 .mainbox{
@@ -26,7 +27,7 @@
     line-height: normal;
     height: 50px; 
     align-items: center; 
-    text-decoration: none;
+    text-decoration-color: black;
  
 }
 #logoname{
@@ -61,19 +62,17 @@
     flex-grow: 1; 
     margin-right: 10px; 
     margin-left: 20px;
-    color: black;
+    text-decoration-color: black;
     font-family: "Open Sans";
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: normal; 
-    text-decoration: none;
+   
     
 }
 
-#headercategories p{
-    text-decoration: none;
-}
+
 
 #header{
     display: flex;

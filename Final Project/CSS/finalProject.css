@@ -4,7 +4,7 @@
 }
 
 .mainbox{
-    width: 1180px;
+    width: 1200px;
     background: #FCEADE;
 }
 
@@ -76,7 +76,7 @@
 
 #header{
     display: flex;
-    width: 1180px;
+    width: 1200px;
     margin-top: 0px; 
     margin-bottom: 0px;  
 }
@@ -104,6 +104,7 @@ justify-content: center;
 
 .homeimage{
      /* display: block;  */
+    
     position: relative; 
     text-align: center; 
    
@@ -249,4 +250,41 @@ background-color: rgba(208, 60, 40, 0.80);
     font-size: 32px;
     margin-left: 2%; 
     margin-top: 2.5%; 
+}
+
+.coffeecontainergame{
+    position: absolute;
+    display: flex; 
+    flex-shrink: 0; 
+    background-color: #D03C28;
+    width: 681px; 
+    height: 86px; 
+    color: white; 
+    font-family: "Open Sans";
+    top: 20%; 
+    left: 50%; 
+    font-size: 48px;
+    font-weight: bold; 
+    align-items: center; 
+    justify-content: center; 
+    transform: translate(-50%, -25%);
+    z-index: 1; /* z-index information found at https://www.shecodes.io/athena/72599-how-to-bring-an-element-to-the-front-in-css-using-z-index#:~:text=To%20bring%20an%20element%20to%20front%20of%20another%20element%2C%20you,a%20lower%20z%2Dindex%20value. */
+}
+
+.secondarycoffeecontainergame{ 
+    position: absolute;
+    display: flex; 
+    flex-shrink: 0; 
+    top: 19.5%; 
+    right: 23%;
+    background-color:#EF798A; 
+    width: 681px; 
+    height: 86px;
+
+
+}
+
+#playnow{
+
+
 }

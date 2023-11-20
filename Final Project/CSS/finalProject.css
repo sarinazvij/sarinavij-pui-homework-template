@@ -239,7 +239,7 @@ justify-content: center;
 
 .globebox{
 display: flex;
-height: 493px; 
+/* height: 493px;  */
 background-color: #D03C28; 
 background-color: rgba(208, 60, 40, 0.80);
 }
@@ -300,3 +300,93 @@ background-color: rgba(208, 60, 40, 0.80);
     transform: translate(-50%, -50%);
 }
 
+.thing{
+    height: 500px; 
+
+   
+}
+
+#heading{
+    display: flex; 
+    font-family: "sanrita";
+    font-size: 48px;
+    flex-direction: row;
+    margin-left: 0%;  
+    
+
+ 
+
+    
+    
+}
+
+.step{
+    font-family: Inria Serif;
+font-size: 32px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+
+}
+
+.cup{
+    width: 20px; 
+    height: 50px; 
+    
+}
+
+
+.instructions{
+font-size: 20px;
+text-align: center; 
+color: #000;
+
+font-family: Inria Serif;
+
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+
+
+
+}
+#map { 
+  
+    height: 400px; 
+    width: 1200px; 
+    z-index: 1; 
+}
+
+
+.icedorhot{
+    display: flex; 
+    justify-content: space-between;
+    width: 200px; 
+}
+
+/* .paragraphClass{
+
+
+} */
+
+#coffee{
+    margin-top: 150px;
+    margin-left:100px;  
+}
+
+
+.navbar-brand{
+  
+    margin-left: 0px; 
+}
+
+.container-fluid{
+    display: flex; 
+
+}
+
+.navbar-toggler-icon{
+
+
+
+}

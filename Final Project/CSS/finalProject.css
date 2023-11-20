@@ -288,20 +288,15 @@ background-color: rgba(208, 60, 40, 0.80);
     position: absolute;
     display: flex; 
     top: 50%; 
-    right: 50%; 
-    
-  
+    right: 50%;     
     border-radius: 20px;
-background-color: #27498F;
-color: #FFF;
-
-font-family: Open Sans;
-font-size: 48px;
-width: 300px; 
-align-items: center; 
+    background-color: #27498F;
+    color: #FFF;
+    font-family: Open Sans;
+    font-size: 48px;
+    width: 300px; 
+    align-items: center; 
     justify-content: center; 
     transform: translate(-50%, -50%);
-  
-
-
 }
+

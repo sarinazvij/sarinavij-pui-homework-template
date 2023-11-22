@@ -1,13 +1,10 @@
-*{
-    margin: 0px auto; 
-    text-decoration: none; 
-}
 
+/* 
 .mainbox{
     width: 1200px;
     background: #FCEADE;
-}
-
+} */
+/* 
 #logopicture{
     width: 50px;
     display: flex; 
@@ -104,7 +101,7 @@ justify-content: center;
 
 .homeimage{
      /* display: block;  */
-    
+/*     
     position: relative; 
     text-align: center; 
    
@@ -116,10 +113,10 @@ justify-content: center;
     filter: hue-rotate(10deg);
     /* fill: rgba(183, 30, 4, 0.70);
     color-interpolation-filters: linearRGB; */
-}
 
-.maincontainer{ /* inspired by https://www.bannerbear.com/blog/how-to-overlay-text-on-an-image-in-html-and-css/ */ 
-    position: absolute;
+
+/* .maincontainer{ inspired by https://www.bannerbear.com/blog/how-to-overlay-text-on-an-image-in-html-and-css/  */ */
+    /* position: absolute;
     display: flex; 
     flex-shrink: 0; 
     bottom: 100px;
@@ -135,9 +132,9 @@ justify-content: center;
     line-height: normal;
     align-items: center; 
     justify-content: center;
-    margin-right: 35px; 
-    z-index: 1; /* z-index information found at https://www.shecodes.io/athena/72599-how-to-bring-an-element-to-the-front-in-css-using-z-index#:~:text=To%20bring%20an%20element%20to%20front%20of%20another%20element%2C%20you,a%20lower%20z%2Dindex%20value. */
+    margin-right: 35px;  */
 
+/* 
 }
 
 .secondarycontainer{
@@ -149,11 +146,11 @@ justify-content: center;
     background-color:#EF798A; 
     width: 681px; 
     height: 86px; 
-}
+} */
 
-.content-box{
+/* .content-box{ */
     /* height: 700px; */
-    display: flex; 
+    /* display: flex; 
     margin-top: 39px; 
     justify-content: space-between;  
     align-items: center; 
@@ -175,10 +172,10 @@ justify-content: center;
     height: 493px; 
     background-color: #EF798A;
     margin-right: 35px; 
-    border-radius: 40px; 
-}
+    border-radius: 40px;  */
 
-.coffeecontainer{ /*inspired by https://www.bannerbear.com/blog/how-to-overlay-text-on-an-image-in-html-and-css/ */ 
+/* 
+.coffeecontainer{ inspired by https://www.bannerbear.com/blog/how-to-overlay-text-on-an-image-in-html-and-css/ 
     position: absolute;
     display: flex; 
     flex-shrink: 0; 
@@ -194,10 +191,9 @@ justify-content: center;
     align-items: center; 
     justify-content: center; 
     transform: translate(-50%, -50%);
-    z-index: 1; /* z-index information found at https://www.shecodes.io/athena/72599-how-to-bring-an-element-to-the-front-in-css-using-z-index#:~:text=To%20bring%20an%20element%20to%20front%20of%20another%20element%2C%20you,a%20lower%20z%2Dindex%20value. */
+    z-index: 1; z-index information found at https://www.shecodes.io/athena/72599-how-to-bring-an-element-to-the-front-in-css-using-z-index#:~:text=To%20bring%20an%20element%20to%20front%20of%20another%20element%2C%20you,a%20lower%20z%2Dindex%20value. */
     
-}
-
+/* 
 .secondarycoffeecontainer{
     position: absolute;
     display: flex; 
@@ -240,7 +236,7 @@ justify-content: center;
 .globebox{
 display: flex;
 /* height: 493px;  */
-background-color: #D03C28; 
+/* background-color: #D03C28; 
 background-color: rgba(208, 60, 40, 0.80);
 }
 
@@ -267,11 +263,11 @@ background-color: rgba(208, 60, 40, 0.80);
     font-weight: bold; 
     align-items: center; 
     justify-content: center; 
-    transform: translate(-50%, -25%);
-    z-index: 1; /* z-index information found at https://www.shecodes.io/athena/72599-how-to-bring-an-element-to-the-front-in-css-using-z-index#:~:text=To%20bring%20an%20element%20to%20front%20of%20another%20element%2C%20you,a%20lower%20z%2Dindex%20value. */
-}
+    transform: translate(-50%, -25%); */
+    /* z-index: 1; z-index information found at https://www.shecodes.io/athena/72599-how-to-bring-an-element-to-the-front-in-css-using-z-index#:~:text=To%20bring%20an%20element%20to%20front%20of%20another%20element%2C%20you,a%20lower%20z%2Dindex%20value. */ */
 
-.secondarycoffeecontainergame{ 
+
+/* .secondarycoffeecontainergame{ 
     position: absolute;
     display: flex; 
     flex-shrink: 0; 
@@ -304,21 +300,21 @@ background-color: rgba(208, 60, 40, 0.80);
     height: 500px; 
 
    
-}
-
+} */
+/* 
 #heading{
     display: flex; 
     font-family: "sanrita";
     font-size: 48px;
     flex-direction: row;
     margin-left: 0%;  
-    
+     */
 
  
 
     
     
-}
+/* }
 
 .step{
     font-family: Inria Serif;
@@ -333,10 +329,10 @@ line-height: normal;
     width: 20px; 
     height: 50px; 
     
-}
+} */
 
 
-.instructions{
+/* .instructions{
 font-size: 20px;
 text-align: center; 
 color: #000;
@@ -345,18 +341,18 @@ font-family: Inria Serif;
 
 font-style: normal;
 font-weight: 400;
-line-height: normal;
+line-height: normal; */
 
 
 
-}
+/* }
 #map { 
   
     height: 400px; 
     width: 1200px; 
     z-index: 1; 
-}
-
+/* } */
+/* 
 
 .icedorhot{
     display: flex; 
@@ -364,29 +360,76 @@ line-height: normal;
     width: 200px; 
 }
 
-/* .paragraphClass{
 
-
-} */
 
 #coffee{
     margin-top: 150px;
     margin-left:100px;  
-}
+}  */ 
 
 
-.navbar-brand{
+
+ .navbar-brand{
   
     margin-left: 0px; 
+    font: sanrita; 
+
+    background-color: #FCEADE;
+    
 }
 
 .container-fluid{
-    display: flex; 
+   
+    background-color: #FCEADE;
 
 }
 
-.navbar-toggler-icon{
+.navbar-nav{
+flex-direction: row; 
+
+color: red; 
 
 
 
 }
+
+.container-fluid{
+  
+    color: black;
+
+    
+
+}
+
+.nav-link{
+    margin-left: 20px; 
+    margin-right: 20px; 
+   margin-top: 17px; 
+  
+}
+
+#interactivegame{
+    border-radius: 80px;
+    background: #D03C28; 
+    padding-left: 30px; 
+    padding-right: 30px; 
+height: 100%;
+ 
+background-position: center;  
+/* width: 120%;  */
+
+
+   
+
+}
+
+.navbar-light{
+    color: yellow; 
+
+}
+
+/* #smallerp{
+    padding: 5px; 
+
+    background: #D03C28; 
+} */

@@ -91,3 +91,8 @@
 // });
 
 
+
+
+// if (/Mobi/.test(navigator.userAgent)) {
+//   // mobile!
+// }

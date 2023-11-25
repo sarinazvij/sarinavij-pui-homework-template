@@ -1,5 +1,12 @@
+/* html 
+{ font-size: calc(1em + 1vw); }
+ */
 
 
+
+ body{
+     background: #FCEADE;
+ }
 
 /* 
 .mainbox{
@@ -392,7 +399,7 @@ flex-direction: row;
 
 color: red; 
 flex: 1; 
-justify-content: space-between;
+justify-content: space-around;
 
 
 
@@ -452,4 +459,68 @@ background-position: center;
 
     background: #D03C28; 
 } */
+
+
+
+.card{
+    width: 45%; 
+    background-color:#EF798A; 
+    border-radius: 20px;
+
+
+
+}
+
+
+#imagecapt {
+    position: relative;
+}
+
+
+.caption{
+    position: absolute; 
+  
+    top: 90%; 
+    background-color: #D03C28; 
+    color: white; 
+    margin-left: 3%; 
+    z-index: 2; 
+
+     
+  
+}
+
+
+
+
+.captions{
+    position: absolute; 
+    top: 90.6%; 
+    background-color: #D03C28; 
+    color: transparent; 
+    margin-left: 2%; 
+    z-index: 3; 
+
+
+    z-index: 1; 
+    background-color:#EF798A; 
+
+  
+
+}
+
+
+.box-shadow-hover:hover { 
+    box-shadow: 0 2px 5px black; 
+} 
+
+#coffeename{
+    display: flex; 
+justify-content: center;
+
+
+  
+
+}
+
 

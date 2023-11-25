@@ -1,4 +1,6 @@
 
+
+
 /* 
 .mainbox{
     width: 1200px;
@@ -370,14 +372,15 @@ line-height: normal; */
 
 
  .navbar-brand{
-  
-    margin-left: 0px; 
-    font: sanrita; 
+    flex: 1; 
+    justify-content: right;
 
+  
+    font-size: 0.5 em; 
+    
     background-color: #FCEADE;
     
 }
-
 .container-fluid{
    
     background-color: #FCEADE;
@@ -388,6 +391,15 @@ line-height: normal; */
 flex-direction: row; 
 
 color: red; 
+flex: 1; 
+justify-content: space-between;
+
+
+
+  
+
+
+
 
 
 
@@ -400,15 +412,22 @@ color: red;
     
 
 }
+ 
+ /* .nav-link{
+    justify-content: space-between;
 
-.nav-link{
-    margin-left: 20px; 
+   
+}  */
+
+    /* margin-left: 20px; 
     margin-right: 20px; 
-   margin-top: 17px; 
-  
-}
+   margin-top: 17px;  */
 
-#interactivegame{
+
+  
+
+
+/* #interactivegame{
     border-radius: 80px;
     background: #D03C28; 
     padding-left: 30px; 
@@ -421,7 +440,7 @@ background-position: center;
 
    
 
-}
+
 
 .navbar-light{
     color: yellow; 
@@ -433,3 +452,4 @@ background-position: center;
 
     background: #D03C28; 
 } */
+

@@ -1,5 +1,26 @@
 
 
+
+
+
+
+
+
+
+
+
+<svg id = "coffee" xmlns="http://www.w3.org/2000/svg" width="234" height="330" viewBox="0 0 234 330" fill="none">
+  <path d="M0.57192 0.5H232.93L212.004 159.435L212.004 159.437L190.559 329.5H50.0135L21.9955 159.433L21.9933 159.419L0.57192 0.5Z" fill="#E5F2FF" fill-opacity="0.5" stroke="black"/>
+</svg>
+
+
+
+
+
+
+
+
+
 // Plot.plot({
 //     marks: [
 //       Plot.ruleY([0]),

@@ -510,17 +510,38 @@ background-position: center;
 }
 
 
-.box-shadow-hover:hover { 
-    box-shadow: 0 2px 5px black; 
-} 
+/* .carousel-caption{
+ 
 
-#coffeename{
-    display: flex; 
-justify-content: center;
+    top: 49%;
+ align-items: center; 
+
+ 
 
 
   
-
 }
+
+
+#coffeename{
+    background-color: #D03C28; 
+    width: 100%; 
+
+} */
+
+
+.img-text-container {
+    position: relative;
+}
+  
+  .inner {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #D03C28; 
+    color: #fff;
+    padding: 2%; 
+  }
 
 

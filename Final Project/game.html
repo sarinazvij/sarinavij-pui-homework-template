@@ -19,27 +19,27 @@
   
   <h2> Step 1: Select whether you would like your drink hot or iced </h2>
   <div class="form-check form-check-inline">
-    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-    <label class="form-check-label" for="inlineCheckbox1"> Iced </label>
+    <input class="form-check-input" type="checkbox" id="inlineCheckbox1a" value="option1">
+    <label class="form-check-label" for="inlineCheckbox1b"> Iced </label>
   </div>
   <div class="form-check form-check-inline">
-    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-    <label class="form-check-label" for="inlineCheckbox2"> Hot </label>
+    <input class="form-check-input" type="checkbox" id="inlineCheckbox2a" value="option2">
+    <label class="form-check-label" for="inlineCheckbox2a"> Hot </label>
   </div>
 
 
   <h2> Step 2: Select the type of coffee roasting you would prefer </h2>
   <div class="form-check form-check-inline">
-    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" onclick = "addIce()" value="option1">
     <label class="form-check-label" for="inlineCheckbox1"> Light </label>
   </div>
   <div class="form-check form-check-inline">
-    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" onclick = "addIce()" value="option2">
     <label class="form-check-label" for="inlineCheckbox2"> Medium </label>
   </div>
   <div class="form-check form-check-inline">
-    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-    <label class="form-check-label" for="inlineCheckbox2"> Dark </label>
+    <input class="form-check-input" type="checkbox" id="inlineCheckbox3" onclick = "addIce()" value="option2">
+    <label class="form-check-label" for="inlineCheckbox3"> Dark </label>
   </div>
 
   <h2> Step 3: Select the type of milk you would prefer (if any) </h2>
@@ -63,9 +63,21 @@
     <option value="3">Vanilla</option>
   </select>
 
+<!-- 
   
+  <svg id = "coffee" xmlns="http://www.w3.org/2000/svg" width="234" height="330" viewBox="0 0 234 330" fill="none">
+    <path d="M0.57192 0.5H232.93L212.004 159.435L212.004 159.437L190.559 329.5H50.0135L21.9955 159.433L21.9933 159.419L0.57192 0.5Z" fill="#E5F2FF" fill-opacity="0.5" stroke="black"/>
+  </svg> -->
 
+  
+  <div id="cup">
+
+  </div>
       
+    
+  <div id="sup">
+
+  </div>
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

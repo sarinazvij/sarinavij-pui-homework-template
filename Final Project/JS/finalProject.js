@@ -1,3 +1,62 @@
+let icedCoffeeCup = d3.select("#cup")
+.append("svg")
+.attr("height", 1000)
+.attr("width", 1000); 
+
+icedCoffeeCup.append("polygon")
+  // .attr("points", "200,800 400,0 700,0 900,800")
+  .attr("points", "900,800 700,0 400,0 200,800")
+  .style("fill", "white");
+
+
+// icedCoffeeCup.append("polygon")
+// .attr("points", "775,300 700,0 400,0 325,300")
+// .style("fill", "red");
+
+
+
+function addIce(){
+
+  let lightCoffee = document.getElementById("inlineCheckbox1"); 
+  let medCoffee = document.getElementById("inlineCheckbox2"); 
+  let darkCoffee = document.getElementById("inlineCheckbox3"); 
+
+  if (lightCoffee.checked){
+    icedCoffeeCup
+    .append("polygon")  
+    .attr("points", "775,300 700,0 400,0 325,300")
+    .style("fill", "#C3890C");
+      if (!(lightCoffee.checked)){
+      icedCoffeeCup
+      .append("polygon")  
+      .attr("points", "775,300 700,0 400,0 325,300")
+      .style("fill", "black");
+    }
+  }
+
+  else if (medCoffee.checked){
+    icedCoffeeCup
+    .append("polygon")  
+    .attr("points", "775,300 700,0 400,0 325,300")
+    .style("fill", "#905B27");
+  }
+  else if (darkCoffee.checked){
+    icedCoffeeCup
+    .append("polygon")  
+    .attr("points", "775,300 700,0 400,0 325,300")
+    .style("fill", "#401D01");
+  }
+  
+  else{
+    icedCoffeeCup
+    .append("polygon")  
+    .attr("points", "775,300 700,0 400,0 325,300")
+    .style("fill", "transparent");
+   
+
+  }
+ 
+}
 
 
 
@@ -7,30 +66,6 @@
 
 
 
-
-
-<svg id = "coffee" xmlns="http://www.w3.org/2000/svg" width="234" height="330" viewBox="0 0 234 330" fill="none">
-  <path d="M0.57192 0.5H232.93L212.004 159.435L212.004 159.437L190.559 329.5H50.0135L21.9955 159.433L21.9933 159.419L0.57192 0.5Z" fill="#E5F2FF" fill-opacity="0.5" stroke="black"/>
-</svg>
-
-
-
-
-
-
-
-
-
-// Plot.plot({
-//     marks: [
-//       Plot.ruleY([0]),
-//       Plot.areaY(data, {
-//         x: "x",
-//         y: d => d.y > 10 ? d.y : null,
-//         fill: 'red', fillOpacity: 0.3}),
-//       Plot.lineY(data, {x: "x", y: "y"})
-//     ]
-//   })
 
 // var theCircle = d3.select("#dataviz_buttonEventListener")
  

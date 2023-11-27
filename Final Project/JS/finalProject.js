@@ -1,11 +1,11 @@
 let icedCoffeeCup = d3.select("#cup")
 .append("svg")
-.attr("height", 1000)
-.attr("width", 1000); 
+.attr("height", 300)
+.attr("width", 500); 
 
 icedCoffeeCup.append("polygon")
-  // .attr("points", "200,800 400,0 700,0 900,800")
-  .attr("points", "900,800 700,0 400,0 200,800")
+  // .attr("points", "900,800 700,0 400,0 200,800")
+  .attr("points", "500,0 290,800 400,800 200,0")
   .style("fill", "white");
 
 
@@ -18,45 +18,100 @@ icedCoffeeCup.append("polygon")
 function addIce(){
 
   let lightCoffee = document.getElementById("inlineCheckbox1"); 
-  let medCoffee = document.getElementById("inlineCheckbox2"); 
+  let medCoffee = document.querySelectorAll("#inlineCheckbox2"); 
   let darkCoffee = document.getElementById("inlineCheckbox3"); 
 
-  if (lightCoffee.checked){
-    icedCoffeeCup
-    .append("polygon")  
-    .attr("points", "775,300 700,0 400,0 325,300")
-    .style("fill", "#C3890C");
-      if (!(lightCoffee.checked)){
+
+  for (let i = 0; i < medCoffee.length; i++){
+    let ohNo = medCoffee[i].checked; 
+
+    if (ohNo.innerHTML === "Light"){
+    console.log(ohNo.innerHTML); 
       icedCoffeeCup
       .append("polygon")  
       .attr("points", "775,300 700,0 400,0 325,300")
-      .style("fill", "black");
+      .style("fill", "#C3890C");
     }
-  }
+    else if (ohNo.innerHTML === "Medium"){
+      icedCoffeeCup
+      .append("polygon")  
+      .attr("points", "775,300 700,0 400,0 325,300")
+      .style("fill", "#905B27");
+    }
 
-  else if (medCoffee.checked){
-    icedCoffeeCup
-    .append("polygon")  
-    .attr("points", "775,300 700,0 400,0 325,300")
-    .style("fill", "#905B27");
-  }
-  else if (darkCoffee.checked){
-    icedCoffeeCup
-    .append("polygon")  
-    .attr("points", "775,300 700,0 400,0 325,300")
-    .style("fill", "#401D01");
-  }
-  
+    else if (ohNo.innerHTML === "Dark"){
+      icedCoffeeCup
+      .append("polygon")  
+      .attr("points", "775,300 700,0 400,0 325,300")
+      .style("fill", "#401D01");
+    }
   else{
-    icedCoffeeCup
-    .append("polygon")  
-    .attr("points", "775,300 700,0 400,0 325,300")
-    .style("fill", "transparent");
+    console.log(ohNo.innerHTML);
+      icedCoffeeCup
+      .append("polygon")  
+      .attr("points", "455,175 350,550 340,550 242,175")
+      .style("fill", "yellow");
+  }
+}
+}
+
+
+
+
+//   if (lightCoffee.checked){
+//     icedCoffeeCup
+//     .append("polygon")  
+//     .attr("points", "775,300 700,0 400,0 325,300")
+//     .style("fill", "#C3890C");
+//   }
+  
+// else {
+//   icedCoffeeCup
+//   .append("polygon")  
+//   .attr("points", "775,300 700,0 400,0 325,300")
+//   .style("fill", "yellow");
+
+// }
+
+// if (medCoffee.checked){
+//     icedCoffeeCup
+//     .append("polygon")  
+//     .attr("points", "775,300 700,0 400,0 325,300")
+//     .style("fill", "#905B27");
+//   }
+    
+// else {
+//   icedCoffeeCup
+//   .append("polygon")  
+//   .attr("points", "775,300 700,0 400,0 325,300")
+//   .style("fill", "yellow");
+// }
+
+  
+// if (darkCoffee.checked){
+//     icedCoffeeCup
+//     .append("polygon")  
+//     .attr("points", "775,300 700,0 400,0 325,300")
+//     .style("fill", "#401D01");
+  
+//   }
+//   else {
+//     icedCoffeeCup
+//     .append("polygon")  
+//     .attr("points", "775,300 700,0 400,0 325,300")
+//     .style("fill", "yellow");
+//   }
+  
+  // else{
+  //   icedCoffeeCup
+  //   .append("polygon")  
+  //   .attr("points", "775,300 700,0 400,0 325,300")
+  //   .style("fill", "transparent");
    
 
-  }
+  // }
  
-}
+
 
 
 

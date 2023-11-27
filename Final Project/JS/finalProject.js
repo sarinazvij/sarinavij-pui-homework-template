@@ -1,16 +1,15 @@
 var data = [ 
-  { x: 0, y: 15 }, 
-  { x: 1, y: 30 },
-  { x: 2, y: 10}, 
-  { x: 5, y: 10 },
-  { x: 8, y: 30 },
-  { x: 7, y: 90 }, 
+  { x: 0, y: 4 }, 
+  { x: 1, y: 9 },
+  { x: 2, y: 16}, 
+  { x: -2, y: 0 },
+  
 ]; 
 
 var xScale = d3.scaleLinear() 
-  .domain([0, 8]).range([25, 175]); 
+  .domain([-10, 40]).range([25, 175]); 
 var yScale = d3.scaleLinear() 
-  .domain([0, 20]).range([175, 25]); 
+  .domain([-10, 40]).range([175, 25]); 
 
 var line = d3.line() 
   .x((d) => xScale(d.x)) 

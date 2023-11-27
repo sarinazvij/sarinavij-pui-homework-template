@@ -6,16 +6,23 @@ var data = [
   
 ]; 
 
-var xScale = d3.scaleLinear() 
-  .domain([-10, 40]).range([25, 175]); 
-var yScale = d3.scaleLinear() 
-  .domain([-10, 40]).range([175, 25]); 
 
-var line = d3.line() 
-  .x((d) => xScale(d.x)) 
-  .y((d) => yScale(d.y)) 
-  // curveBasisOpen is used 
-  .curve(d3.curveBasisOpen); 
+
+for (var x = 0; x < 500; x++){
+  var y = a*(x - xIntercept1)*(x - xIntercept2);
+  data.push({x: x, y: y});
+}
+
+// var xScale = d3.scaleLinear() 
+//   .domain([0, 20]).range([25, 175]); 
+// var yScale = d3.scaleLinear() 
+//   .domain([0, 20]).range([175, 25]); 
+
+// var line = d3.line() 
+//   .x((d) => xScale(d.x)) 
+//   .y((d) => yScale(d.y)) 
+//   // curveBasisOpen is used 
+//   .curve(d3.curveBasisOpen); 
 
 d3.select("#gfg") 
   .append("path") 

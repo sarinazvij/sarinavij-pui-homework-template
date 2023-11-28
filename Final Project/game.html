@@ -29,21 +29,40 @@
 
 
   <h2> Step 2: Select the type of coffee roasting you would prefer </h2>
-  <div class = "yikes"> 
-  <div class="form-check form-check-inline">
-    <input class="form-check-input" type="checkbox" id="inlineCheckbox2a" onclick = "addIce()" value="option1">
+
+  <!-- <div class="form-check form-check-inline">
+    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" onclick = "addIce(this)" value="light">
     <label class="form-check-label" for="inlineCheckbox2"> Light </label>
   </div>
   <div class="form-check form-check-inline">
-    <input class="form-check-input" type="checkbox" id="inlineCheckbox2b" onclick = "addIce()" value="option2">
+    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" onclick = "addIce(this)" value="medim">
     <label class="form-check-label" for="inlineCheckbox2"> Medium </label>
   </div>
   <div class="form-check form-check-inline">
-    <input class="form-check-input" type="checkbox" id="inlineCheckbox2c" onclick = "addIce()" value="option2">
+    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" onclick = "addIce(this)" value="dark">
     <label class="form-check-label" for="inlineCheckbox2"> Dark </label>
+  </div> -->
+
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" onclick = "addIce(this)" value="Light">
+    <label class="form-check-label" for="flexRadioDefault1">
+      Light
+    </label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" onclick = "addIce(this)" value="Medium">
+    <label class="form-check-label" for="flexRadioDefault2">
+      Medium
+    </label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" onclick = "addIce(this)" value="Dark">
+    <label class="form-check-label" for="flexRadioDefault3">
+      Dark
+    </label>
   </div>
 
-</div>
+
 
   <h2> Step 3: Select the type of milk you would prefer (if any) </h2>
 

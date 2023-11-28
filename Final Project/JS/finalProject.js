@@ -1,34 +1,34 @@
-var data = [ 
-  { x: 0, y: 4 }, 
-  { x: 1, y: 9 },
-  { x: 2, y: 16}, 
-  { x: -2, y: 0 },
+// var data = [ 
+//   { x: 0, y: 4 }, 
+//   { x: 1, y: 9 },
+//   { x: 2, y: 16}, 
+//   { x: -2, y: 0 },
   
-]; 
+// ]; 
 
 
 
-for (var x = 0; x < 500; x++){
-  var y = a*(x - xIntercept1)*(x - xIntercept2);
-  data.push({x: x, y: y});
-}
+// for (var x = 0; x < 500; x++){
+//   var y = a*(x - xIntercept1)*(x - xIntercept2);
+//   data.push({x: x, y: y});
+// }
 
-// var xScale = d3.scaleLinear() 
-//   .domain([0, 20]).range([25, 175]); 
-// var yScale = d3.scaleLinear() 
-//   .domain([0, 20]).range([175, 25]); 
+// // var xScale = d3.scaleLinear() 
+// //   .domain([0, 20]).range([25, 175]); 
+// // var yScale = d3.scaleLinear() 
+// //   .domain([0, 20]).range([175, 25]); 
 
-// var line = d3.line() 
-//   .x((d) => xScale(d.x)) 
-//   .y((d) => yScale(d.y)) 
-//   // curveBasisOpen is used 
-//   .curve(d3.curveBasisOpen); 
+// // var line = d3.line() 
+// //   .x((d) => xScale(d.x)) 
+// //   .y((d) => yScale(d.y)) 
+// //   // curveBasisOpen is used 
+// //   .curve(d3.curveBasisOpen); 
 
-d3.select("#gfg") 
-  .append("path") 
-  .attr("d", line(data)) 
-  .attr("fill", "white") 
-  .attr("stroke", "green"); 
+// d3.select("#gfg") 
+//   .append("path") 
+//   .attr("d", line(data)) 
+//   .attr("fill", "white") 
+//   .attr("stroke", "green"); 
 
 
 
@@ -49,129 +49,32 @@ let icedCoffeeCup = d3.select("#cup")
 .attr("width", 500); 
 
 icedCoffeeCup.append("polygon")
-  // .attr("points", "900,800 700,0 400,0 200,800")
   .attr("points", "500,0 290,800 400,800 200,0")
   .style("fill", "white");
 
 
-// icedCoffeeCup.append("polygon")
-// .attr("points", "775,300 700,0 400,0 325,300")
-// .style("fill", "red");
 
-
-
-function addIce(){
-
-  let lightCoffee = document.getElementById("inlineCheckbox2a"); 
-  let medCoffee = document.querySelectorAll("#inlineCheckbox2b"); 
-  let darkCoffee = document.getElementById("inlineCheckbox2c"); 
-
-
-  for (let i = 0; i < lightCoffee.length; i++){
-    let ohNo = lightCoffee[i].checked; 
-  
-
-    if (ohNo.innerHTML = "Light"){
-    console.log(ohNo.innerHTML); 
-      icedCoffeeCup
-      .append("polygon")  
-      .attr("points", "455,175 350,550 340,550 242,175")
-      .style("fill", "#C3890C");
-    }
-    else{
-      console.log(ohNo.innerHTML);
-        icedCoffeeCup
-        .append("polygon")  
-        .attr("points", "455,175 350,550 340,550 242,175")
-        .style("fill", "yellow");
-    }
+function addIce(element){
+  console.log(element.value)
+  if (element.value === "Light"){
+    icedCoffeeCup
+    .append("polygon")  
+    .attr("points", "455,175 350,550 340,550 242,175")
+    .style("fill", "#C3890C");
+  }
+  else if (element.value === "Medium"){
+    icedCoffeeCup
+    .append("polygon")  
+    .attr("points", "455,175 350,550 340,550 242,175")
+    .style("fill", "#905B27");
+  }
+  else if (element.value === "Dark"){
+    icedCoffeeCup
+    .append("polygon")  
+    .attr("points", "455,175 350,550 340,550 242,175")
+    .style("fill", "#401D01");
   }
 }
-
-
-//     if (ohNo.innerHTML = "Medium"){
-//       icedCoffeeCup
-//       .append("polygon")  
-//       .attr("points", "455,175 350,550 340,550 242,175")
-//       .style("fill", "#905B27");
-//     }
-
-//     else if (ohNo.innerHTML = "Dark"){
-//       icedCoffeeCup
-//       .append("polygon")  
-//       .attr("points", "455,175 350,550 340,550 242,175")
-//       .style("fill", "#401D01");
-//     }
-//   else{
-//     console.log(ohNo.innerHTML);
-//       icedCoffeeCup
-//       .append("polygon")  
-//       .attr("points", "455,175 350,550 340,550 242,175")
-//       .style("fill", "yellow");
-//   }
-// }
-// }
-
-
-
-
-//   if (lightCoffee.checked){
-//     icedCoffeeCup
-//     .append("polygon")  
-//     .attr("points", "775,300 700,0 400,0 325,300")
-//     .style("fill", "#C3890C");
-//   }
-  
-// else {
-//   icedCoffeeCup
-//   .append("polygon")  
-//   .attr("points", "775,300 700,0 400,0 325,300")
-//   .style("fill", "yellow");
-
-// }
-
-// if (medCoffee.checked){
-//     icedCoffeeCup
-//     .append("polygon")  
-//     .attr("points", "775,300 700,0 400,0 325,300")
-//     .style("fill", "#905B27");
-//   }
-    
-// else {
-//   icedCoffeeCup
-//   .append("polygon")  
-//   .attr("points", "775,300 700,0 400,0 325,300")
-//   .style("fill", "yellow");
-// }
-
-  
-// if (darkCoffee.checked){
-//     icedCoffeeCup
-//     .append("polygon")  
-//     .attr("points", "775,300 700,0 400,0 325,300")
-//     .style("fill", "#401D01");
-  
-//   }
-//   else {
-//     icedCoffeeCup
-//     .append("polygon")  
-//     .attr("points", "775,300 700,0 400,0 325,300")
-//     .style("fill", "yellow");
-//   }
-  
-  // else{
-  //   icedCoffeeCup
-  //   .append("polygon")  
-  //   .attr("points", "775,300 700,0 400,0 325,300")
-  //   .style("fill", "transparent");
-   
-
-  // }
- 
-
-
-
-
 
 
 

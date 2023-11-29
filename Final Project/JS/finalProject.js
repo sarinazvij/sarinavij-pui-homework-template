@@ -30,27 +30,52 @@
 //   .attr("fill", "white") 
 //   .attr("stroke", "green"); 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 let icedCoffeeCup = d3.select("#cup")
 .append("svg")
 .attr("height", 300)
 .attr("width", 500); 
 
-icedCoffeeCup.append("polygon")
-  .attr("points", "500,0 290,800 400,800 200,0")
-  .style("fill", "white");
+
+
+
+
+  
+
+const arc = d3.arc()
+    .innerRadius(0)
+    .outerRadius(100)
+    .startAngle(0)
+    .endAngle(Math.PI / 2);
+    
+  
+
+
+
+
+
+
+// function cupType(element){
+//   if (element.value === "Iced"){
+//     icedCoffeeCup.append("polygon")
+//     .attr("points", "500,0 290,800 400,800 200,0")
+//     .style("fill", "white");
+// }
+// else if (element.value === "Hot"){
+
+// }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -89,14 +114,14 @@ function addCoffee(element){
   // .style("fill", "yellow");
 
 
- icedCoffeeCup
-  .append("polygon")  
-  .attr("points", "500,0 487,50 212,50 200,0") //milk
-  .style("fill", "yellow");
+//  icedCoffeeCup
+//   .append("polygon")  
+//   .attr("points", "500,0 487,50 212,50 200,0") //milk
+//   .style("fill", "yellow");
 
 
-  icedCoffeeCup
-  .append("polygon")  
-  .attr("points", "453,176 487,50 212,50 244,176") //syrup
-  .style("fill", "blue");
+//   icedCoffeeCup
+//   .append("polygon")  
+//   .attr("points", "453,176 487,50 212,50 244,176") //syrup
+//   .style("fill", "blue");
 

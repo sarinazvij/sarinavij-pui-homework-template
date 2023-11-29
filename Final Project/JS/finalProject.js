@@ -41,14 +41,26 @@ let icedCoffeeCup = d3.select("#cup")
 
   
 
-const arc = d3.arc()
-    .innerRadius(0)
-    .outerRadius(100)
-    .startAngle(0)
-    .endAngle(Math.PI / 2);
+let arc = d3.arc()
+.innerRadius(0) 
+.outerRadius(100) 
+.startAngle((Math.PI)*12) 
+.endAngle(Math.PI*4); 
+
     
   
+let hotCoffeeCup = d3.select("#cup")
+  .append("svg") 
+  .append("path")
+  .attr("height", 400)
+.attr("width", 350); 
 
+
+hotCoffeeCup
+  .attr("class", "arc") 
+  .attr("transform", "translate(100, 20)")
+  .attr("d", arc)
+  .style("fill", "blue"); 
 
 
 
@@ -79,27 +91,27 @@ const arc = d3.arc()
 
 
 
-function addCoffee(element){
-  console.log(element.value)
-  if (element.value === "Light"){
-    icedCoffeeCup
-    .append("polygon")  
-    .attr("points", "453.25,175 350,550 340,550 243.75,175")
-    .style("fill", "#C3890C");
-  }
-  else if (element.value === "Medium"){
-    icedCoffeeCup
-    .append("polygon")  
-    .attr("points", "453.25,175 350,550 340,550 243.75,175")
-    .style("fill", "#905B27");
-  }
-  else if (element.value === "Dark"){
-    icedCoffeeCup
-    .append("polygon")  
-    .attr("points", "453.25,175 350,550 340,550 243.75,175")
-    .style("fill", "#401D01");
-  }
-}
+// function addCoffee(element){
+//   console.log(element.value)
+//   if (element.value === "Light"){
+//     icedCoffeeCup
+//     .append("polygon")  
+//     .attr("points", "453.25,175 350,550 340,550 243.75,175")
+//     .style("fill", "#C3890C");
+//   }
+//   else if (element.value === "Medium"){
+//     icedCoffeeCup
+//     .append("polygon")  
+//     .attr("points", "453.25,175 350,550 340,550 243.75,175")
+//     .style("fill", "#905B27");
+//   }
+//   else if (element.value === "Dark"){
+//     icedCoffeeCup
+//     .append("polygon")  
+//     .attr("points", "453.25,175 350,550 340,550 243.75,175")
+//     .style("fill", "#401D01");
+//   }
+// }
 
 // function addSyrup(){
   

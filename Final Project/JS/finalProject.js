@@ -54,116 +54,49 @@ icedCoffeeCup.append("polygon")
 
 
 
-function addIce(element){
+function addCoffee(element){
   console.log(element.value)
   if (element.value === "Light"){
     icedCoffeeCup
     .append("polygon")  
-    .attr("points", "455,175 350,550 340,550 242,175")
+    .attr("points", "453.25,175 350,550 340,550 243.75,175")
     .style("fill", "#C3890C");
   }
   else if (element.value === "Medium"){
     icedCoffeeCup
     .append("polygon")  
-    .attr("points", "455,175 350,550 340,550 242,175")
+    .attr("points", "453.25,175 350,550 340,550 243.75,175")
     .style("fill", "#905B27");
   }
   else if (element.value === "Dark"){
     icedCoffeeCup
     .append("polygon")  
-    .attr("points", "455,175 350,550 340,550 242,175")
+    .attr("points", "453.25,175 350,550 340,550 243.75,175")
     .style("fill", "#401D01");
   }
 }
 
-
-
-
-
-
-
-// var theCircle = d3.select("#dataviz_buttonEventListener")
- 
-
-// // A function that update the color circle
-// function changeSize() {
-//   theCircle
-//   .append("svg")
+// function addSyrup(){
   
-//   .append("polygon")
-//   .attr("points", "400,100, 235,210, 160,210, 100,100")
 
-// }
+//  var syrup = document.getElementById("blah"); 
+//  console.log(syrup)
 
-// // Add an event listener to the button created in the html part
-// d3.select("#Button").on("input", changeSize )
-
-  
-// function createCup() {
-//    theCircle
-//    .append("tag")
-//    .append("circle")
-
-//    .attr("r", 180)
-//  }
-      
-//  https://d3-graph-gallery.com/graph/interactivity_button.html
-// var coffeeCup = d3.select("#cup")
-// .append("svg")
-// .attr("points", "300,100, 235,210, 160,210, 100,100")
-   
-  //  .attr("height", 1000)
-  //  .attr("width", 500);
-
-// poly = [{"x":0.0, "y":25.0},
-// {"x":8.5,"y":23.4},
-// {"x":13.0,"y":21.0},
-// {"x":19.0,"y":15.5}]
-
-   // .style("fill", "green")
-   // .style("stroke", "black")
-   // .style("strokeWidth", "10px");
+//   if (syrup === "Caramel"){
+  // icedCoffeeCup
+  // .append("polygon")  
+  // .attr("points", "500,0 487,50 212,50 200,0")
+  // .style("fill", "yellow");
 
 
-
-//    function myFunc() { 
-//       var para = document.getElementById("p"); 
-//       para.classList.toggle("paragraphClass"); 
-//   } 
-
-
-//   var path = function(){
-//    coffeeCup
-//    .remove(); 
-
-//   };
-    
-//     d3.select('#Button').on('click', function ); 
+ icedCoffeeCup
+  .append("polygon")  
+  .attr("points", "500,0 487,50 212,50 200,0") //milk
+  .style("fill", "yellow");
 
 
+  icedCoffeeCup
+  .append("polygon")  
+  .attr("points", "453,176 487,50 212,50 244,176") //syrup
+  .style("fill", "blue");
 
-// if ( path ) {
-   
-//     path.remove();
-//     // Remove dots
-//     path = null;
-// } else {
-//    path=coffeeCup.selectAll("polygon")
-//    .data([poly])
-//    .enter().append("polygon")
-
-//   .attr("stroke","black")
-//   .attr("stroke-width",2);
-  
-   
-
-// }
-
-// });
-
-
-
-
-// if (/Mobi/.test(navigator.userAgent)) {
-//   // mobile!
-// }

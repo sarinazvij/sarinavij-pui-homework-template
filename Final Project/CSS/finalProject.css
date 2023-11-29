@@ -403,10 +403,9 @@ justify-content: space-around;
 
 
 
-  
-
-
-
+#cup{
+    transform: scale(2.5); 
+}
 
 
 

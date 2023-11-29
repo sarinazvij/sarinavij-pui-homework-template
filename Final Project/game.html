@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Sansita&display=swap" rel="stylesheet" type="text/css" /> 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://d3js.org/d3.v4.min.js" defer></script>
+    <script src="https://d3js.org/d3-selection.v1.min.js" defer></script> 
     <script src="JS/finalProject.js" defer></script>  
   
   </head>
@@ -19,13 +20,13 @@
   
   <h2> Step 1: Select whether you would like your drink hot or iced </h2>
   <div class="form-check">
-    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" onclick = "cupType(this)" value="Iced">
+    <input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefault1" onclick = "cupType(this)" value="Iced">
     <label class="form-check-label" for="flexRadioDefault1">
       Iced
     </label>
   </div>
   <div class="form-check">
-    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" onclick = "cupType(this)" value="Hot">
+    <input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefault2" onclick = "cupType(this)" value="Hot">
     <label class="form-check-label" for="flexRadioDefault2">
       Hot
     </label>
@@ -34,19 +35,19 @@
 
   <h2> Step 2: Select the type of coffee roasting you would prefer </h2>
   <div class="form-check">
-    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" onclick = "addCoffee(this)" value="Light">
+    <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioDefault1" onclick = "addCoffee(this)" value="Light">
     <label class="form-check-label" for="flexRadioDefault1">
       Light
     </label>
   </div>
   <div class="form-check">
-    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" onclick = "addCoffee(this)" value="Medium">
+    <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioDefault2" onclick = "addCoffee(this)" value="Medium">
     <label class="form-check-label" for="flexRadioDefault2">
       Medium
     </label>
   </div>
   <div class="form-check">
-    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" onclick = "addCoffee(this)" value="Dark">
+    <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioDefault3" onclick = "addCoffee(this)" value="Dark">
     <label class="form-check-label" for="flexRadioDefault3">
       Dark
     </label>
@@ -84,11 +85,9 @@
 
   </div>
 
-  <div id="lcup">
-
-  </div>
+ 
       
-  <svg id="gfg" width="200" height="200"></svg> 
+  <!-- <svg id="gfg" width="200" height="200"></svg>  -->
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

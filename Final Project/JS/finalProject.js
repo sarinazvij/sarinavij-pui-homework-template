@@ -1,45 +1,7 @@
-// var data = [ 
-//   { x: 0, y: 4 }, 
-//   { x: 1, y: 9 },
-//   { x: 2, y: 16}, 
-//   { x: -2, y: 0 },
-  
-// ]; 
-
-
-
-// for (var x = 0; x < 500; x++){
-//   var y = a*(x - xIntercept1)*(x - xIntercept2);
-//   data.push({x: x, y: y});
-// }
-
-// // var xScale = d3.scaleLinear() 
-// //   .domain([0, 20]).range([25, 175]); 
-// // var yScale = d3.scaleLinear() 
-// //   .domain([0, 20]).range([175, 25]); 
-
-// // var line = d3.line() 
-// //   .x((d) => xScale(d.x)) 
-// //   .y((d) => yScale(d.y)) 
-// //   // curveBasisOpen is used 
-// //   .curve(d3.curveBasisOpen); 
-
-// d3.select("#gfg") 
-//   .append("path") 
-//   .attr("d", line(data)) 
-//   .attr("fill", "white") 
-//   .attr("stroke", "green"); 
-
 let icedCoffeeCup = d3.select("#cup")
 .append("svg")
 .attr("height", 300)
 .attr("width", 500); 
-
-
-
-
-
-  
 
 let arc = d3.arc()
 .innerRadius(0) 
@@ -48,36 +10,67 @@ let arc = d3.arc()
 .endAngle(Math.PI*4); 
 
     
-  
 let hotCoffeeCup = d3.select("#cup")
   .append("svg") 
   .append("path")
-  .attr("height", 400)
-.attr("width", 350); 
+  .attr("height", 600)
+  .attr("width", 650); 
 
 
-hotCoffeeCup
+
+
+
+//   let cupHandle = d3.select("#cup")
+//   .append("svg") 
+//   .append("path")
+//   .attr("height", 400)
+// .attr("width", 350); 
+
+
+// let newArc = d3.arc()
+// .innerRadius(0) 
+// .outerRadius(50) 
+// .startAngle((Math.PI)*2) 
+// .endAngle(Math.PI*1); 
+
+
+// cupHandle
+//   .attr("class", "arc") 
+//   .attr("transform", "translate(100, 100)")
+//   .attr("d", newArc)
+//   .style("fill", "orange"); 
+
+
+
+function cupType(element){
+
+ 
+  if (element.value === "Iced"){
+
+    icedCoffeeCup.append("polygon")
+    .attr("points", "500,0 290,800 400,800 200,0")
+    .style("fill", "white"); 
+
+ 
+  }
+else if (element.value === "Hot"){
+  
+  hotCoffeeCup
   .attr("class", "arc") 
   .attr("transform", "translate(100, 20)")
   .attr("d", arc)
-  .style("fill", "blue"); 
+  .style("fill", "white"); 
+
+ 
+}
+}
 
 
 
 
 
-// function cupType(element){
-//   if (element.value === "Iced"){
-//     icedCoffeeCup.append("polygon")
-//     .attr("points", "500,0 290,800 400,800 200,0")
-//     .style("fill", "white");
-// }
-// else if (element.value === "Hot"){
 
-// }
-// }
-
-
+d3.select("#cup").html("")
 
 
 
@@ -86,32 +79,31 @@ hotCoffeeCup
 
 
 
+function addCoffee(element){
+
+  let iceCheck = document.querySelector('input[name="flexRadioDefault1"]:checked');
 
 
-
-
-
-// function addCoffee(element){
-//   console.log(element.value)
-//   if (element.value === "Light"){
-//     icedCoffeeCup
-//     .append("polygon")  
-//     .attr("points", "453.25,175 350,550 340,550 243.75,175")
-//     .style("fill", "#C3890C");
-//   }
-//   else if (element.value === "Medium"){
-//     icedCoffeeCup
-//     .append("polygon")  
-//     .attr("points", "453.25,175 350,550 340,550 243.75,175")
-//     .style("fill", "#905B27");
-//   }
-//   else if (element.value === "Dark"){
-//     icedCoffeeCup
-//     .append("polygon")  
-//     .attr("points", "453.25,175 350,550 340,550 243.75,175")
-//     .style("fill", "#401D01");
-//   }
-// }
+  console.log(element.value)
+  if ((element.value === "Light") && (iceCheck.value === "Iced")){
+    icedCoffeeCup
+    .append("polygon")  
+    .attr("points", "453.25,175 350,550 340,550 243.75,175")
+    .style("fill", "#C3890C");
+  }
+  else if ((element.value === "Medium") && (iceCheck.value === "Iced")){
+    icedCoffeeCup
+    .append("polygon")  
+    .attr("points", "453.25,175 350,550 340,550 243.75,175")
+    .style("fill", "#905B27");
+  }
+  else if ((element.value === "Dark") && (iceCheck.value === "Iced")){
+    icedCoffeeCup
+    .append("polygon")  
+    .attr("points", "453.25,175 350,550 340,550 243.75,175")
+    .style("fill", "#401D01");
+  }
+}
 
 // function addSyrup(){
   

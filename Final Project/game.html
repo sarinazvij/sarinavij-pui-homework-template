@@ -58,18 +58,18 @@
   <h2> Step 3: Select the type of milk you would prefer </h2>
 
 
-<select class="form-select form-select-sm" aria-label=".form-select-sm example">
+<select class="form-select form-select-sm" aria-label=".form-select-sm example" id="milk" onchange = "addMilk()">
   <option selected>Select Milk Type</option>
   <option value="1">1% Milk</option>
   <option value="2">Almond Milk</option>
-  <option value="3">Coconut milk</option>
-  <option value="3">Soy milk</option>
+  <option value="3">Coconut Milk</option>
+  <option value="3">Soy Milk</option>
 </select>
 
   <h2> Step 4: Select the type of syrup flavoring you would prefer (if any) </h2>
 
-  <select class="form-select form-select-sm" aria-label=".form-select-sm example" onchange = "addSyrup()">
-    <option  id = "blah" selected>Select Syrup Type</option>
+  <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="syrup" onchange = "addSyrup()">
+    <option selected>Select Syrup Type</option>
     <option id="Caramel"> Caramel</option>
     <option id="Hazelnut">Hazelnut</option>
     <option value="Mocha">Mocha</option>

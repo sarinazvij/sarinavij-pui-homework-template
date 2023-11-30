@@ -50,6 +50,11 @@ function cupType(element){
     icedCoffeeCup.append("polygon")
     .attr("points", "500,0 290,800 400,800 200,0")
     .style("fill", "white"); 
+  hotCoffeeCup
+  .attr("class", "arc") 
+  .attr("transform", "translate(100, 20)")
+  .attr("d", arc)
+  .style("fill", "blue");
 
  
   }
@@ -61,6 +66,10 @@ else if (element.value === "Hot"){
   .attr("d", arc)
   .style("fill", "white"); 
 
+  icedCoffeeCup.append("polygon")
+  .attr("points", "500,0 290,800 400,800 200,0")
+  .style("opacity", 0); 
+
  
 }
 }
@@ -70,7 +79,6 @@ else if (element.value === "Hot"){
 
 
 
-d3.select("#cup").html("")
 
 
 
@@ -82,6 +90,7 @@ d3.select("#cup").html("")
 function addCoffee(element){
 
   let iceCheck = document.querySelector('input[name="flexRadioDefault1"]:checked');
+
 
 
   console.log(element.value)
@@ -105,27 +114,95 @@ function addCoffee(element){
   }
 }
 
-// function addSyrup(){
+function addMilk(){
+  let iceCheck = document.querySelector('input[name="flexRadioDefault1"]:checked');
+
   
+let milkType= document.getElementById("milk");
+var milkText = milkType.options[milkType.selectedIndex].text;
+console.log(milkText); 
+ 
 
-//  var syrup = document.getElementById("blah"); 
-//  console.log(syrup)
+  if ((milkText === "1% Milk") && (iceCheck.value === "Iced")){
+    icedCoffeeCup
+    .append("polygon")  
+    .attr("points", "453,176 487,50 212,50 244,176")
+    .style("fill", "#F0ECE8");
+  }
+  else if ((milkText === "Almond Milk") && (iceCheck.value === "Iced")){
+    icedCoffeeCup
+    .append("polygon")  
+    .attr("points", "453,176 487,50 212,50 244,176")
+    .style("fill", "#F9E9D3");
+  }
+  else if ((milkText === "Coconut Milk") && (iceCheck.value === "Iced")){
+    icedCoffeeCup
+    .append("polygon")  
+    .attr("points", "453,176 487,50 212,50 244,176")
+    .style("fill", "#F2EFE7");
+  }
+  else if ((milkText === "Soy Milk") && (iceCheck.value === "Iced")){
+    icedCoffeeCup
+    .append("polygon")  
+    .attr("points", "453,176 487,50 212,50 244,176")
+    .style("fill", "#D2C7BF");
+  }
+  }
 
-//   if (syrup === "Caramel"){
-  // icedCoffeeCup
-  // .append("polygon")  
-  // .attr("points", "500,0 487,50 212,50 200,0")
-  // .style("fill", "yellow");
 
 
-//  icedCoffeeCup
-//   .append("polygon")  
-//   .attr("points", "500,0 487,50 212,50 200,0") //milk
-//   .style("fill", "yellow");
 
 
-//   icedCoffeeCup
-//   .append("polygon")  
-//   .attr("points", "453,176 487,50 212,50 244,176") //syrup
-//   .style("fill", "blue");
+function addSyrup(){
+  let iceCheck = document.querySelector('input[name="flexRadioDefault1"]:checked');
 
+  let syruptype= document.getElementById("syrup");
+  var syrupText = syruptype.options[syruptype.selectedIndex].text;
+  console.log(syrupText); 
+ 
+
+  if (syrupText === "Caramel" && (iceCheck.value === "Iced")){
+    icedCoffeeCup
+    .append("polygon")  
+    .attr("points", "500,0 487,50 212,50 200,0")
+    .style("fill", "#DB9C60");
+  }
+  else if (syrupText === "Hazelnut" && (iceCheck.value === "Iced")){
+    icedCoffeeCup
+    .append("polygon")  
+    .attr("points", "500,0 487,50 212,50 200,0")
+    .style("fill", "#8F4E02");
+  }
+  else if (syrupText === "Mocha" && (iceCheck.value === "Iced") ){
+    icedCoffeeCup
+    .append("polygon")  
+    .attr("points", "500,0 487,50 212,50 200,0")
+    .style("fill", "#411900");
+  }
+  else if (syrupText === "Vanilla"  && (iceCheck.value === "Iced")){
+    icedCoffeeCup
+    .append("polygon")  
+    .attr("points", "500,0 487,50 212,50 200,0")
+    .style("fill", "#EBE2D3");
+  }
+  else if (syrupText === "No Syrup"  && (iceCheck.value === "Iced")){
+    icedCoffeeCup
+    .append("polygon")  
+    .attr("points", "500,0 487,50 212,50 200,0")
+    .style("fill", "white");
+  }
+
+}
+
+
+
+// icedCoffeeCup
+// .append("polygon")  
+// .attr("points", "500,0 487,50 212,50 200,0") //milk
+// .style("fill", "yellow");
+
+
+// icedCoffeeCup
+// .append("polygon")  
+// .attr("points", "453,176 487,50 212,50 244,176") //syrup
+// .style("fill", "blue");

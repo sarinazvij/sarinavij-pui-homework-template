@@ -50,14 +50,13 @@ function cupType(element){
     icedCoffeeCup.append("polygon")
     .attr("points", "500,0 290,800 400,800 200,0")
     .style("fill", "white"); 
-  hotCoffeeCup
-  .attr("class", "arc") 
-  .attr("transform", "translate(100, 20)")
-  .attr("d", arc)
-  .style("fill", "blue");
-
- 
+  // hotCoffeeCup
+  // .attr("class", "arc") 
+  // .attr("transform", "translate(100, 20)")
+  // .attr("d", arc)
+  // .style("fill", "blue");
   }
+
 else if (element.value === "Hot"){
   
   hotCoffeeCup
@@ -67,8 +66,8 @@ else if (element.value === "Hot"){
   .style("fill", "white"); 
 
   icedCoffeeCup.append("polygon")
-  .attr("points", "500,0 290,800 400,800 200,0")
-  .style("opacity", 0); 
+  .attr("points", "0,0 0,0 0,0 0,0"); 
+   
 
  
 }
@@ -90,29 +89,32 @@ else if (element.value === "Hot"){
 function addCoffee(element){
 
   let iceCheck = document.querySelector('input[name="flexRadioDefault1"]:checked');
+  
+    if (iceCheck === null){
+      alert("Please select whether you would like your drink iced or hot."); 
+    }
 
+  
+    if ((element.value === "Light") && (iceCheck.value === "Iced")){
+      icedCoffeeCup
+      .append("polygon")  
+      .attr("points", "453.25,175 350,550 340,550 243.75,175")
+      .style("fill", "#C3890C");
+    }
+    else if ((element.value === "Medium") && (iceCheck.value === "Iced")){
+      icedCoffeeCup
+      .append("polygon")  
+      .attr("points", "453.25,175 350,550 340,550 243.75,175")
+      .style("fill", "#905B27");
+    }
+    else if ((element.value === "Dark") && (iceCheck.value === "Iced")){
+      icedCoffeeCup
+      .append("polygon")  
+      .attr("points", "453.25,175 350,550 340,550 243.75,175")
+      .style("fill", "#401D01");
+    }
+  }
 
-
-  console.log(element.value)
-  if ((element.value === "Light") && (iceCheck.value === "Iced")){
-    icedCoffeeCup
-    .append("polygon")  
-    .attr("points", "453.25,175 350,550 340,550 243.75,175")
-    .style("fill", "#C3890C");
-  }
-  else if ((element.value === "Medium") && (iceCheck.value === "Iced")){
-    icedCoffeeCup
-    .append("polygon")  
-    .attr("points", "453.25,175 350,550 340,550 243.75,175")
-    .style("fill", "#905B27");
-  }
-  else if ((element.value === "Dark") && (iceCheck.value === "Iced")){
-    icedCoffeeCup
-    .append("polygon")  
-    .attr("points", "453.25,175 350,550 340,550 243.75,175")
-    .style("fill", "#401D01");
-  }
-}
 
 function addMilk(){
   let iceCheck = document.querySelector('input[name="flexRadioDefault1"]:checked');
@@ -185,7 +187,7 @@ function addSyrup(){
     .attr("points", "500,0 487,50 212,50 200,0")
     .style("fill", "#EBE2D3");
   }
-  else if (syrupText === "No Syrup"  && (iceCheck.value === "Iced")){
+  else if (syrupText === "No Syrup" && (iceCheck.value === "Iced")){
     icedCoffeeCup
     .append("polygon")  
     .attr("points", "500,0 487,50 212,50 200,0")

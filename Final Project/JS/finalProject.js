@@ -3,18 +3,16 @@ let icedCoffeeCup = d3.select("#cup")
 .attr("height", 300)
 .attr("width", 500); 
 
-let arc = d3.arc()
-.innerRadius(0) 
-.outerRadius(100) 
-.startAngle((Math.PI)*12) 
-.endAngle(Math.PI*4); 
 
-    
-let hotCoffeeCup = d3.select("#cup")
+
+
+
+  let hotCoffeeCup = d3.select("#cup")
   .append("svg") 
   .append("path")
   .attr("height", 600)
   .attr("width", 650); 
+    
 
 
 
@@ -43,14 +41,21 @@ let hotCoffeeCup = d3.select("#cup")
 
 
 function cupType(element){
-
- 
+  d3.select("body").select("svg").remove();
   if (element.value === "Iced"){
-
+    icedCoffeeCup = d3.select("#cup")
+    .append("svg")
+    .attr("height", 300)
+    .attr("width", 500); 
     icedCoffeeCup.append("polygon")
     .attr("points", "500,0 290,800 400,800 200,0")
     .style("fill", "white"); 
-  // hotCoffeeCup
+  
+
+    // icedCoffeeCup.append("polygon")
+    // .attr("points", "500,0 290,800 400,800 200,0")
+    // .style("fill", "white"); 
+  // hotCoffeeCup.remove(); 
   // .attr("class", "arc") 
   // .attr("transform", "translate(100, 20)")
   // .attr("d", arc)
@@ -58,15 +63,27 @@ function cupType(element){
   }
 
 else if (element.value === "Hot"){
-  
+  d3.select("body").select("svg").remove();
+
+hotCoffeeCup = d3.select("#cup")
+  .append("svg") 
+  .append("path")
+  .attr("height", 600)
+  .attr("width", 650); 
+   arc = d3.arc()
+.innerRadius(0) 
+.outerRadius(100) 
+.startAngle((Math.PI)*12) 
+.endAngle(Math.PI*4); 
+console.log("hi")
   hotCoffeeCup
   .attr("class", "arc") 
   .attr("transform", "translate(100, 20)")
   .attr("d", arc)
   .style("fill", "white"); 
 
-  icedCoffeeCup.append("polygon")
-  .attr("points", "0,0 0,0 0,0 0,0"); 
+//   icedCoffeeCup.append("polygon")
+//   .attr("points", "0,0 0,0 0,0 0,0"); 
    
 
  
@@ -93,8 +110,6 @@ function addCoffee(element){
     if (iceCheck === null){
       alert("Please select whether you would like your drink iced or hot."); 
     }
-
-  
     if ((element.value === "Light") && (iceCheck.value === "Iced")){
       icedCoffeeCup
       .append("polygon")  

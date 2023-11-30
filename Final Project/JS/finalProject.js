@@ -1,8 +1,8 @@
 let icedCoffeeCup = d3.select("#cup")
 .append("svg")
 .attr("height", 300)
-.attr("width", 500); 
-
+.attr("width", 500)
+margin = ({top: 320, right: 330, bottom: 330, left: 430}); 
 
 
 
@@ -14,6 +14,8 @@ let icedCoffeeCup = d3.select("#cup")
   .attr("width", 650); 
     
 
+
+  
 
 
 
@@ -41,7 +43,7 @@ let icedCoffeeCup = d3.select("#cup")
 
 
 function cupType(element){
-  d3.select("body").select("svg").remove();
+  d3.select("body").select("svg").remove(); // aided by https://stackoverflow.com/questions/46499721/d3-js-graphs-not-getting-toggled-on-click-of-radio-buttons
   if (element.value === "Iced"){
     icedCoffeeCup = d3.select("#cup")
     .append("svg")
@@ -50,20 +52,10 @@ function cupType(element){
     icedCoffeeCup.append("polygon")
     .attr("points", "500,0 290,800 400,800 200,0")
     .style("fill", "white"); 
-  
-
-    // icedCoffeeCup.append("polygon")
-    // .attr("points", "500,0 290,800 400,800 200,0")
-    // .style("fill", "white"); 
-  // hotCoffeeCup.remove(); 
-  // .attr("class", "arc") 
-  // .attr("transform", "translate(100, 20)")
-  // .attr("d", arc)
-  // .style("fill", "blue");
   }
 
 else if (element.value === "Hot"){
-  d3.select("body").select("svg").remove();
+  d3.select("body").select("svg").remove(); // aided by https://stackoverflow.com/questions/46499721/d3-js-graphs-not-getting-toggled-on-click-of-radio-buttons
 
 hotCoffeeCup = d3.select("#cup")
   .append("svg") 
@@ -75,33 +67,13 @@ hotCoffeeCup = d3.select("#cup")
 .outerRadius(100) 
 .startAngle((Math.PI)*12) 
 .endAngle(Math.PI*4); 
-console.log("hi")
   hotCoffeeCup
   .attr("class", "arc") 
   .attr("transform", "translate(100, 20)")
   .attr("d", arc)
   .style("fill", "white"); 
-
-//   icedCoffeeCup.append("polygon")
-//   .attr("points", "0,0 0,0 0,0 0,0"); 
-   
-
- 
 }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 function addCoffee(element){
 

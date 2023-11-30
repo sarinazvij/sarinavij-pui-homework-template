@@ -19,8 +19,8 @@
 
   <h1>Build Your Own Coffee</h1>
 
-  
-  <div class="cardf" style="width: 50%">
+
+  <div class="card" style="width: 50%">
     <div class="card-body">
       <p class="card-text">
         <h5 class="card-title">Step 1: Select whether you would like your drink hot or iced</h5>
@@ -36,6 +36,8 @@
             Hot
           </label>
         </div>
+        <br>
+
         <h5 class="card-title">Step 2: Select the type of coffee roasting you would prefer</h5>
         <div class="form-check">
           <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioDefault1" onclick = "addCoffee(this)" value="Light">
@@ -55,11 +57,9 @@
             Dark
           </label>
         </div>
-      
-        <h5 class="card-title">Step 3: Select the type of milk you would prefer</h5>
-      
+      <br>
 
-      
+        <h5 class="card-title">Step 3: Select the type of milk you would prefer</h5>
       
       <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="milk" onchange = "addMilk()">
         <option selected>Select Milk Type</option>
@@ -68,6 +68,8 @@
         <option value="3">Coconut Milk</option>
         <option value="3">Soy Milk</option>
       </select>
+
+      <br> 
       <h5 class="card-title">Step 4: Select the type of syrup flavoring you would prefer (if any) </h5>
       
         <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="syrup" onchange = "addSyrup()">
@@ -86,17 +88,27 @@
     </div>
   </div>
 
-  
-
 
 
 
   <br>
   <br>
-  
-  <div id="cup">
 
+  <div class="cardf" style="width: 50%">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+      <p class="card-text">
+        <div id="cup">
+
+        </div>
+      </p>
+      <a href="#" class="card-link">Card link</a>
+      <a href="#" class="card-link">Another link</a>
+    </div>
   </div>
+  
+ 
 
  
       

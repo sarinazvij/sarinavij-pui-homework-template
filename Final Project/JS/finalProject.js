@@ -1,8 +1,8 @@
 let icedCoffeeCup = d3.select("#cup")
 .append("svg")
 .attr("height", 300)
-.attr("width", 500)
-margin = ({top: 320, right: 330, bottom: 330, left: 430}); 
+.attr("width", 500); 
+
 
 
 
@@ -10,8 +10,8 @@ margin = ({top: 320, right: 330, bottom: 330, left: 430});
   let hotCoffeeCup = d3.select("#cup")
   .append("svg") 
   .append("path")
-  .attr("height", 600)
-  .attr("width", 650); 
+  .attr("height", 300)
+  .attr("width", 500); 
     
 
 
@@ -60,8 +60,8 @@ else if (element.value === "Hot"){
 hotCoffeeCup = d3.select("#cup")
   .append("svg") 
   .append("path")
-  .attr("height", 600)
-  .attr("width", 650); 
+  .attr("height", 300)
+  .attr("width", 500); 
    arc = d3.arc()
 .innerRadius(0) 
 .outerRadius(100) 

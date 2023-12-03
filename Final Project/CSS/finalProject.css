@@ -542,23 +542,21 @@ background-position: center;
 .bothcards {
     margin-left: 5%; 
     margin-right: 5%; 
-<<<<<<< HEAD
-<<<<<<< HEAD
+    
 }
 
+
 .main{
-    background-color: #D2F6F9;  
- }
- #gameTitle{
-     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
-     text-align: center; 
- }
- .gamecard{
-     background-color: #D2F6F9; 
- }
-=======
+   background-color: #D2F6F9;  
 }
->>>>>>> parent of 9ae4623 (trying to make a change (before))
-=======
+
+#gameTitle{
+
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    text-align: center; 
 }
->>>>>>> parent of 9ae4623 (trying to make a change (before))
+
+.gamecard{
+    background-color: #D2F6F9; 
+
+}

@@ -401,7 +401,7 @@ color: red;
 flex: 1; 
 justify-content: space-around;
 
-
+}
 
 #cup{
     transform: scale(2.5); 
@@ -409,7 +409,7 @@ justify-content: space-around;
 
 
 
-}
+
 
 .container-fluid{
   
@@ -476,38 +476,6 @@ background-position: center;
 }
 
 
-.caption{
-    position: absolute; 
-  
-    top: 90%; 
-    background-color: #D03C28; 
-    color: white; 
-    margin-left: 3%; 
-    z-index: 2; 
-
-     
-  
-}
-
-
-
-
-.captions{
-    position: absolute; 
-    top: 90.6%; 
-    background-color: #D03C28; 
-    color: transparent; 
-    margin-left: 2%; 
-    z-index: 3; 
-
-
-    z-index: 1; 
-    background-color:#EF798A; 
-
-  
-
-}
-
 
 
 .img-text-container {
@@ -526,8 +494,52 @@ background-position: center;
 
 #cup{
     display: flex; 
- justify-content: space-evenly;
- align-items: center;
+  justify-content: center;
+ align-items: center; 
 
 
+}
+
+
+.caption{
+    position: absolute; 
+  
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    background-color: #D03C28; 
+    color: white; 
+    z-index: 2; 
+  
+}
+
+#sup2{
+
+    position: relative; 
+    background-color: black; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-30%, -30%);
+
+}
+
+
+/* .sos{
+    position: absolute; 
+
+    top: 52%; 
+    left: 51%; 
+    transform: translate(-57%, -50%);
+    background-color: #EF798A; 
+    z-index: 1; 
+    width: 460px; 
+    height: 70px; 
+
+  
+
+} */
+
+.bothcards {
+    margin-left: 5%; 
+    margin-right: 5%; 
 }

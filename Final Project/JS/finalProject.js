@@ -1,8 +1,10 @@
 let icedCoffeeCup = d3.select("#cup")
 .append("svg")
-.attr("height", 300)
-.attr("width", 500); 
-
+// .attr("height", 300)
+// .attr("width", 500)    
+.attr("viewBox", `0 0 100 900`)
+.attr("preserveAspectRatio", "xMinYMin meet")
+.classed("svg-content", true); 
 
 
 
@@ -10,8 +12,9 @@ let icedCoffeeCup = d3.select("#cup")
   let hotCoffeeCup = d3.select("#cup")
   .append("svg") 
   .append("path")
-  .attr("height", 300)
-  .attr("width", 500); 
+  .attr("viewBox", `0 0 600 400`)
+  .attr("preserveAspectRatio", "xMinYMin meet")
+  .classed("svg-content", true);
     
 
 
@@ -45,10 +48,14 @@ let icedCoffeeCup = d3.select("#cup")
 function cupType(element){
   d3.select("body").select("svg").remove(); // aided by https://stackoverflow.com/questions/46499721/d3-js-graphs-not-getting-toggled-on-click-of-radio-buttons
   if (element.value === "Iced"){
+    d3.select("body").select("svg").remove();
     icedCoffeeCup = d3.select("#cup")
     .append("svg")
-    .attr("height", 300)
-    .attr("width", 500); 
+    // .attr("height", 300)
+    // .attr("width", 500)
+    .attr("viewBox", `0 0 600 400`)
+    .attr("preserveAspectRatio", "xMinYMin meet")
+    .attr("preserveAspectRatio", "xMinYMin meet"); 
     icedCoffeeCup.append("polygon")
     .attr("points", "500,0 290,800 400,800 200,0")
     .style("fill", "white"); 
@@ -60,16 +67,17 @@ else if (element.value === "Hot"){
 hotCoffeeCup = d3.select("#cup")
   .append("svg") 
   .append("path")
-  .attr("height", 300)
-  .attr("width", 500); 
+  // .attr("height", 100)
+  // .attr("width", 100); 
+  .attr("viewBox", `0 0 100 900`)
+  .attr("transform", "translate(100, 20)"); 
    arc = d3.arc()
 .innerRadius(0) 
-.outerRadius(100) 
-.startAngle((Math.PI)*12) 
-.endAngle(Math.PI*4); 
+.outerRadius(76) 
+.startAngle((Math.PI)*6) 
+.endAngle(Math.PI*2); 
   hotCoffeeCup
-  .attr("class", "arc") 
-  .attr("transform", "translate(100, 20)")
+  // .attr("class", "arc") 
   .attr("d", arc)
   .style("fill", "white"); 
 }

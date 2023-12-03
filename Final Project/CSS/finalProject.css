@@ -543,3 +543,14 @@ background-position: center;
     margin-left: 5%; 
     margin-right: 5%; 
 }
+
+.main{
+    background-color: #D2F6F9;  
+ }
+ #gameTitle{
+     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+     text-align: center; 
+ }
+ .gamecard{
+     background-color: #D2F6F9; 
+ }

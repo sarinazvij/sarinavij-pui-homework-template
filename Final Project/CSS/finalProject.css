@@ -378,7 +378,7 @@ line-height: normal; */
 
 
 
- .navbar-brand{
+  .navbar-brand{
     flex: 1; 
     justify-content: right;
 
@@ -387,9 +387,9 @@ line-height: normal; */
     
     background-color: #FCEADE;
     
-}
+} 
 .container-fluid{
-   
+    
     background-color: #FCEADE;
 
 }
@@ -403,9 +403,9 @@ justify-content: space-around;
 
 }
 
-#cup{
+/* #cup{
     transform: scale(2.5); 
-}
+} */
 
 
 
@@ -542,4 +542,21 @@ background-position: center;
 .bothcards {
     margin-left: 5%; 
     margin-right: 5%; 
+    
+}
+
+
+.main{
+   background-color: #D2F6F9;  
+}
+
+#gameTitle{
+
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    text-align: center; 
+}
+
+.gamecard{
+    background-color: #D2F6F9; 
+
 }

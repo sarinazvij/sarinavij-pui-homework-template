@@ -2,7 +2,7 @@ let icedCoffeeCup = d3.select("#cup")
 .append("svg")
 // .attr("height", 300)
 // .attr("width", 500)    
-.attr("viewBox", `0 0 100 900`)
+.attr("viewBox", `0 0 600 400`)
 .attr("preserveAspectRatio", "xMinYMin meet")
 .classed("svg-content", true); 
 

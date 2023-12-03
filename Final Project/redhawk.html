@@ -2,72 +2,57 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Tartan Coffee</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> <!-- This is directly copied from Bootstrap's library to be able to load CSS. -->
     <link href="./CSS/finalProject.css" rel="stylesheet" type="text/css">
     <link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" /> <!--This code was inspired by the following website: https://stackoverflow.com/questions/40982845/how-do-i-add-a-new-font-of-my-choice-into-visual-studio-code --> 
     <link href="https://fonts.googleapis.com/css2?family=Sansita&display=swap" rel="stylesheet" type="text/css" /> 
-    <script src="JS/finalProject.js" defer></script>
-    <script src="JS/finalProject.js" defer></script>
-</head>
+    <script src='https://d3js.org/d3.v4.min.js' defer></script>
+    <script src="JS/finalProject.js" defer></script>  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous" defer></script>
+      
+  </head>
 <body>
-    <div class="mainbox">
-        <div id="header">
-          <div id="title">
-            <div id="logopicture">
-              <p id="cuppicture"> <a href="./homepage.html"> <img src="../Images/coffeeIcon.svg" alt="Outline of coffee cup being used as logo"></a></p>
-            </div>
-            <div id="logoname">
-              <p id="tartancoffee"> <a href="./homepage.html"> Tartan Coffee </a></p>
-            </div>
-            </div>
-          <div id="headercategories">
-            <p> <a href="./deFer.html"> de Fer Coffee & Tea</p>
-            <p> <a href="./laPrima.html"> La Prima</p>
-            <p> <a href="./millies.html"> Millie's Coffee & Creamery</p>
-            <p> <a href="./redhawk.html"> Redhawk Coffee </a></p>
-            <div id="gamebutton"> 
-              <p id="interactivegame"> <a href="./gameHome.html"> Interactive Game </a></p>
-            </div>
-          </div>
+  <nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand mr-auto" href="#">
+        <img src="../Images/coffeeIcon.svg" alt="Outline of coffee cup being used as logo" width="30" height="24" class="d-inline-block align-text-top">
+        Tartan Coffee
+      </a>
+       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+      </button>  
+     <div class="collapse navbar-collapse" id="navbarNavAltMarkup"> 
+         <div id ="headercategories">
+        <div class="navbar-nav flex-lg-grow mx-auto">
+          
+          <a class="nav-link" aria-current="page" href="./deFer.html">de Fer Coffee & Tea</a>
+          <a class="nav-link" href="./laPrima.html" href="#">La Prima</a>
+          <a class="nav-link" href="./millies.html">Millie's Coffee & Creamery</a>
+          <a class="nav-link" href="./redhawk.html">Redhawk Coffee</a>
+          <a class="nav-link" href="./game.html"> Interactive Game </a>
+          
+        </div>  
+       </div> 
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="row" id="imagecapt">
+    <div class="thumbnail text-center pr-2">
+        <img src="../Images/homeImage.png" alt="Responsive image" class="img-fluid">
+        <div class="caption">
+        <h1 id ="sup">Redhawk Coffee</h1>
         </div>
-        <div class="homeimage">
-          <img src="../Images/homeImage.png" alt="Image of someone harvesting coffee plants"></a>
-          <div class="coffeecontainer"> Redhawk Coffee
-          </div>
-          <div class="secondarycoffeecontainer"> 
-          </div>
-        </div>
-        <br>
-        <div class ="coffeemaininfo">
-          <p class="coffeetitle"> About the Coffee Shop </p>
-          <div class = "textfordescription">
-            <p> BLAH BLAH LOREM IPSUM</p>
-          </div>
-        </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-          <div class="globebox">
-            <p class = "wheredoesitcomefrom"> Where in the world does Redhawk's coffee come from? </p>
-          </div>
-        </div>
-        
+
+
+
+
+
+
+  
 
 
 
@@ -81,11 +66,9 @@
 
 
 
+    
+</div> 
 
+</body>
+</html>
 
-
-
-
-
-    </body>
-    </html>

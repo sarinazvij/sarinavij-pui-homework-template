@@ -542,6 +542,7 @@ background-position: center;
 .bothcards {
     margin-left: 5%; 
     margin-right: 5%; 
+<<<<<<< HEAD
 }
 
 .main{
@@ -554,3 +555,6 @@ background-position: center;
  .gamecard{
      background-color: #D2F6F9; 
  }
+=======
+}
+>>>>>>> parent of 9ae4623 (trying to make a change (before))

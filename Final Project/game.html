@@ -50,12 +50,25 @@
     <div class="card-body">
       <p class="card-text">
         <h5 class="card-title">Step 1: Select whether you would like your drink hot or iced</h5>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefault1" onclick = "cupType(this)" value="Iced">
-          <label class="form-check-label" for="flexRadioDefault1">
-            Iced
-          </label>
+       
+       
+        <div class="col-md-4">
+          <label>  
+          <input class="radio" name="flexRadioDefault1" selected checked class = "card-input-element" id="flexRadioDefault1" onclick = "cupType(this)" value="Iced">
+          <!-- <label class="form-check-label" for="flexRadioDefault1"> -->
+            <div class="card card-default card-input"> 
+            <div class = "card-header"> thing</div>
+            <div class ="card-body"> Iced </div> 
+          <!-- </label> -->
         </div>
+        </label>
+        </div>
+        
+     
+
+
+
+
         <div class="form-check">
           <input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefault2" onclick = "cupType(this)" value="Hot">
           <label class="form-check-label" for="flexRadioDefault2">

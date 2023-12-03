@@ -403,9 +403,9 @@ justify-content: space-around;
 
 }
 
-#cup{
+/* #cup{
     transform: scale(2.5); 
-}
+} */
 
 
 
@@ -464,6 +464,17 @@ background-position: center;
 .card{
     width: 45%; 
     background-color:#EF798A; 
+    border-radius: 20px;
+
+
+
+}
+
+
+
+.cards{
+    width: 45%; 
+
     border-radius: 20px;
 
 
@@ -543,3 +554,38 @@ background-position: center;
     margin-left: 5%; 
     margin-right: 5%; 
 }
+
+.main{
+    background-color: #D2F6F9;  
+ }
+ #gameTitle{
+     font-family:"Sansita";
+     text-align: center; 
+ }
+ .gamecard{
+     background-color: #D2F6F9; 
+ }
+
+ #icedcoffee{
+    width: 30%; 
+    border-radius: 20px;
+
+
+ }
+
+ /* .form-check{
+    display: flex; 
+flex-direction: column; 
+ } */
+
+/* .btn-group{
+    width: 50px; 
+} */
+
+/* .btn-group{
+
+    background-color: white; 
+
+
+
+} */

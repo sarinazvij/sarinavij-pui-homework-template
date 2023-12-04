@@ -58,7 +58,8 @@ function cupType(element){
     .attr("preserveAspectRatio", "xMinYMin meet"); 
     icedCoffeeCup.append("polygon")
     .attr("points", "500,0 290,800 400,800 200,0")
-    .style("fill", "white"); 
+    .style("fill", "white")
+    .attr("stroke", "black"); 
   }
 
 else if (element.value === "Hot"){

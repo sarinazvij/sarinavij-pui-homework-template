@@ -507,6 +507,7 @@ background-position: center;
     display: flex; 
   justify-content: center;
  align-items: center; 
+ background-color: #D2F6F9; 
 
 
 }
@@ -556,8 +557,11 @@ background-position: center;
 }
 
 .main{
-    background-color: #D2F6F9;  
+    background-color: #D2F6F9; 
+ 
  }
+
+
  #gameTitle{
      font-family:"Sansita";
      text-align: center; 
@@ -589,3 +593,13 @@ flex-direction: column;
 
 
 } */
+
+
+.carddescription{
+background-color: #BEA757; 
+margin-left: 5%;
+margin-right: 5%; 
+border-radius: 20px; 
+padding: 3%; 
+text-align: center; 
+}

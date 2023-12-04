@@ -7,18 +7,41 @@ let icedCoffeeCup = d3.select("#cup")
 .classed("svg-content", true); 
 
 
-
-
-  let hotCoffeeCup = d3.select("#cup")
+hotCoffeeCup = d3.select("#cup")
   .append("svg") 
   .append("path")
-  .attr("viewBox", `0 0 600 400`)
-  .attr("preserveAspectRatio", "xMinYMin meet")
-  .classed("svg-content", true);
+  // .append("class", "old")
+  // .attr("height", 100)
+  // .attr("width", 100); 
+  .attr("viewBox", `0 0 100 900`)
+  .attr("transform", "translate(100, 20)"); 
+  
+
+
+  // let hotCoffeeCup = d3.select("#cup")
+  // .append("svg") 
+  // .append("path")
+  // .attr("viewBox", `0 0 600 400`)
+  // .attr("preserveAspectRatio", "xMinYMin meet")
+  // .classed("svg-content", true);
     
 
 
+
   
+
+// hotCoffeeCup = d3.select("#cup")
+//   .append("svg") 
+//   .append("path")
+//   // .attr("height", 100)
+//   // .attr("width", 100); 
+//   .attr("viewBox", `0 0 100 900`)
+//   // .attr("transform", "translate(100, 20)"); 
+  
+
+
+
+
 
 
 
@@ -68,8 +91,8 @@ else if (element.value === "Hot"){
 hotCoffeeCup = d3.select("#cup")
   .append("svg") 
   .append("path")
-  // .attr("height", 100)
-  // .attr("width", 100); 
+  .attr("height", 100)
+  .attr("width", 100) 
   .attr("viewBox", `0 0 100 900`)
   .attr("transform", "translate(100, 20)"); 
    arc = d3.arc()
@@ -78,7 +101,7 @@ hotCoffeeCup = d3.select("#cup")
 .startAngle((Math.PI)*6) 
 .endAngle(Math.PI*2); 
   hotCoffeeCup
-  // .attr("class", "arc") 
+  .attr("class", "arc") 
   .attr("d", arc)
   .style("fill", "white"); 
 }
@@ -194,13 +217,13 @@ function addSyrup(){
 
 
 
-// icedCoffeeCup
-// .append("polygon")  
-// .attr("points", "500,0 487,50 212,50 200,0") //milk
-// .style("fill", "yellow");
+icedCoffeeCup
+.append("polygon")  
+.attr("points", "500,0 487,50 212,50 200,0") //milk
+.style("fill", "yellow");
 
 
-// icedCoffeeCup
-// .append("polygon")  
-// .attr("points", "453,176 487,50 212,50 244,176") //syrup
-// .style("fill", "blue");
+icedCoffeeCup
+.append("polygon")  
+.attr("points", "453,176 487,50 212,50 244,176") //syrup
+.style("fill", "blue");

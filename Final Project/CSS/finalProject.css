@@ -603,3 +603,12 @@ border-radius: 20px;
 padding: 3%; 
 text-align: center; 
 }
+
+
+.old{
+    z-index: 1; 
+}
+
+.new{
+    z-index: 2; 
+}

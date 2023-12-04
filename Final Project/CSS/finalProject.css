@@ -554,6 +554,7 @@ background-position: center;
 .bothcards {
     margin-left: 5%; 
     margin-right: 5%; 
+    height: 100%; 
 }
 
 .main{
@@ -615,8 +616,7 @@ svg{
      height: 100%; 
 
 } 
-
-.cardforcoffee{
+ /* .cardforcoffee{
 
 width: 100%; 
 }
@@ -625,4 +625,4 @@ width: 100%;
 
     width: 200px; 
     height: 200px; 
-}
+}   */

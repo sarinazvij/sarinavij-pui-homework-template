@@ -1,11 +1,11 @@
 
-let icedCoffeeCup = d3.select("#cup")
-.append("svg")
-.attr("height", 300)
-.attr("width", 500)    
-.attr("viewBox", `0 0 100 900`)
-.attr("preserveAspectRatio", "xMinYMin meet")
-.classed("svg-content", true); 
+// let icedCoffeeCup = d3.select("#cup")
+// .append("svg")
+// .attr("height", 300)
+// .attr("width", 500)    
+// .attr("viewBox", `0 0 100 900`)
+// .attr("preserveAspectRatio", "xMinYMin meet")
+// .classed("svg-content", true); 
 
 
 
@@ -14,13 +14,20 @@ let icedCoffeeCup = d3.select("#cup")
 
 
  
-let r = 200;
 
+let r = 200;
 let hotCoffeeCup = d3.select("#cup")
 .append("svg")
+.attr("height", 300)
+.attr("width", 500) 
+.attr("cx", r)
+  .attr("cy", r)
+  .attr("r", r) 
 .attr("viewBox", `0 0 100 900`)
 .attr("preserveAspectRatio", "xMinYMin meet")
 .classed("svg-content", true); 
+
+
 
 
 
@@ -56,6 +63,7 @@ else if (element.value === "Hot"){
   
   grad.append("stop").attr("offset", "50%").style("stop-color", "white");
 grad.append("stop").attr("offset", "50%").style("stop-color", "#D2F6F9");
+
 // grad.append("stop").attr("offset", "30%").style("stop-color", "lightblue");
 // grad.append("stop").attr("offset", "30%").style("stop-color", "white");
 
@@ -67,24 +75,7 @@ hotCoffeeCup.append("circle")
 
 }
 }
-// hotCoffeeCup = d3.select("#cup")
-//   .append("svg") 
-//   .append("path")
-//   .attr("height", 100)
-//   .attr("width", 100) 
-//   .attr("viewBox", `0 0 100 900`)
-//   .attr("transform", "translate(100, 20)"); 
-//    arc = d3.arc()
-// .innerRadius(0) 
-// .outerRadius(76) 
-// .startAngle((Math.PI)*6) 
-// .endAngle(Math.PI*2); 
-//   hotCoffeeCup
-//   .attr("class", "arc") 
-//   .attr("d", arc)
-// //   .style("fill", "white"); 
-// }
-// }
+
 
 function addCoffee(element){
 
@@ -113,25 +104,34 @@ function addCoffee(element){
       .style("fill", "#401D01");
     }
     else if ((element.value === "Light") && (iceCheck.value === "Hot")){
-  
-  var grad = hotCoffeeCup.append("defs").append("linearGradient").attr("id", "grad")
-  .attr("x1", "0%").attr("x2", "0%").attr("y1", "100%").attr("y2", "0%");
-  
-  grad.append("stop").attr("offset", "50%").style("stop-color", "white");
-grad.append("stop").attr("offset", "50%").style("stop-color", "#D2F6F9");
-// grad.append("stop").attr("offset", "30%").style("stop-color", "lightblue");
-// grad.append("stop").attr("offset", "30%").style("stop-color", "white");
+      d3.select("body").select("svg").remove(); // aided by https://stackoverflow.com/questions/46499721/d3-js-graphs-not-getting-toggled-on-click-of-radio-buttons
+      hotCoffeeCup = d3.select("#cup")
+      .append("svg");
+      var grad = hotCoffeeCup.append("defs").append("linearGradient").attr("id", "grad")
+      .attr("x1", "0%").attr("x2", "0%").attr("y1", "100%").attr("y2", "0%");
+    
 
-hotCoffeeCup.append("circle")
-  .attr("cx", r)
-  .attr("cy", r)
-  .attr("r", r)
-  .attr("fill", "url(#grad)")
-  .attr("stroke", "black"); 
+      grad.append("stop").attr("offset", "20%").style("stop-color", "#C3890C");
+
+  
+      grad.append("stop").attr("offset", "10%").style("stop-color", "white");
+
+      
+      
+      grad.append("stop").attr("offset", "50%").style("stop-color", "#D2F6F9");
+      
+
+    
+    hotCoffeeCup.append("circle")
+      .attr("cx", r)
+      .attr("cy", r)
+      .attr("r", r)
+      .attr("fill", "url(#grad)");
+    
+    }
   
   }
 
-}
 
 function addMilk(){
   let iceCheck = document.querySelector('input[name="flexRadioDefault1"]:checked');
@@ -165,6 +165,36 @@ console.log(milkText);
     .append("polygon")  
     .attr("points", "537,350 581,175 240,175 286,350")
     .style("fill", "#D2C7BF");
+  }
+  else if ((milkText === "1% Milk") && (iceCheck.value === "Hot")){
+    d3.select("body").select("svg").remove(); // aided by https://stackoverflow.com/questions/46499721/d3-js-graphs-not-getting-toggled-on-click-of-radio-buttons
+    hotCoffeeCup = d3.select("#cup")
+    .append("svg");
+    var grad = hotCoffeeCup.append("defs").append("linearGradient").attr("id", "grad")
+    .attr("x1", "0%").attr("x2", "0%").attr("y1", "100%").attr("y2", "0%");
+  
+
+    grad.append("stop").attr("offset", "20%").style("stop-color", "#C3890C");
+
+grad.append("stop").attr("offset", "40%").style("stop-color", "#F0ECE8");
+
+  
+    grad.append("stop").attr("offset", "10%").style("stop-color", "white");
+    
+
+    
+    
+    grad.append("stop").attr("offset", "50%").style("stop-color", "#D2F6F9");
+    
+    
+
+  
+  hotCoffeeCup.append("circle")
+    .attr("cx", r)
+    .attr("cy", r)
+    .attr("r", r)
+    .attr("fill", "url(#grad)");
+  
   }
   }
 
@@ -209,6 +239,37 @@ function addSyrup(){
     .append("polygon")  
     .attr("points", "600,100 581,175 240,175 220,100")
     .style("fill", "white");
+  }
+
+  else if ((syrupText === "Caramel") && (iceCheck.value === "Hot")){
+    d3.select("body").select("svg").remove(); // aided by https://stackoverflow.com/questions/46499721/d3-js-graphs-not-getting-toggled-on-click-of-radio-buttons
+    hotCoffeeCup = d3.select("#cup")
+    .append("svg");
+    var grad = hotCoffeeCup.append("defs").append("linearGradient").attr("id", "grad")
+    .attr("x1", "0%").attr("x2", "0%").attr("y1", "100%").attr("y2", "0%");
+  
+
+    grad.append("stop").attr("offset", "20%").style("stop-color", "#C3890C");
+
+grad.append("stop").attr("offset", "40%").style("stop-color", "#F0ECE8");
+
+  
+    grad.append("stop").attr("offset", "10%").style("stop-color", "white");
+    grad.append("stop").attr("offset", "10%").style("stop-color", "#DB9C60");
+
+    
+    
+    grad.append("stop").attr("offset", "50%").style("stop-color", "#D2F6F9");
+    
+    
+
+  
+  hotCoffeeCup.append("circle")
+    .attr("cx", r)
+    .attr("cy", r)
+    .attr("r", r)
+    .attr("fill", "url(#grad)");
+  
   }
 
 }

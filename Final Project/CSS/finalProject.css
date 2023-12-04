@@ -626,3 +626,8 @@ width: 100%;
     width: 200px; 
     height: 200px; 
 }   */
+
+.blah{
+    background: linear-gradient(to left, #333, #333 50%, #eee 75%, #333 75%);
+
+}

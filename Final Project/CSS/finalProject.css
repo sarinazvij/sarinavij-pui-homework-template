@@ -611,7 +611,7 @@ svg{
 }
  
   #cup{
-
+/* margin-left: 400px;  */
      width: 100%;
      height: 100%; 
 
@@ -648,31 +648,3 @@ margin: 1%;
 
 }
 
-
-.stop-left {
-    stop-color: brown;  /* Indigo */
-}
-
-.stop-right {
-    stop-color: white;  /* Teal */
-}
-
-.filled {
-    fill: url(#mainGradient);
-}
-
-.outlined {
-    fill:   none;
-    stroke: url(#mainGradient);
-    stroke-width: 4;
-}
-
-
-.white{
-    /* background: -moz-linear-gradient(top,  yellow 0%, purple 25%, green 50%, rgba(242,38,42,1) 75%, black 100%); */
-    background: -webkit-linear-gradient(top,  white 100%, black 100%);   
-    /* background: linear-gradient(to bottom,white,50% purple, 25%); */
-    border-radius: 90%;
-}
-
-.yellow{}

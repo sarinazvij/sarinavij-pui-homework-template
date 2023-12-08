@@ -17,7 +17,12 @@ let hotCoffeeCup = d3.select("#cup")
 .attr("preserveAspectRatio", "xMinYMin meet")
 .classed("svg-content", true); 
 
+outerRadius = Math.min(width,height)/2,
+innerRadius = (outerRadius/5)*4,
+fontSize = (Math.min(width,height)/4);
+
 var arc = d3.arc()
+
 .innerRadius(0)
 .outerRadius(150)
 .startAngle(0)

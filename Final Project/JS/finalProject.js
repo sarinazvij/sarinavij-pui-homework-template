@@ -60,11 +60,12 @@ function cupType(element){
     .style("fill", "white")
     .attr("d", arc());
 
-    hotCoffeeCup.append("rect")
+  let rect =  hotCoffeeCup.append("rect")
      .attr("height", 200)
      .attr("width", 300)
         .attr("transform","translate(0,-150)rotate(90)")
-        .style("fill", "white"); 
+        .style("fill", "white")
+        
 
 }
 }
@@ -133,14 +134,10 @@ function addCoffee(element){
   
 
 function addMilk(){
-  let iceCheck = document.querySelector('input[name="flexRadioDefault1"]:checked');
-
-  
+let iceCheck = document.querySelector('input[name="flexRadioDefault1"]:checked');
 let milkType= document.getElementById("milk");
 var milkText = milkType.options[milkType.selectedIndex].text;
 console.log(milkText); 
- 
-
   if ((milkText === "1% Milk") && (iceCheck.value === "Iced")){
     icedCoffeeCup
     .append("polygon")  
@@ -166,10 +163,35 @@ console.log(milkText);
     .style("fill", "#D2C7BF");
   }
 
+  else if ((milkText === "1% Milk") && (iceCheck.value === "Hot")){
+    d3.select("body").select("svg")
+    .append("polygon")  
+    .attr("points", "400,250 400,100 100,100 100,250")
+    .style("fill", "#F0ECE8");
+  }
+  
+  else if ((milkText === "Almond Milk") && (iceCheck.value === "Hot")){
+    d3.select("body").select("svg")
+    .append("polygon")  
+    .attr("points", "400,250 400,100 100,100 100,250")
+    .style("fill", "#F9E9D3");
   }
 
+  else if ((milkText === "Coconut Milk") && (iceCheck.value === "Hot")){
+    d3.select("body").select("svg")
+    .append("polygon")  
+    .attr("points", "400,250 400,100 100,100 100,250")
+    .style("fill", "#F2EFE7");
+    
+  }
 
-
+  else if ((milkText === "Soy Milk") && (iceCheck.value === "Hot")){
+    d3.select("body").select("svg")
+    .append("polygon")  
+    .attr("points", "400,250 400,100 100,100 100,250")
+    .style("fill", "#D2C7BF");
+  }
+}
 
 
 function addSyrup(){
@@ -210,11 +232,43 @@ function addSyrup(){
     .attr("points", "600,100 581,175 240,175 220,100")
     .style("fill", "white");
   }
+  else if (syrupText === "Caramel" && (iceCheck.value === "Hot")){
+    d3.select("body").select("svg")
+    .append("polygon")  
+    .attr("points", "400,50 400,100 100,100 100,50")
+    .style("fill", "#DB9C60");
+  }
+  else if (syrupText === "Hazelnut" && (iceCheck.value === "Hot")){
+    d3.select("body").select("svg")
+    .append("polygon")  
+    .attr("points", "400,50 400,100 100,100 100,50")
+    .style("fill", "#8F4E02");
+  }
+  else if (syrupText === "Mocha" && (iceCheck.value === "Hot")){
+    d3.select("body").select("svg")
+    .append("polygon")  
+    .attr("points", "400,50 400,100 100,100 100,50")
+    .style("fill", "#411900");
+  }
+else if (syrupText === "Vanilla" && (iceCheck.value === "Hot")){
+  d3.select("body").select("svg")
+  .append("polygon")  
+  .attr("points", "400,50 400,100 100,100 100,50")
+  .style("fill", "#EBE2D3");
+
+
+}
+
+else if (syrupText === "No Syrup" && (iceCheck.value === "Hot")){
+  d3.select("body").select("svg")
+  .append("polygon")  
+  .attr("points", "400,50 400,100 100,100 100,50")
+  .style("fill", "white");
 
 }
 
 
-
+}
 
 
 

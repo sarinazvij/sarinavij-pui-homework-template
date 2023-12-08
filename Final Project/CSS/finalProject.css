@@ -616,16 +616,12 @@ svg{
      height: 100%; 
 
 } 
- /* .cardforcoffee{
+  .cardforcoffee{
 
-width: 100%; 
+width: 50%; 
 }
 
-#arc1{
 
-    width: 200px; 
-    height: 200px; 
-}   */
 
 /* .carddescriptionok{
     display: flex;

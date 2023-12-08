@@ -1,15 +1,12 @@
 
-// let icedCoffeeCup = d3.select("#cup")
-// .append("svg")
-// .attr("height", 300)
-// .attr("width", 500)    
-// .attr("viewBox", `0 0 100 900`)
-// .attr("preserveAspectRatio", "xMinYMin meet")
-// .classed("svg-content", true); 
+let icedCoffeeCup = d3.select("#cup")
+.append("svg")
+.attr("height", 300)
+.attr("width", 500)    
+.attr("viewBox", `0 0 100 900`)
+.attr("preserveAspectRatio", "xMinYMin meet")
+.classed("svg-content", true); 
 
-
-
-  
 
 
 
@@ -20,20 +17,14 @@ let hotCoffeeCup = d3.select("#cup")
 .append("svg")
 .attr("height", 300)
 .attr("width", 500) 
-.attr("cx", r)
-  .attr("cy", r)
-  .attr("r", r) 
 .attr("viewBox", `0 0 100 900`)
 .attr("preserveAspectRatio", "xMinYMin meet")
 .classed("svg-content", true); 
 
 
+// var grad = hotCoffeeCup.append("defs").append("linearGradient").attr("id", "grad")
+// .attr("x1", "0%").attr("x2", "0%").attr("y1", "100%").attr("y2", "0%");
 
-
-
-
-
- 
 
 
 function cupType(element){
@@ -58,9 +49,11 @@ else if (element.value === "Hot"){
   d3.select("body").select("svg").remove(); // aided by https://stackoverflow.com/questions/46499721/d3-js-graphs-not-getting-toggled-on-click-of-radio-buttons
   hotCoffeeCup = d3.select("#cup")
   .append("svg");
-  var grad = hotCoffeeCup.append("defs").append("linearGradient").attr("id", "grad")
-  .attr("x1", "0%").attr("x2", "0%").attr("y1", "100%").attr("y2", "0%");
   
+
+var grad = hotCoffeeCup.append("defs").append("linearGradient").attr("id", "grad")
+.attr("x1", "0%").attr("x2", "0%").attr("y1", "100%").attr("y2", "0%");
+
   grad.append("stop").attr("offset", "50%").style("stop-color", "white");
 grad.append("stop").attr("offset", "50%").style("stop-color", "#D2F6F9");
 
@@ -166,36 +159,7 @@ console.log(milkText);
     .attr("points", "537,350 581,175 240,175 286,350")
     .style("fill", "#D2C7BF");
   }
-  else if ((milkText === "1% Milk") && (iceCheck.value === "Hot")){
-    d3.select("body").select("svg").remove(); // aided by https://stackoverflow.com/questions/46499721/d3-js-graphs-not-getting-toggled-on-click-of-radio-buttons
-    hotCoffeeCup = d3.select("#cup")
-    .append("svg");
-    var grad = hotCoffeeCup.append("defs").append("linearGradient").attr("id", "grad")
-    .attr("x1", "0%").attr("x2", "0%").attr("y1", "100%").attr("y2", "0%");
-  
 
-    grad.append("stop").attr("offset", "20%").style("stop-color", "#C3890C");
-
-grad.append("stop").attr("offset", "40%").style("stop-color", "#F0ECE8");
-
-  
-    grad.append("stop").attr("offset", "10%").style("stop-color", "white");
-    
-
-    
-    
-    grad.append("stop").attr("offset", "50%").style("stop-color", "#D2F6F9");
-    
-    
-
-  
-  hotCoffeeCup.append("circle")
-    .attr("cx", r)
-    .attr("cy", r)
-    .attr("r", r)
-    .attr("fill", "url(#grad)");
-  
-  }
   }
 
 
@@ -241,51 +205,5 @@ function addSyrup(){
     .style("fill", "white");
   }
 
-  else if ((syrupText === "Caramel") && (iceCheck.value === "Hot")){
-    d3.select("body").select("svg").remove(); // aided by https://stackoverflow.com/questions/46499721/d3-js-graphs-not-getting-toggled-on-click-of-radio-buttons
-    hotCoffeeCup = d3.select("#cup")
-    .append("svg");
-    var grad = hotCoffeeCup.append("defs").append("linearGradient").attr("id", "grad")
-    .attr("x1", "0%").attr("x2", "0%").attr("y1", "100%").attr("y2", "0%");
-  
-
-    grad.append("stop").attr("offset", "20%").style("stop-color", "#C3890C");
-
-grad.append("stop").attr("offset", "40%").style("stop-color", "#F0ECE8");
-
-  
-    grad.append("stop").attr("offset", "10%").style("stop-color", "white");
-    grad.append("stop").attr("offset", "10%").style("stop-color", "#DB9C60");
-
-    
-    
-    grad.append("stop").attr("offset", "50%").style("stop-color", "#D2F6F9");
-    
-    
-
-  
-  hotCoffeeCup.append("circle")
-    .attr("cx", r)
-    .attr("cy", r)
-    .attr("r", r)
-    .attr("fill", "url(#grad)");
-  
-  }
-
 }
-
-
-
-// icedCoffeeCup
-// .append("polygon")  
-// .attr("points", "500,0 487,50 212,50 200,0") //milk
-// .style("fill", "yellow");
-
-
-// icedCoffeeCup
-// .append("polygon")  
-// .attr("points", "453,176 487,50 212,50 244,176") //syrup
-// .style("fill", "blue");
-
-
 

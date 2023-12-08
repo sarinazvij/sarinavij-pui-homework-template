@@ -557,10 +557,10 @@ background-position: center;
     height: 100%; 
 }
 
-.main{
+/* .main{
     background-color: #D2F6F9; 
  
- }
+ } */
 
 
  #gameTitle{
@@ -646,4 +646,27 @@ width: 100%;
 
 margin: 1%; 
 
+}
+
+
+.stop-left {
+    stop-color: #3f51b5;  /* Indigo */
+}
+
+.stop-right {
+    stop-color: #009688;  /* Teal */
+}
+
+.filled {
+    fill: url(#mainGradient);
+}
+
+.outlined {
+    fill:   none;
+    stroke: url(#mainGradient);
+    stroke-width: 4;
+}
+
+.white{
+    background: radial-gradient(#e66465, #9198e5);
 }

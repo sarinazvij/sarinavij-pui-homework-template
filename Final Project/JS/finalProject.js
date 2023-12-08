@@ -9,19 +9,28 @@ let icedCoffeeCup = d3.select("#cup")
   
 let hotCoffeeCup = d3.select("#cup")
 .append("svg")
-.attr("width", 200)
-.attr("height", 200)
+// .attr("width", 200)
+// .attr("height", 200)
 .append("g")
 .attr("transform","translate(250,250)rotate(90)")
-.attr("viewBox", `0 0 100 900`)
-.attr("preserveAspectRatio", "xMinYMin meet")
-.classed("svg-content", true); 
+// .attr("viewBox", `0 0 100 900`)
+// .attr("preserveAspectRatio", "xMinYMin meet")
+.classed("svg-content", true)
 
-outerRadius = Math.min(width,height)/2,
-innerRadius = (outerRadius/5)*4,
-fontSize = (Math.min(width,height)/4);
+// width = #cup.width(),
+//         height = #cup.height(),
+//         outerRadius = Math.min(width,height)/2,
+//         innerRadius = (outerRadius/5)*4,
+//         fontSize = (Math.min(width,height)/4);
+    
+
+
 
 var arc = d3.arc()
+
+// outerRadius = Math.min(width,height)/2,
+// innerRadius = (outerRadius/5)*4,
+// fontSize = (Math.min(width,height)/4);
 
 .innerRadius(0)
 .outerRadius(150)

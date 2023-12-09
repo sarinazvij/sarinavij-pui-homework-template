@@ -97,6 +97,15 @@ svg{
     height: 100%; 
 } 
 
+.locationCards{
+    width: 45%; 
+    background-color:#F298A5; 
+    border-radius: 20px;
+    margin: 1%; 
+}
+
+
+
 
 
 
@@ -104,13 +113,7 @@ svg{
     width: 50%; 
 }
 
-.locationCards{
-    width: 45%; 
-    background-color:#F298A5; 
-    border-radius: 20px;
-    margin: 1%; 
 
-}
 
 #icedcoffee{
     width: 30%; 

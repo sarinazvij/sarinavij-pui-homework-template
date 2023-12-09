@@ -1,4 +1,4 @@
-let icedCoffeeCup = d3.select("#cup")
+let icedCoffeeCup = d3.select("#cup") // The following websites helped me to create the structure for my polygon shapes: https://stackoverflow.com/questions/13204562/proper-format-for-drawing-polygon-data-in-d3 , https://d3-graph-gallery.com/graph/shape.html , 
   .append("svg")
   .attr("height", 300)
   .attr("width", 500)    
@@ -9,9 +9,9 @@ let hotCoffeeCup = d3.select("#cup")
   .append("svg")
   .attr("width", 400)
   .attr("height", 200)
-  .attr("viewBox", `0 0 200 300`)
-  .attr("preserveAspectRatio", "xMinYMin meet")
-  .classed("svg-content", true); 
+  .attr("viewBox", `0 0 200 300`) // All viewbox attributed below were created with help from: https://www.geeksforgeeks.org/svg-viewbox-attribute/
+  .attr("preserveAspectRatio", "xMinYMin meet") // Aspect ratio assistance: https://stackoverflow.com/questions/13632169/using-viewbox-to-resize-svg-depending-on-the-window-size
+  .classed("svg-content", true); // Another responsive element: https://stackoverflow.com/questions/9400615/whats-the-best-way-to-make-a-d3-js-visualisation-layout-responsive
 
 function cupType(element){
   d3.select("body").select("svg").remove(); // aided by https://stackoverflow.com/questions/46499721/d3-js-graphs-not-getting-toggled-on-click-of-radio-buttons
@@ -19,9 +19,8 @@ function cupType(element){
     d3.select("body").select("svg").remove();
     icedCoffeeCup = d3.select("#cup")
       .append("svg")
-      .attr("viewBox", `0 0 600 400`)
-      .attr("preserveAspectRatio", "xMinYMin meet")
-      .attr("preserveAspectRatio", "xMinYMin meet");       
+      .attr("viewBox", `0 0 600 400`) 
+      .attr("preserveAspectRatio", "xMinYMin meet")  
     icedCoffeeCup.append("polygon")
       .attr("points", "600,100 500,500 325,500 220,100")
       .style("fill", "white")
@@ -33,13 +32,12 @@ function cupType(element){
       .append("svg")
       .attr("width", 200)
       .attr("height", 200)
-      .attr("viewBox", `0 0 200 200`)
+      .attr("viewBox", `0 0 200 200`) 
       .attr("preserveAspectRatio", "xMinYMin meet")
       .classed("svg-content", true); 
     hotCoffeeCup
       .append("polygon")  
       .attr("viewBox", `0 0 100 300`)
-      .attr("preserveAspectRatio", "xMinYMin meet")
       .attr("preserveAspectRatio", "xMinYMin meet")
       .classed("svg-content", true)
       .attr("points", "70,115, 70,85, 130,85, 130,115")  
@@ -50,9 +48,8 @@ function cupType(element){
     hotCoffeeCup
       .attr("viewBox", `0 0 100 300`)
       .attr("preserveAspectRatio", "xMinYMin meet")
-      .attr("preserveAspectRatio", "xMinYMin meet")
       .classed("svg-content", true); 
-    hotCoffeeCup.append("polygon")
+    hotCoffeeCup.append("polygon") // In general, this link helped me determine how to append shapes: https://stackoverflow.com/questions/32409136/d3-js-adding-polygon-inside-rectangle
       .attr("points", "10,50, 10,150, 100,150, 100,50")
       .style("stroke", "black")
       .style("fill", "white")
@@ -60,14 +57,14 @@ function cupType(element){
 }
 
 function addCoffee(element){
-  let iceCheck = document.querySelector('input[name="flexRadioDefault1"]:checked');
+  let iceCheck = document.querySelector('input[name="flexRadioDefault1"]:checked'); //Helped me determine how to figure out when something is checked: https://developer.mozilla.org/ru/docs/Web/CSS/:checked
   if (iceCheck === null){
     alert("Please select whether you would like your drink iced or hot."); 
   }
   if ((element.value === "Light") && (iceCheck.value === "Iced")){
     icedCoffeeCup
       .append("polygon")  
-      .attr("points", "537,350 500,500 325,500 286,350")
+      .attr("points", "537,350 500,500 325,500 286,350") 
       .style("fill", "#C3890C");
   }
   else if ((element.value === "Medium") && (iceCheck.value === "Iced")){

@@ -33,11 +33,10 @@
         </div>
       </div>
     </nav>
-    <h1 id = "gameTitle">Build Your Own Coffee</h1>
-    <div class ="bothcards class d-flex justify-content-between">
+    <h1 id = "gameTitle">Build Your Own Coffee</h1> <!-- The following radio button forms were created using Boostrap: https://getbootstrap.com/docs/5.0/forms/checks-radios/-->
+    <div class ="infoCoffeeCards class d-flex justify-content-between">
       <div class="cards">
         <div class="card-body">
-          <!-- <p class="card-text"> -->
           <h5 class="card-title">Step 1: Select whether you would like your drink hot or iced</h5>
           <div class="form-check">
             <input class="form-check-input" type="radio" name="flexRadioDefault1"  id="flexRadioDefault1" onclick = "cupType(this)" value="Iced"/>
@@ -64,7 +63,7 @@
             <label class="form-check-label" for="flexRadioDefault3"> Dark </label>
           </div>
           <br>
-          <h5 class="card-title">Step 3: Select the type of milk you would prefer</h5>
+          <h5 class="card-title">Step 3: Select the type of milk you would prefer</h5> <!--The following two drop-down forms were made using the following Boostrap link: https://getbootstrap.com/docs/4.0/components/forms/-->
           <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="milk" onchange = "addMilk()">
             <option selected>Select Milk Type</option>
             <option value="1">1% Milk</option>
@@ -82,19 +81,16 @@
             <option value="Vanilla">Vanilla</option>
             <option value="None">No Syrup</option>
           </select>
-        <!-- </p> -->
           <a href="#" class="card-link">Another link</a>
         </div>
       </div>
-      <div class="cardforcoffee">
+      <div class="cardForCoffee">
         <div id="cup">
       </div>
     </div>
-    <!-- </div> -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  <!-- </div>      -->
   </body>
 </html>
       

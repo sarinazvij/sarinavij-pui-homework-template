@@ -133,3 +133,87 @@ svg{
     border-radius: 30px;
  }
 
+ @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Libre+Baskerville&display=swap');
+
+
+ 
+ .heroimage {
+   width:100vw;
+   height: 100vh;
+   display:flex;
+   justify-content:center;
+   align-items:center;
+   text-align:center;
+   background-image:url(https://img.freepik.com/free-vector/variety-cute-shapes-abstract-background_23-2148544989.jpg?t=st=1648518916~exp=1648519516~hmac=f749e8642a4e066c0d5f0be0e3225f1b34aa32949fac05adb6c7732e86b9fa74&w=826);
+   background-size:cover;
+   background-repeat: no-repeat;
+ }
+ 
+ .hero-inner .button {
+   display: block;
+   width: 200px;
+   height: 50px;
+   border: 3px solid black;
+   border-radius: 20px;
+   text-decoration: none;
+   line-height: 45px;
+   color: black;
+   background-color: green;
+   font-family: arial;
+   font-size: 20px;
+   text-transform: uppercase;
+   margin:auto;
+ }
+ 
+ 
+ .hero-inner .button:hover {
+   display: block;
+   width: 200px;
+   height: 50px;
+   border: 3px solid black;
+   border-radius: 20px;
+   text-decoration: none;
+   line-height: 45px;
+   color: black;
+   background-color: white;
+   font-family: calibri;
+   font-size: 20px;
+   margin: auto;
+ }
+ 
+ h1 {
+   font-family: calibri;
+   font-size: 80px;
+ }
+ 
+ h2 {
+     font-family: arial;
+   font-size: 30px;
+ 
+ }
+ 
+ @media screen and (min-width:768px), and (max-width:1023px), and (orientation: landscape){
+   h1{
+     color: #b08f88;
+     font-family: 'Abril Fatface', cursive;
+     font-size: 80px;
+     font-weight: bold;
+   }
+   
+   h2{
+     color: #395659;
+     font-family: 'Libre Baskerville', serif;
+     font-size: 25px;
+   }
+   
+   .heroimage {
+     width:100vw;
+     height: 100vh;
+     display:flex;
+     justify-content:center;
+     align-items:center;
+     text-align:center;
+     background-image:url(https://img.freepik.com/free-vector/minimal-doodle-frame-background-social-story-highlight_53876-97970.jpg?size=626&ext=jpg);
+     background-size:cover;
+     background-repeat: no-repeat;
+ }

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Tartan Coffee</title>
@@ -10,111 +10,65 @@
     <link href="https://fonts.googleapis.com/css2?family=Sansita&display=swap" rel="stylesheet" type="text/css" /> 
     <script src='https://d3js.org/d3.v4.min.js' defer></script>
     <script src="JS/finalProject.js" defer></script>  
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous" defer></script>
-      
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous" defer></script>   
   </head>
-<body>
-  <nav class="navbar navbar-light bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand mr-auto" href="./homepage.html">
-        <img src="Images/coffeeIcon.svg" alt="Outline of coffee cup being used as logo" width="30" height="24" class="d-inline-block align-text-top">
-        Tartan Coffee
-      </a>
-       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-         <span class="navbar-toggler-icon"></span>
-      </button>  
-     <div class="collapse navbar-collapse" id="navbarNavAltMarkup"> 
-         <div id ="headercategories">
-        <div class="navbar-nav flex-lg-grow mx-auto">
-          
-          <a class="nav-link" href="./laPrima.html" href="#">La Prima</a>
-          <a class="nav-link" href="./redhawk.html">Redhawk Coffee</a>
-          <a class="nav-link" href="./game.html"> Interactive Game </a>
-          
-        </div>  
-       </div> 
+
+  <body>
+    <nav class="navbar navbar-light bg-light"> <!-- The navbar structure was taken from the following site: https://getbootstrap.com/docs/4.0/components/navbar/ --> 
+      <div class="container-fluid">
+        <a class="navbar-brand mr-auto" href="./homepage.html">
+        <img src="Images/coffeeIcon.svg" id="coffeeIcon" alt="Outline of coffee cup being used as logo">Tartan Coffee
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>  
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup"> 
+          <div id ="headercategories">
+            <div class="navbar-nav flex-lg-grow mx-auto">
+              <a class="nav-link" href="./laPrima.html">La Prima</a>
+              <a class="nav-link" href="./redhawk.html">Redhawk Coffee</a>
+              <a class="nav-link" href="./game.html"> Interactive Game </a>
+            </div>  
+          </div> 
+        </div>
+     </div>
+    </nav>
+    <div class="imageCaptionPlacement">
+      <div class="thumbnail text-center pr-2"> <!-- The text overlay on the image on Boostrap: https://getbootstrap.com/docs/4.0/content/images/ and https://mdbootstrap.com/docs/standard/extended/overlay/--> 
+        <img src="Images/laPrima.jpg" alt="Image of the La Prima coffee shop at CMU. A glass container and register are on display in front of some coffee shop signage." class="img-fluid">
+          <div class="captionOnImage">
+            <h1> La Prima</h1>
+          </div>
       </div>
     </div>
-  </nav>
-
-
-  <div class="row" id="imagecapt">
-    <div class="thumbnail text-center pr-2">
-        <img src="Images/laPrima.jpg" alt="Responsive image" class="img-fluid">
-        <div class="caption">
-        <h1 id ="sup"> La Prima</h1>
+    <div class="carddescription mt-5"> <!-- Cards were made using the following link: https://getbootstrap.com/docs/4.0/components/card/ --> 
+      <h1 class = "card-title"> Coffee Shop Information </h1>
+        <div class="card-body">
+          La Prima was created by Sam Patti over 30 years ago in downtown Pittsburgh&#39;s Strip District. Initially, the store sold espresso machines but, later, pivoted to become the coffee shop that it is today. There are currently five locations, but their coffee is sold in 14 stores across the city as well. There are currently two locations at CMU: in the Gates-Hillman Center (which opened in 2021) and in Wean Hall (which opened in 2018). Currently, they source their coffee beans from several different countries around the world; explore some of them below. 
         </div>
-</div>
-</div>
-
-    
-  
-
-        <div class="carddescription mt-5">
-          <h1 class = "card-title"> Coffee Shop Information </h1>
-          <div class="card-body">
-            La Prima was created by Sam Patti over 30 years ago in downtown Pittsburgh’s Strip District. Initially, the store sold espresso machines but, later, pivoted to become the coffee shop that it is today. There are currently five locations, but their coffee is sold in 14 stores across the city as well. There are currently two locations at CMU: in the Gates-Hillman Center (which opened in 2021) and in Wean Hall (which opened in 2018). Currently, they source their coffee beans from several different countries around the world; explore some of them below. 
-                  </div>
+      </div>
+      <br>
+      <div class="class d-inline-flex justify-content-between">
+        <div class="locationCards">
+          <img class="card-img-top" src="Images/papuaNewGuinea.jpg" alt="Image overlooks a valley with lush trees and a green, mountainous skyline in Papua New Guinea." class="img-fluid">
+            <div class="card-body">
+              <p class="card-text"> La Prima&#39;s medium roast hails from Papua New Guinea, growing in the colder valleys where coffee plants receive rain and are grown in moist climates. This coffee is part of a local effort led by Moses Venapo to help local farmers gain access to markets and learn more about how to price their coffee. This coffee is processed in small batches, and its flavor is described as sweet with hints of vanilla and strawberry.</p>
+            </div>
         </div>
-<br>
-        
-        <div class = "bothcardsok class d-inline-flex justify-content-between">
-        
-                <div class="cardthing">
-                  <img class="card-img-top" src="Images/papuaNewGuinea.jpg" alt="Responsive image" class="img-fluid">
-                  <div class="card-body">
-                    <p class="card-text">
-                    
-                      La Prima’s medium roast hails from Papua New Guinea, growing in the colder valleys where coffee plants receive rain and are grown in moist climates. This coffee is part of a local effort led by Moses Venapo to help local farmers gain access to markets and learn more about how to price their coffee. This coffee is processed in small batches, and its flavor is described as sweet with hints of vanilla and strawberry.                      </p>
-                  </div>
-                </div>
-        
-                <div class="cardthing">
-                  <img class="card-img-top" src="Images/costaRica.jpg" alt="Card image cap">
-                  <div class="card-body">
-                    <p class="card-text">
-
-
-                      Produced in the Los Santos region of Costa Rica, another of La Prima’s medium roasts has notes of lemon and cherry. This coffee is grown at high altitudes in volcanic soil, eliciting complex flavors. Typically, they have a snappy flavor due and “clean” taste. 
-                       
-                    </p>
-                  </div>
-                </div>
-        
-        
-                <div class="cardthing">
-                  <img class="card-img-top" src="Images/brazil.jpg" alt="Card image cap">
-                  <div class="card-body">
-                    <p class="card-text">
-        
-                      In Brazil’s Cerrado region, the coffee is produced by thousands of farmers who produce about 6 million bags of coffee every year. This particular region is known for its red, mineral-filled soil along with its heavy rains and tropical climate. This coffee at La Prima is a light roast with notes of peanut and sour apple.                       </p>
-                  </div>
-                </div>
-        
-        
-        
-              </div>
-        
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-</div> 
-
-</body>
+        <div class="locationCards">
+          <img class="card-img-top" src="Images/costaRica.jpg" alt="Zoomed image of a coffee bean plant with a green hue.">
+            <div class="card-body">
+              <p class="card-text"> Produced in the Los Santos region of Costa Rica, another of La Prima&#39;s medium roasts has notes of lemon and cherry. This coffee is grown at high altitudes in volcanic soil, eliciting complex flavors. Typically, they have a snappy flavor due and “clean” taste. </p>
+            </div>
+        </div>
+        <div class="locationCards">
+          <img class="card-img-top" src="Images/brazil.jpg" alt="Image at the bottom of a lush, green hill with scattered houses.">
+            <div class="card-body">
+              <p class="card-text"> In Brazil&#39;s Cerrado region, the coffee is produced by thousands of farmers who produce about 6 million bags of coffee every year. This particular region is known for its red, mineral-filled soil along with its heavy rains and tropical climate. This coffee at La Prima is a light roast with notes of peanut and sour apple. </p>
+            </div>
+        </div>
+      </div>    
+    </div> 
+  </body>
 </html>
 

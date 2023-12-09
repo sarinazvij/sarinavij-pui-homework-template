@@ -44,12 +44,11 @@ body{
     border-radius: 20px;
 }
 
-#imagecapt {
-    position: relative;
-  
+.imageCaptionPlacement{
+    position:relative;
 }
 
-.img-text-container {
+.img-text-container{
     position: relative;
 }
   
@@ -63,7 +62,7 @@ body{
     padding: 2%; 
 }
 
-.caption{
+.captionOnImage{
     position: absolute; 
     top: 50%; 
     left: 50%; 
@@ -83,7 +82,7 @@ body{
     transform: translate(-30%, -30%);
 }
 
-.bothcards {
+.infoCoffeeCards{
     margin-left: 5%; 
     margin-right: 5%; 
     height: 100%; 
@@ -125,7 +124,7 @@ svg{
     width: 50%; 
 }
 
-.cardthing{
+.locationCards{
     width: 45%; 
     background-color:#F298A5; 
     border-radius: 20px;

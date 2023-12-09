@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Tartan Coffee</title>
@@ -11,107 +11,65 @@
     <script src='https://d3js.org/d3.v4.min.js' defer></script>
     <script src="JS/finalProject.js" defer></script>  
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous" defer></script>
-      
   </head>
-<body>
-  <nav class="navbar navbar-light bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand mr-auto" href="./homepage.html">
-        <img src="Images/coffeeIcon.svg" alt="Outline of coffee cup being used as logo" width="30" height="24" class="d-inline-block align-text-top">
-        Tartan Coffee
-      </a>
-       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-         <span class="navbar-toggler-icon"></span>
-      </button>  
-     <div class="collapse navbar-collapse" id="navbarNavAltMarkup"> 
-         <div id ="headercategories">
-        <div class="navbar-nav flex-lg-grow mx-auto">
-          
-          <!-- <a class="nav-link" aria-current="page" href="./deFer.html">de Fer Coffee & Tea</a> -->
-          <a class="nav-link" href="./laPrima.html" href="#">La Prima</a>
-          <a class="nav-link" href="./redhawk.html">Redhawk Coffee</a>
-          <a class="nav-link" href="./game.html"> Interactive Game </a>
-          
-        </div>  
-       </div> 
+  <body>
+    <nav class="navbar navbar-light bg-light"> <!-- The navbar structure was taken from the following site: https://getbootstrap.com/docs/4.0/components/navbar/ --> 
+      <div class="container-fluid">
+        <a class="navbar-brand mr-auto" href="./homepage.html">
+        <img src="Images/coffeeIcon.svg" id="coffeeIcon" alt="Outline of coffee cup being used as logo">Tartan Coffee
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>  
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup"> 
+          <div id ="headercategories">
+            <div class="navbar-nav flex-lg-grow mx-auto">
+              <a class="nav-link" href="./laPrima.html">La Prima</a>
+              <a class="nav-link" href="./redhawk.html">Redhawk Coffee</a>
+              <a class="nav-link" href="./game.html"> Interactive Game </a>
+            </div>  
+          </div> 
+        </div>
+      </div>
+    </nav>
+    <div class="imageCaptionPlacement">
+      <div class="thumbnail text-center pr-2"> <!-- The text overlay on the image on Boostrap: https://getbootstrap.com/docs/4.0/content/images/ and https://mdbootstrap.com/docs/standard/extended/overlay/--> 
+        <img src="Images/homeImage.png" alt="Responsive image" class="img-fluid">
+          <div class="captionOnImage">
+            <h1>Redhawk Coffee</h1>
+          </div>
       </div>
     </div>
-  </nav>
-
-
-  <div class="row" id="imagecapt">
-    <div class="thumbnail text-center pr-2">
-        <img src="Images/homeImage.png" alt="Responsive image" class="img-fluid">
-        <div class="caption">
-        <h1 id ="sup">Redhawk Coffee</h1>
+    <div class="carddescription mt-5"> <!-- Cards were made using the following link: https://getbootstrap.com/docs/4.0/components/card/ --> 
+      <h1 class = "card-title"> Coffee Shop Information </h1>
+        <div class="card-body">Redhawk Coffee opened in Scaife Hall in October of this year! The company started as a pop-up truck 6 years ago, and have quickly expanded to 4 locations across Pittsburgh. Their aim is to create an atmosphere that encourages conversation and socialization all while serving unique coffee blends. Coffees are sourced from five different countries around the world: Mexico, Ethiopia, Columbia, Guatemala, and El Salvador. Click below to learn more!       
         </div>
-        </div>
-        </div>
-
-
-
-        <div class="carddescription mt-5">
-          <h1 class = "card-title"> Coffee Shop Information </h1>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class = "class d-inline-flex justify-content-between">
+      <div class="locationCards">
+        <img class="card-img-top" src="Images/mexico.jpg" alt="Image on hilltop overlooking green valley with trees below.">
           <div class="card-body">
-            Redhawk Coffee opened in Scaife Hall in October of this year! The company started as a pop-up truck 6 years ago, and have quickly expanded to 4 locations across Pittsburgh. Their aim is to create an atmosphere that encourages conversation and socialization all while serving unique coffee blends. Coffees are sourced from five different countries around the world: Mexico, Ethiopia, Columbia, Guatemala, and El Salvador. Click below to learn more!       
-        </div>
-        </div>
-<br>
-<br>
-<br>
-<br>
-
-<div class = "bothcardsok class d-inline-flex justify-content-between">
-
-        <div class="cardthing">
-          <img class="card-img-top" src="Images/mexico.jpg" alt="Card image cap">
-          <div class="card-body">
-            <p class="card-text">
-              In Mexico, Rehawk’s coffee is grown by local farmer Pepe Arguello. The farm has been run for three generations, and his farm is called Finca Santa Cruz. He grows coffee cherries with a variety of flavor profile including (but not limited to) grape, plum, and strawberry. Pepe is committed to conservational agricultural practices, using the native flora and fauna of the area to aid in the coffee-growing process. Furthermore, he spends hundreds of hours fermenting the beans and is frequently experimenting to develop new blends.  
-              </p>
+            <p class="card-text">In Mexico, Rehawk&#39;s coffee is grown by local farmer Pepe Arguello. The farm has been run for three generations, and his farm is called Finca Santa Cruz. He grows coffee cherries with a variety of flavor profile including (but not limited to) grape, plum, and strawberry. Pepe is committed to conservational agricultural practices, using the native flora and fauna of the area to aid in the coffee-growing process. Furthermore, he spends hundreds of hours fermenting the beans and is frequently experimenting to develop new blends.</p>
           </div>
         </div>
-
-        <div class="cardthing">
-          <img class="card-img-top" src="Images/ethiopia.jpg" alt="Card image cap">
-          <div class="card-body">
-            <p class="card-text">Ethiopia Gogogu is a farm in Guji which produced coffee with notes of stone fruits and local Ethiopian florals. This specific type of coffee is grown at a very high altitude, which gives it a unique flavor and taste. The process of harvesting the coffee beans here is rigorous; involving 2-3 says of soaking the beans before beginning an almost two-week-long drying process. 
-            </p>
-          </div>
+        <div class="locationCards">
+          <img class="card-img-top" src="Images/ethiopia.jpg" alt="Person pouring coffee from coffee maker into several cups stored in a wooden basket.">
+            <div class="card-body">
+              <p class="card-text">Ethiopia Gogogu is a farm in Guji which produced coffee with notes of stone fruits and local Ethiopian florals. This specific type of coffee is grown at a very high altitude, which gives it a unique flavor and taste. The process of harvesting the coffee beans here is rigorous; involving 2-3 says of soaking the beans before beginning an almost two-week-long drying process.</p>
+            </div>
         </div>
-
-
-        <div class="cardthing">
-          <img class="card-img-top" src="Images/columbia.jpg" alt="Card image cap">
-          <div class="card-body">
-            <p class="card-text">
-
-              Redhawk uses a micromill located in Columbia to produce rich, diverse coffee blends. This micromill facility comprises of 8 different local farmers who bring the coffee cherries to the mill frequently; the cherries then proceed to begin the fermentation process here, undergoing constant checks to ensure the process is timely. The drying period takes about a month and a half and, after this period, they are sent to a coffee production site which grounds them up and sends them to Redhawk. 
-              </p>
-          </div>
+        <div class="locationCards">
+          <img class="card-img-top" src="Images/columbia.jpg" alt="Image overlooking valley with a river cutting through. Some houses are scattered along the river.">
+            <div class="card-body">
+              <p class="card-text"> Redhawk uses a micromill located in Columbia to produce rich, diverse coffee blends. This micromill facility comprises of 8 different local farmers who bring the coffee cherries to the mill frequently; the cherries then proceed to begin the fermentation process here, undergoing constant checks to ensure the process is timely. The drying period takes about a month and a half and, after this period, they are sent to a coffee production site which grounds them up and sends them to Redhawk.</p>
+            </div>
         </div>
-
-
-
       </div>
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-</div> 
-
-</body>
+    </div> 
+  </body>
 </html>
 

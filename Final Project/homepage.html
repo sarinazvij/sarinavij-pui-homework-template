@@ -12,6 +12,7 @@
     <script src="JS/finalProject.js" defer></script>  
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous" defer></script> 
   </head>
+  
   <body>
     <nav class="navbar navbar-light bg-light"> <!-- The navbar structure was taken from the following site: https://getbootstrap.com/docs/4.0/components/navbar/ --> 
       <div class="container-fluid">
@@ -32,18 +33,18 @@
         </div>
       </div>
     </nav>
-    <div class="row" id="imagecapt">
-      <div class="thumbnail text-center pr-2">
-        <img src="Images/homeImage.png" alt="Responsive image" class="img-fluid">
-          <div class="caption">
-          <h1 id ="sup"> How did coffee come to be?</h1>
+    <div class="imageCaptionPlacement">
+      <div class="thumbnail text-center pr-2"> <!-- The text overlay on the image on Boostrap: https://getbootstrap.com/docs/4.0/content/images/ and https://mdbootstrap.com/docs/standard/extended/overlay/--> 
+        <img src="Images/homeImage.png" alt="This is an image of a person picking a coffee cherry off of a branch. Only their arms are in view." class="img-fluid">
+          <div class="captionOnImage">
+            <h1> How did coffee come to be?</h1>
           </div>
       </div>
     </div>
-    <div class ="bothcards class d-inline-flex justify-content-between">
+    <div class ="infoCoffeeCards class d-inline-flex justify-content-between"> <!-- Cards were made using the following link: https://getbootstrap.com/docs/4.0/components/card/ --> 
       <div class="cards mt-5">
-      <img class="card-img-top" src= "Images/coffeeProduction.jpg" alt="Card image cap" class="img-fluid">
-      <p class="card-text"><a href="https://www.freepik.com/free-vector/coffee-production-poster-with-processing-roasting-symbols-cartoon-vector-illustration_26759841.htm#query=coffee%20cycle&position=3&from_view=search&track=ais&uuid=a4b9dd7b-fba9-471e-a9bd-82ab5a538739">Image by macrovector</a> on Freepik</p> 
+        <img class="card-img-top" src= "Images/coffeeProduction.jpg" alt="This is an infographic of the coffee production process from harvesting to the delivery and consumption of coffee products." class="img-fluid">
+        <p class="card-text"><a href="https://www.freepik.com/free-vector/coffee-production-poster-with-processing-roasting-symbols-cartoon-vector-illustration_26759841.htm#query=coffee%20cycle&position=3&from_view=search&track=ais&uuid=a4b9dd7b-fba9-471e-a9bd-82ab5a538739">Image by macrovector</a> on Freepik</p> 
       </div>
       <div class="card mt-5">
         <div class="card-body">
@@ -53,9 +54,9 @@
         </div>
       </div>
     </div>
-    <div class ="bothcards class d-inline-flex justify-content-between">
+    <div class ="locationCards class d-inline-flex justify-content-between">
       <div class="cards mt-5">
-        <img src="Images/coffeeBeans.jpg" alt="Responsive image" class="img-fluid">
+        <img src="Images/coffeeBeans.jpg" alt="Image of the different roasts of coffee spilling from circular containers on a table." class="img-fluid">
         <p class="card-text">Image by <a href="https://www.freepik.com/free-photo/bowls-with-coffee-beans_13661704.htm#query=coffee%20beans%20four&position=24&from_view=search&track=ais&uuid=1473d7dc-d4bc-4bd5-8084-c87347c0a73f">Freepik</a></p>
       </div>
       <div class="card mt-5">

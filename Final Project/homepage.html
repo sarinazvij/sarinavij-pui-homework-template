@@ -1,125 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Tartan Coffee</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> <!-- This is directly copied from Bootstrap's library to be able to load CSS. -->
     <link href="./CSS/finalProject.css" rel="stylesheet" type="text/css">
-    <link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" /> <!--This code was inspired by the following website: https://stackoverflow.com/questions/40982845/how-do-i-add-a-new-font-of-my-choice-into-visual-studio-code --> 
-    <link href="https://fonts.googleapis.com/css2?family=Sansita&display=swap" rel="stylesheet" type="text/css" /> 
+    <link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css"/> <!--This code was inspired by the following website: https://stackoverflow.com/questions/40982845/how-do-i-add-a-new-font-of-my-choice-into-visual-studio-code --> 
+    <link href="https://fonts.googleapis.com/css2?family=Sansita&display=swap" rel="stylesheet" type="text/css"/> 
     <script src='https://d3js.org/d3.v4.min.js' defer></script>
     <script src="JS/finalProject.js" defer></script>  
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous" defer></script>
-      
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous" defer></script> 
   </head>
-<body>
-  <nav class="navbar navbar-light bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand mr-auto" href="./homepage.html">
-        <img src="Images/coffeeIcon.svg" alt="Outline of coffee cup being used as logo" width="30" height="24" class="d-inline-block align-text-top">
-        Tartan Coffee
-      </a>
-       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-         <span class="navbar-toggler-icon"></span>
-      </button>  
-     <div class="collapse navbar-collapse" id="navbarNavAltMarkup"> 
-         <div id ="headercategories">
-        <div class="navbar-nav flex-lg-grow mx-auto">
-          
-          <!-- <a class="nav-link" aria-current="page" href="./deFer.html">de Fer Coffee & Tea</a> -->
-          <a class="nav-link" href="./laPrima.html">La Prima</a>
-          <a class="nav-link" href="./redhawk.html">Redhawk Coffee</a>
-          <a class="nav-link" href="./game.html"> Interactive Game </a>
-          
-        </div>  
-       </div> 
+  <body>
+    <nav class="navbar navbar-light bg-light"> <!-- The navbar structure was taken from the following site: https://getbootstrap.com/docs/4.0/components/navbar/ --> 
+      <div class="container-fluid">
+        <a class="navbar-brand mr-auto" href="./homepage.html">
+        <img src="Images/coffeeIcon.svg" id="coffeeIcon" alt="Outline of coffee cup being used as logo"> Tartan Coffee
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>  
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup"> 
+          <div id ="headercategories">
+            <div class="navbar-nav flex-lg-grow mx-auto">
+              <a class="nav-link" href="./laPrima.html">La Prima</a>
+              <a class="nav-link" href="./redhawk.html">Redhawk Coffee</a>
+              <a class="nav-link" href="./game.html"> Interactive Game </a>
+            </div>  
+          </div> 
+        </div>
+      </div>
+    </nav>
+    <div class="row" id="imagecapt">
+      <div class="thumbnail text-center pr-2">
+        <img src="Images/homeImage.png" alt="Responsive image" class="img-fluid">
+          <div class="caption">
+          <h1 id ="sup"> How did coffee come to be?</h1>
+          </div>
       </div>
     </div>
-  </nav>
-
-   <div class="row" id="imagecapt">
-    <div class="thumbnail text-center pr-2">
-        <img src="Images/homeImage.png" alt="Responsive image" class="img-fluid">
-        <div class="caption">
-        <h1 id ="sup"> How did coffee come to be?</h1>
-        </div>
-<!-- <div class = "caption" id = > 
-        <h1 id ="sup2"> </h1>
-        </div> -->
-    </div>
-</div> 
-
-
-
-
-
-<div class ="bothcards class d-inline-flex justify-content-between">
-  <div class="cards mt-5">
-    <img class="card-img-top" src= "Images/coffeeProduction.jpg" alt="Card image cap" class="img-fluid" >
-     <!-- <img src="../Images/coffeeProduction.jpg" alt="Responsive image" class="img-fluid"> -->
+    <div class ="bothcards class d-inline-flex justify-content-between">
+      <div class="cards mt-5">
+      <img class="card-img-top" src= "Images/coffeeProduction.jpg" alt="Card image cap" class="img-fluid">
       <p class="card-text"><a href="https://www.freepik.com/free-vector/coffee-production-poster-with-processing-roasting-symbols-cartoon-vector-illustration_26759841.htm#query=coffee%20cycle&position=3&from_view=search&track=ais&uuid=a4b9dd7b-fba9-471e-a9bd-82ab5a538739">Image by macrovector</a> on Freepik</p> 
-
-     
-  </div>
-
-  <div class="card mt-5">
-    <div class="card-body">
-      <h5 class="card-title">History of Coffee</h5>
-      <br> 
-      <p class="card-text">The oldest coffee plants have been cultivated by humans for hundreds of years. However, the origins of coffee as we know it 
-        today are still undiscovered. However, in the 1400s, coffee was being grown and traded in East Africa and the Arabian Peninsula. The desire to stay awake was the prime motivation for coffee consumption (much as it is the case today). In 1475, Constantinople became home to the first coffee shop. Quickly, drinking coffee became more of a social activity, often accompanied by performances or game-playing. When the practice of coffee-drinking spread to Europe in the 1600s, coffee became synonymous with wealth. Soon, only white men were permitted in coffee shops in England, and the culture associated with coffee began to experience a shift. 
-
-        At the start of the American Revolution, when America began protesting the British tax on tea, coffee rose to prominence. Due to Europe\'\'s inhospitable winter climate, coffee-production moved primarily to Central America. Today, Brazil cultivates the most coffee, followed by Vietnam. 
-        
-        </p>
-      
+      </div>
+      <div class="card mt-5">
+        <div class="card-body">
+          <h5 class="card-title">History of Coffee</h5>
+          <br> 
+          <p class="card-text">The oldest coffee plants have been cultivated by humans for hundreds of years. However, the origins of coffee as we know it today are still undiscovered. However, in the 1400s, coffee was being grown and traded in East Africa and the Arabian Peninsula. The desire to stay awake was the prime motivation for coffee consumption (much as it is the case today). In 1475, Constantinople became home to the first coffee shop. Quickly, drinking coffee became more of a social activity, often accompanied by performances or game-playing. When the practice of coffee-drinking spread to Europe in the 1600s, coffee became synonymous with wealth. Soon, only white men were permitted in coffee shops in England, and the culture associated with coffee began to experience a shift. At the start of the American Revolution, when America began protesting the British tax on tea, coffee rose to prominence. Due to Europe\'\'s inhospitable winter climate, coffee-production moved primarily to Central America. Today, Brazil cultivates the most coffee, followed by Vietnam. </p>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-<div class ="bothcards class d-inline-flex justify-content-between">
-  <div class="cards mt-5">
-      <img src="Images/coffeeBeans.jpg" alt="Responsive image" class="img-fluid">
-      <p class="card-text">Image by <a href="https://www.freepik.com/free-photo/bowls-with-coffee-beans_13661704.htm#query=coffee%20beans%20four&position=24&from_view=search&track=ais&uuid=1473d7dc-d4bc-4bd5-8084-c87347c0a73f">Freepik</a></p>
-  </div>
-
-  <div class="card mt-5">
-    <div class="card-body">
-      <h5 class="card-title">Coffee Species</h5>
-      <br>
-      <p class="card-text">
-        There are over 100 different species of coffee beans. However, these four dominate the global market today: 
-        <ul> 
-          <li>Arabica</li>
-          <li>Excelsa</li>
-          <li>Liberica</ol>
-          <li>Robusta</li>
-        </ul>
-        The reason for this is because of their higher caffeine content and relative ease of growth compared to most other varieties. 
-      </p>
-      
+    <div class ="bothcards class d-inline-flex justify-content-between">
+      <div class="cards mt-5">
+        <img src="Images/coffeeBeans.jpg" alt="Responsive image" class="img-fluid">
+        <p class="card-text">Image by <a href="https://www.freepik.com/free-photo/bowls-with-coffee-beans_13661704.htm#query=coffee%20beans%20four&position=24&from_view=search&track=ais&uuid=1473d7dc-d4bc-4bd5-8084-c87347c0a73f">Freepik</a></p>
+      </div>
+      <div class="card mt-5">
+        <div class="card-body">
+          <h5 class="card-title">Coffee Species</h5>
+          <br>
+          <p class="card-text"> There are over 100 different species of coffee beans. However, these four dominate the global market today: 
+          <ul> 
+            <li>Arabica</li>
+            <li>Excelsa</li>
+            <li>Liberica</ol>
+            <li>Robusta</li>
+          </ul>
+            The reason for this is because of their higher caffeine content and relative ease of growth compared to most other varieties. 
+          </p>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-</div> 
-
-</body>
+  </body>
 </html>
 

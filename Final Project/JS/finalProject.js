@@ -13,51 +13,51 @@ let hotCoffeeCup = d3.select("#cup")
   .attr("preserveAspectRatio", "xMinYMin meet")
   .classed("svg-content", true); 
 
-  function cupType(element){
-    d3.select("body").select("svg").remove(); // aided by https://stackoverflow.com/questions/46499721/d3-js-graphs-not-getting-toggled-on-click-of-radio-buttons
-    if (element.value === "Iced"){
-      d3.select("body").select("svg").remove();
-      icedCoffeeCup = d3.select("#cup")
-        .append("svg")
-        .attr("viewBox", `0 0 600 400`)
-        .attr("preserveAspectRatio", "xMinYMin meet")
-        .attr("preserveAspectRatio", "xMinYMin meet");       
-      icedCoffeeCup.append("polygon")
-        .attr("points", "600,100 500,500 325,500 220,100")
-        .style("fill", "white")
-        .attr("stroke", "black"); 
-    }
-    else if (element.value === "Hot"){
-      d3.select("body").select("svg").remove(); // aided by https://stackoverflow.com/questions/46499721/d3-js-graphs-not-getting-toggled-on-click-of-radio-buttons
-      hotCoffeeCup = d3.select("#cup")
-        .append("svg")
-        .attr("width", 200)
-        .attr("height", 200)
-        .attr("viewBox", `0 0 200 200`)
-        .attr("preserveAspectRatio", "xMinYMin meet")
-        .classed("svg-content", true); 
-      hotCoffeeCup
-        .append("polygon")  
-        .attr("viewBox", `0 0 100 300`)
-        .attr("preserveAspectRatio", "xMinYMin meet")
-        .attr("preserveAspectRatio", "xMinYMin meet")
-        .classed("svg-content", true)
-        .attr("points", "70,115, 70,85, 130,85, 130,115")  
-        .attr("transform", "translate(-70,-10), rotate(0)") 
-        .style("stroke", "black")  
-        .style("fill", "none") 
-        .attr("stroke-width", 10); 
-      hotCoffeeCup
-        .attr("viewBox", `0 0 100 300`)
-        .attr("preserveAspectRatio", "xMinYMin meet")
-        .attr("preserveAspectRatio", "xMinYMin meet")
-        .classed("svg-content", true); 
-      hotCoffeeCup.append("polygon")
-        .attr("points", "10,50, 10,150, 100,150, 100,50")
-        .style("stroke", "black")
-        .style("fill", "white")
-    }
+function cupType(element){
+  d3.select("body").select("svg").remove(); // aided by https://stackoverflow.com/questions/46499721/d3-js-graphs-not-getting-toggled-on-click-of-radio-buttons
+  if (element.value === "Iced"){
+    d3.select("body").select("svg").remove();
+    icedCoffeeCup = d3.select("#cup")
+      .append("svg")
+      .attr("viewBox", `0 0 600 400`)
+      .attr("preserveAspectRatio", "xMinYMin meet")
+      .attr("preserveAspectRatio", "xMinYMin meet");       
+    icedCoffeeCup.append("polygon")
+      .attr("points", "600,100 500,500 325,500 220,100")
+      .style("fill", "white")
+      .attr("stroke", "black"); 
   }
+  else if (element.value === "Hot"){
+    d3.select("body").select("svg").remove(); // aided by https://stackoverflow.com/questions/46499721/d3-js-graphs-not-getting-toggled-on-click-of-radio-buttons
+    hotCoffeeCup = d3.select("#cup")
+      .append("svg")
+      .attr("width", 200)
+      .attr("height", 200)
+      .attr("viewBox", `0 0 200 200`)
+      .attr("preserveAspectRatio", "xMinYMin meet")
+      .classed("svg-content", true); 
+    hotCoffeeCup
+      .append("polygon")  
+      .attr("viewBox", `0 0 100 300`)
+      .attr("preserveAspectRatio", "xMinYMin meet")
+      .attr("preserveAspectRatio", "xMinYMin meet")
+      .classed("svg-content", true)
+      .attr("points", "70,115, 70,85, 130,85, 130,115")  
+      .attr("transform", "translate(-70,-10), rotate(0)") 
+      .style("stroke", "black")  
+      .style("fill", "none") 
+      .attr("stroke-width", 10); 
+    hotCoffeeCup
+      .attr("viewBox", `0 0 100 300`)
+      .attr("preserveAspectRatio", "xMinYMin meet")
+      .attr("preserveAspectRatio", "xMinYMin meet")
+      .classed("svg-content", true); 
+    hotCoffeeCup.append("polygon")
+      .attr("points", "10,50, 10,150, 100,150, 100,50")
+      .style("stroke", "black")
+      .style("fill", "white")
+  }
+}
 
 function addCoffee(element){
   let iceCheck = document.querySelector('input[name="flexRadioDefault1"]:checked');

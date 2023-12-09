@@ -1,174 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Tartan Coffee</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> <!-- This is directly copied from Bootstrap's library to be able to load CSS. -->
     <link href="./CSS/finalProject.css" rel="stylesheet" type="text/css">
     <link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" /> <!--This code was inspired by the following website: https://stackoverflow.com/questions/40982845/how-do-i-add-a-new-font-of-my-choice-into-visual-studio-code --> 
-    <link href="https://fonts.googleapis.com/css2?family=Sansita&display=swap" rel="stylesheet" type="text/css" /> 
+    <link href="https://fonts.googleapis.com/css2?family=Sansita&display=swap" rel="stylesheet" type="text/css"/> 
     <script src='https://d3js.org/d3.v4.min.js' defer></script>
     <script src="JS/finalProject.js" defer></script>  
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous" defer></script>
-      
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous" defer></script>  
   </head>
-<body>
-  <div class = "main">
-  <nav class="navbar navbar-light bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand mr-auto" href="./homepage.html">
-        <img src="Images/coffeeIcon.svg" alt="Outline of coffee cup being used as logo" width="30" height="24" class="d-inline-block align-text-top">
-        Tartan Coffee
-      </a>
-       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-         <span class="navbar-toggler-icon"></span>
-      </button>  
-     <div class="collapse navbar-collapse" id="navbarNavAltMarkup"> 
-         <div id ="headercategories">
-        <div class="navbar-nav flex-lg-grow mx-auto">
-          
-          
-          <a class="nav-link" href="./laPrima.html" href="#">La Prima</a>
-          <a class="nav-link" href="./redhawk.html">Redhawk Coffee</a>
-          <a class="nav-link" href="./game.html"> Interactive Game </a>
-          
-        </div>  
-       </div> 
+
+  <body>
+    <nav class="navbar navbar-light bg-light"> <!-- The navbar structure was taken from the following site: https://getbootstrap.com/docs/4.0/components/navbar/ --> 
+      <div class="container-fluid">
+        <a class="navbar-brand mr-auto" href="./homepage.html">
+          <img src="Images/coffeeIcon.svg" id="coffeeIcon" alt="Outline of coffee cup being used as logo"> Tartan Coffee
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>  
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup"> 
+          <div id ="headercategories">
+            <div class="navbar-nav flex-lg-grow mx-auto">
+              <a class="nav-link" href="./laPrima.html">La Prima</a>
+              <a class="nav-link" href="./redhawk.html">Redhawk Coffee</a>
+              <a class="nav-link" href="./game.html"> Interactive Game </a>
+            </div>  
+          </div> 
+        </div>
+      </div>
+    </nav>
+    <h1 id = "gameTitle">Build Your Own Coffee</h1>
+    <div class ="bothcards class d-flex justify-content-between">
+      <div class="cards">
+        <div class="card-body">
+          <!-- <p class="card-text"> -->
+          <h5 class="card-title">Step 1: Select whether you would like your drink hot or iced</h5>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault1"  id="flexRadioDefault1" onclick = "cupType(this)" value="Iced"/>
+            <label class="form-check-label" for="flexRadioDefault1"> Iced </label>
+            <br>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefault2" onclick = "cupType(this)" value="Hot"/>
+            <label class="form-check-label" for="flexRadioDefault2"> Hot </label>
+            <br>
+          </div>
+          <br>
+          <h5 class="card-title">Step 2: Select the type of coffee roasting you would prefer</h5>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioDefault1" onclick = "addCoffee(this)" value="Light"/>
+            <label class="form-check-label" for="flexRadioDefault1"> Light </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioDefault2" onclick = "addCoffee(this)" value="Medium"/>
+            <label class="form-check-label" for="flexRadioDefault2"> Medium </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioDefault3" onclick = "addCoffee(this)" value="Dark"/>
+            <label class="form-check-label" for="flexRadioDefault3"> Dark </label>
+          </div>
+          <br>
+          <h5 class="card-title">Step 3: Select the type of milk you would prefer</h5>
+          <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="milk" onchange = "addMilk()">
+            <option selected>Select Milk Type</option>
+            <option value="1">1% Milk</option>
+            <option value="2">Almond Milk</option>
+            <option value="3">Coconut Milk</option>
+            <option value="3">Soy Milk</option>
+          </select>
+          <br> 
+          <h5 class="card-title">Step 4: Select the type of syrup flavoring you would prefer (if any) </h5>
+          <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="syrup" onchange = "addSyrup()">
+            <option selected>Select Syrup Type</option>
+            <option id="Caramel"> Caramel</option>
+            <option id="Hazelnut">Hazelnut</option>
+            <option value="Mocha">Mocha</option>
+            <option value="Vanilla">Vanilla</option>
+            <option value="None">No Syrup</option>
+          </select>
+        <!-- </p> -->
+          <a href="#" class="card-link">Another link</a>
+        </div>
+      </div>
+      <div class="cardforcoffee">
+        <div id="cup">
       </div>
     </div>
-  </nav>
-
-
-
-  <h1 id = "gameTitle">Build Your Own Coffee</h1>
-
-  <div class ="bothcards class d-flex justify-content-between">
-  <div class="cards">
-    <div class="card-body">
-      <p class="card-text">
-        <h5 class="card-title">Step 1: Select whether you would like your drink hot or iced</h5>
-       
-       
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="flexRadioDefault1"  id="flexRadioDefault1" onclick = "cupType(this)" value="Iced">
-          <label class="form-check-label" for="flexRadioDefault1">
-            Iced
-          </label>
-          <br>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefault2" onclick = "cupType(this)" value="Hot">
-          <label class="form-check-label" for="flexRadioDefault2">
-            Hot
-          </label>
-          <br>
-
-        </div>
-        <br>
-
-
-  
-        <h5 class="card-title">Step 2: Select the type of coffee roasting you would prefer</h5>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioDefault1" onclick = "addCoffee(this)" value="Light">
-          <label class="form-check-label" for="flexRadioDefault1">
-            Light
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioDefault2" onclick = "addCoffee(this)" value="Medium">
-          <label class="form-check-label" for="flexRadioDefault2">
-            Medium
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioDefault3" onclick = "addCoffee(this)" value="Dark">
-          <label class="form-check-label" for="flexRadioDefault3">
-            Dark
-          </label>
-        </div>
-      <br>
-
-    
-
-
-
-
-
-
-
-
-
-
-
-        <h5 class="card-title">Step 3: Select the type of milk you would prefer</h5>
-      
-      <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="milk" onchange = "addMilk()">
-        <option selected>Select Milk Type</option>
-        <option value="1">1% Milk</option>
-        <option value="2">Almond Milk</option>
-        <option value="3">Coconut Milk</option>
-        <option value="3">Soy Milk</option>
-      </select>
-
-      <br> 
-      <h5 class="card-title">Step 4: Select the type of syrup flavoring you would prefer (if any) </h5>
-      
-        <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="syrup" onchange = "addSyrup()">
-          <option selected>Select Syrup Type</option>
-          <option id="Caramel"> Caramel</option>
-          <option id="Hazelnut">Hazelnut</option>
-          <option value="Mocha">Mocha</option>
-          <option value="Vanilla">Vanilla</option>
-          <option value="None">No Syrup</option>
-        </select>
-      
-
-
-      </p>
-      <a href="#" class="card-link">Another link</a>
-    </div>
-  </div>
-
-
-
-
-  <br>
-  <br>
-
-  <br>
-  <br>
-  <div class="cardforcoffee">
-   
-        <div id="cup">
-          <!-- <svg>
-            
-           
-              <path id="arc1" fill="none" stroke="white" stroke-width="200" />
-              <path id="arc2" fill="none"  stroke-width="200" />
-              <path id="arc3" fill="none"  stroke-width="200" />
-              <path id="arc4" fill="none" stroke-width="200" />
-
-          </svg> -->
-        </div>
-     
-  </div>
-
-
-
-</div>
-
-
- 
-
-      
-  <!-- <svg id="gfg" width="200" height="200"></svg>  -->
-
+    <!-- </div> -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  </div>     
-</body>
-      </html>
+  <!-- </div>      -->
+  </body>
+</html>
       

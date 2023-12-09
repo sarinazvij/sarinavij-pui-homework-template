@@ -1,493 +1,47 @@
-/* html 
-{ font-size: calc(1em + 1vw); }
- */
-
-
-
- body{
-     background: #FCEADE;
- }
-
-/* 
-.mainbox{
-    width: 1200px;
+body{
     background: #FCEADE;
-} */
-/* 
-#logopicture{
-    width: 50px;
-    display: flex; 
-    transform: rotate(-10deg);
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    margin-left: 4%; 
-    margin-right: 6%; 
-    
 }
 
-#tartancoffee{
-    color: black;
-    font-family: 'Sansita', sans-serif;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    height: 50px; 
-    align-items: center; 
-    text-decoration-color: black;
- 
-}
-#logoname{
-    display: flex;
-    align-items: center;
-    justify-content: right;
-    margin-left: 6%; 
-    margin-right: 0%;  
-    
- 
-
-}
-
-#cuppicture{
-    margin-left: 40%; 
-}
-
-#title{
-    display: flex;
-    width: 308px;
-    height: 82px;
-    flex-shrink: 0;
-    justify-content: flex-start;
-    margin-left: 2%; 
-    margin-left: 0px; 
-}
-
-#headercategories{
-    display: flex; 
-    justify-content: space-between;  
-    align-items: center; 
-    flex-grow: 1; 
-    margin-right: 10px; 
-    margin-left: 20px;
-    text-decoration-color: black;
-    font-family: "Open Sans";
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal; 
-   
-    
-}
-
-
-
-#header{
-    display: flex;
-    width: 1200px;
-    margin-top: 0px; 
-    margin-bottom: 0px;  
-}
-
-#gamebutton{
-    width: 215px;
-    height: 51px;
-    flex-shrink: 0;
-    border-radius: 80px;
-    background: #D03C28;
-    background-color: rgba(208, 60, 40, 0.80);
-    display: flex; 
-}
-
-#interactivegame{
-    display: flex; 
-    
-    font-weight: bold;
-    color: white; 
-    align-items: center; 
-justify-content: center;
-
-
-}
-
-.homeimage{
-     /* display: block;  */
-/*     
-    position: relative; 
-    text-align: center; 
-   
-}
-
-.homepicture{
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    filter: sepia(100%); 
-    filter: hue-rotate(10deg);
-    /* fill: rgba(183, 30, 4, 0.70);
-    color-interpolation-filters: linearRGB; */
-
-
-/* .maincontainer{ inspired by https://www.bannerbear.com/blog/how-to-overlay-text-on-an-image-in-html-and-css/  */ */
-    /* position: absolute;
-    display: flex; 
-    flex-shrink: 0; 
-    bottom: 100px;
-    top: 70%; 
-    right: 37%;
-    background-color: #D03C28; 
-    width: 681px; 
-    height: 86px; 
-    color: white; 
-    font-family: "Open Sans";
-    font-size: 48px;
-    font-weight: bold; 
-    line-height: normal;
-    align-items: center; 
-    justify-content: center;
-    margin-right: 35px;  */
-
-/* 
-}
-
-.secondarycontainer{
-    position: absolute;
-    display: flex; 
-    flex-shrink: 0; 
-    top: 73%; 
-    right: 42.2%;
-    background-color:#EF798A; 
-    width: 681px; 
-    height: 86px; 
-} */
-
-/* .content-box{ */
-    /* height: 700px; */
-    /* display: flex; 
-    margin-top: 39px; 
-    justify-content: space-between;  
-    align-items: center; 
-    flex-grow: 1; 
-}
-
-.picture-box{
-    display: flex; 
-    width: 503px; 
-    height: 493px; 
-    background-color: #EF798A;
-    margin-left: 35px; 
-    border-radius: 40px; 
-}
-
-.text-box{
-    display: flex; 
-    width: 503px; 
-    height: 493px; 
-    background-color: #EF798A;
-    margin-right: 35px; 
-    border-radius: 40px;  */
-
-/* 
-.coffeecontainer{ inspired by https://www.bannerbear.com/blog/how-to-overlay-text-on-an-image-in-html-and-css/ 
-    position: absolute;
-    display: flex; 
-    flex-shrink: 0; 
-    background-color: #D03C28;
-    width: 681px; 
-    height: 86px; 
-    color: white; 
-    font-family: "Open Sans";
-    top: 50%; 
-    left: 50%; 
-    font-size: 48px;
-    font-weight: bold; 
-    align-items: center; 
-    justify-content: center; 
-    transform: translate(-50%, -50%);
-    z-index: 1; z-index information found at https://www.shecodes.io/athena/72599-how-to-bring-an-element-to-the-front-in-css-using-z-index#:~:text=To%20bring%20an%20element%20to%20front%20of%20another%20element%2C%20you,a%20lower%20z%2Dindex%20value. */
-    
-/* 
-.secondarycoffeecontainer{
-    position: absolute;
-    display: flex; 
-    background-color:#EF798A; 
-    width: 681px; 
-    height: 86px; 
-    top: 46%; 
-    right: 23%;
- 
-  
-
-}
-
-.coffeemaininfo{
-    display: flex; 
-    flex-direction: column;
-}
-
-.coffeetitle{
-   
-    color: black; 
-    font-family: "Open Sans";
-    font-size: 32px;
-    margin-bottom: 1%; 
-    margin-top: 3%; 
-    display: flex; 
-    margin-left: 1.5%;  
-
- 
-}
-
-.textfordescription{
-    color: black; 
-    font-family: "Open Sans";
-    font-size: 12px;
-    margin-left: 1.5%;  
-
-}
-
-.globebox{
-display: flex;
-/* height: 493px;  */
-/* background-color: #D03C28; 
-background-color: rgba(208, 60, 40, 0.80);
-}
-
-.wheredoesitcomefrom{
-    color: white; 
-    font-family: "Open Sans";
-    font-size: 32px;
-    margin-left: 2%; 
-    margin-top: 2.5%; 
-}
-
-.coffeecontainergame{
-    position: absolute;
-    display: flex; 
-    flex-shrink: 0; 
-    background-color: #D03C28;
-    width: 681px; 
-    height: 86px; 
-    color: white; 
-    font-family: "Open Sans";
-    top: 20%; 
-    left: 50%; 
-    font-size: 48px;
-    font-weight: bold; 
-    align-items: center; 
-    justify-content: center; 
-    transform: translate(-50%, -25%); */
-    /* z-index: 1; z-index information found at https://www.shecodes.io/athena/72599-how-to-bring-an-element-to-the-front-in-css-using-z-index#:~:text=To%20bring%20an%20element%20to%20front%20of%20another%20element%2C%20you,a%20lower%20z%2Dindex%20value. */ */
-
-
-/* .secondarycoffeecontainergame{ 
-    position: absolute;
-    display: flex; 
-    flex-shrink: 0; 
-    top: 19.5%; 
-    right: 23%;
-    background-color:#EF798A; 
-    width: 681px; 
-    height: 86px;
-
-
-}
-
-#playnow{
-    position: absolute;
-    display: flex; 
-    top: 50%; 
-    right: 50%;     
-    border-radius: 20px;
-    background-color: #27498F;
-    color: #FFF;
-    font-family: Open Sans;
-    font-size: 48px;
-    width: 300px; 
-    align-items: center; 
-    justify-content: center; 
-    transform: translate(-50%, -50%);
-}
-
-.thing{
-    height: 500px; 
-
-   
-} */
-/* 
-#heading{
-    display: flex; 
-    font-family: "sanrita";
-    font-size: 48px;
-    flex-direction: row;
-    margin-left: 0%;  
-     */
-
- 
-
-    
-    
-/* }
-
-.step{
-    font-family: Inria Serif;
-font-size: 32px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-
-}
-
-.cup{
-    width: 20px; 
-    height: 50px; 
-    
-} */
-
-
-/* .instructions{
-font-size: 20px;
-text-align: center; 
-color: #000;
-
-font-family: Inria Serif;
-
-font-style: normal;
-font-weight: 400;
-line-height: normal; */
-
-
-
-/* }
-#map { 
-  
-    height: 400px; 
-    width: 1200px; 
-    z-index: 1; 
-/* } */
-/* 
-
-.icedorhot{
-    display: flex; 
-    justify-content: space-between;
-    width: 200px; 
-}
-
-
-
-#coffee{
-    margin-top: 150px;
-    margin-left:100px;  
-}  */ 
-
-
-
- .navbar-brand{
+.navbar-brand{
     flex: 1; 
     justify-content: right;
-
-  
     font-size: 0.5 em; 
-    
-    background-color: #FCEADE;
-    
+    background-color: #FCEADE;  
 }
-.container-fluid{
-   
-    background-color: #FCEADE;
 
+.container-fluid{
+    background-color: #FCEADE;
 }
 
 .navbar-nav{
-flex-direction: row; 
-
-color: red; 
-flex: 1; 
-justify-content: space-around;
-
+    flex-direction: row; 
+    color: red; 
+    flex: 1; 
+    justify-content: space-around;
 }
-
-/* #cup{
-    transform: scale(2.5); 
-} */
-
-
-
-
 
 .container-fluid{
-  
     color: black;
-
-    
-
 }
- 
- /* .nav-link{
-    justify-content: space-between;
-
-   
-}  */
-
-    /* margin-left: 20px; 
-    margin-right: 20px; 
-   margin-top: 17px;  */
-
-
-  
-
-
-/* #interactivegame{
-    border-radius: 80px;
-    background: #D03C28; 
-    padding-left: 30px; 
-    padding-right: 30px; 
-height: 100%;
- 
-background-position: center;  
-/* width: 120%;  */
-
-
-   
-
-
 
 .navbar-light{
     color: yellow; 
-
 }
-
-/* #smallerp{
-    padding: 5px; 
-
-    background: #D03C28; 
-} */
-
-
 
 .card{
     width: 45%; 
     background-color:#EF798A; 
     border-radius: 20px;
-
-
-
 }
-
-
 
 .cards{
     width: 45%; 
-
     border-radius: 20px;
-
-
-
 }
-
 
 #imagecapt {
     position: relative;
 }
-
-
-
 
 .img-text-container {
     position: relative;
@@ -503,53 +57,23 @@ background-position: center;
     padding: 2%; 
 }
 
-/* #cup{
-    display: flex; 
-  justify-content: center;
- align-items: center; 
- background-color: #D2F6F9; 
-
-
-} */
-
-
 .caption{
     position: absolute; 
-  
     top: 50%; 
     left: 50%; 
     transform: translate(-50%, -50%);
     background-color: #D03C28; 
     color: white; 
     z-index: 2; 
-  
 }
 
 #sup2{
-
     position: relative; 
     background-color: black; 
     top: 50%; 
     left: 50%; 
     transform: translate(-30%, -30%);
-
 }
-
-
-/* .sos{
-    position: absolute; 
-
-    top: 52%; 
-    left: 51%; 
-    transform: translate(-57%, -50%);
-    background-color: #EF798A; 
-    z-index: 1; 
-    width: 460px; 
-    height: 70px; 
-
-  
-
-} */
 
 .bothcards {
     margin-left: 5%; 
@@ -557,52 +81,27 @@ background-position: center;
     height: 100%; 
 }
 
-/* .main{
-    background-color: #D2F6F9; 
- 
- } */
-
-
  #gameTitle{
-     font-family:"Sansita";
-     text-align: center; 
+    font-family:"Sansita";
+    text-align: center; 
  }
+
  .gamecard{
-     background-color: #D2F6F9; 
+    background-color: #D2F6F9; 
  }
 
  #icedcoffee{
     width: 30%; 
     border-radius: 20px;
-
-
  }
 
- /* .form-check{
-    display: flex; 
-flex-direction: column; 
- } */
-
-/* .btn-group{
-    width: 50px; 
-} */
-
-/* .btn-group{
-
-    background-color: white; 
-
-
-
-} */
-
-
 .carddescription{
-background-color: #BEA757; 
-margin-left: 5%;
-margin-right: 5%; 
-border-radius: 20px; 
-padding: 3%; 
-text-align: center; 
+    background-color: #BEA757; 
+    margin-left: 5%;
+    margin-right: 5%; 
+    border-radius: 20px; 
+    padding: 3%; 
+    text-align: center; 
 }
 
 svg{
@@ -610,37 +109,24 @@ svg{
     width: 100%; 
 }
  
-  #cup{
-/* margin-left: 400px;  */
-     width: 100%;
-     height: 100%; 
-
+#cup{
+    width: 100%;
+    height: 100%; 
 } 
-  .cardforcoffee{
 
-width: 50%; 
+.cardforcoffee{
+    width: 50%; 
 }
 
-
-
-/* .carddescriptionok{
-    display: flex;
-    flex-direction: row;
-
-} */
-
-
 .cardthing{
-    /* display: flex; */
     width: 45%; 
     background-color:#EF798A; 
     border-radius: 20px;
-
 }
 
-.cardthing{
+/* .cardthing{
 
-margin: 1%; 
+    margin: 1%; 
 
-}
+} */
 

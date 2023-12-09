@@ -16,6 +16,7 @@ let hotCoffeeCup = d3.select("#cup")
 .attr("preserveAspectRatio", "xMinYMin meet")
 .classed("svg-content", true); 
 
+
 // hotCoffeeCup
 // .attr("viewBox", `0 0 100 300`)
 // .attr("preserveAspectRatio", "xMinYMin meet")

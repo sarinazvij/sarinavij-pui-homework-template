@@ -58,9 +58,14 @@ body{
     height: 100%; 
 }
 
-#gameTitle{
-    font-family:"Sansita";
-    text-align: center; 
+#gameTitle {
+    font-family: calibri;
+    font-size: 80px;
+    color: #b08f88;
+    font-family: 'Abril Fatface', cursive;
+    font-size: 80px;
+    font-weight: bold;
+    text-align: center;
 }
 
 .shopDescription{
@@ -98,6 +103,8 @@ svg{
 
 
 
+
+
 .cardForCoffee{
     width: 50%; 
     margin-right: 5%; 
@@ -106,3 +113,31 @@ svg{
 
 
 
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Libre+Baskerville&display=swap');
+
+
+.heroimage {
+  width:100vw;
+  height: 100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  background-image:url(https://img.freepik.com/free-vector/variety-cute-shapes-abstract-background_23-2148544989.jpg?t=st=1648518916~exp=1648519516~hmac=f749e8642a4e066c0d5f0be0e3225f1b34aa32949fac05adb6c7732e86b9fa74&w=826);
+  background-size:cover;
+  background-repeat: no-repeat;
+}
+
+
+  
+  .heroimage {
+    width:100vw;
+    height: 100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background-image:url(https://img.freepik.com/free-vector/minimal-doodle-frame-background-social-story-highlight_53876-97970.jpg?size=626&ext=jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+}

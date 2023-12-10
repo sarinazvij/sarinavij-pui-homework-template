@@ -221,6 +221,24 @@ function addSyrup(){
   }
 }
 
-
-
- 
+function clearAll(){
+  d3.select("body").select("svg").remove();
+  let iceClear = document.getElementById('flexRadioDefault1'); // Inspirtation came from: https://linuxhint.com/check-uncheck-checkbox-using-javascript/#:~:text=uncheck%20the%20checkbox.-,Inside%20the%20body%20of%20the%20function%2C%20get%20the%20reference%20of,checked%E2%80%9D%20property%20%E2%80%9Cfalse%E2%80%9D.
+  let hotClear = document.getElementById('flexRadioDefault2');
+  let lightClear = document.getElementById('flexRadioDefault3');
+  let medClear = document.getElementById('flexRadioDefault4');
+  let darkRoastClear = document.getElementById('flexRadioDefault5');
+  iceClear.checked = false;
+  hotClear.checked = false;
+  lightClear.checked = false;
+  medClear.checked = false;
+  darkRoastClear.checked = false;
+  let milkSelection = document.getElementById('milk'); // Inspirtation came from: https://linuxhint.com/check-uncheck-checkbox-using-javascript/#:~:text=uncheck%20the%20checkbox.-,Inside%20the%20body%20of%20the%20function%2C%20get%20the%20reference%20of,checked%E2%80%9D%20property%20%E2%80%9Cfalse%E2%80%9D.
+  let syrupSelection = document.getElementById('syrup');
+    for(i = 0; i < milkSelection.options.length; i++){
+      milkSelection.selectedIndex = 0;
+    }
+    for(i = 0; i < syrupSelection.options.length; i++){
+      syrupSelection.selectedIndex = 0;
+    }
+}

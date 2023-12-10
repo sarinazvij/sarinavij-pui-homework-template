@@ -1,3 +1,17 @@
+let iceClear = document.getElementById('flexRadioDefault1'); // Inspirtation came from: https://linuxhint.com/check-uncheck-checkbox-using-javascript/#:~:text=uncheck%20the%20checkbox.-,Inside%20the%20body%20of%20the%20function%2C%20get%20the%20reference%20of,checked%E2%80%9D%20property%20%E2%80%9Cfalse%E2%80%9D.
+let hotClear = document.getElementById('flexRadioDefault2');
+let lightClear = document.getElementById('flexRadioDefault3');
+let medClear = document.getElementById('flexRadioDefault4');
+let darkRoastClear = document.getElementById('flexRadioDefault5');
+let iceCheck = document.querySelector('input[name="flexRadioDefault1"]:checked'); //Helped me determine how to figure out when something is checked: https://developer.mozilla.org/ru/docs/Web/CSS/:checked
+let milkType= document.getElementById("milk");
+let milkText = milkType.options[milkType.selectedIndex].text;
+let milkSelection = document.getElementById('milk'); // Inspirtation came from: https://linuxhint.com/check-uncheck-checkbox-using-javascript/#:~:text=uncheck%20the%20checkbox.-,Inside%20the%20body%20of%20the%20function%2C%20get%20the%20reference%20of,checked%E2%80%9D%20property%20%E2%80%9Cfalse%E2%80%9D.
+let syrupSelection = document.getElementById('syrup');
+let syruptype= document.getElementById("syrup");
+let syrupText = syruptype.options[syruptype.selectedIndex].text;
+let roastCheck = document.querySelector('input[name="flexRadioDefault2"]:checked'); //Helped me determine how to figure out when something is checked: https://developer.mozilla.org/ru/docs/Web/CSS/:checked
+
 let icedCoffeeCup = d3.select("#cup") // The following websites helped me to create the structure for my polygon shapes: https://stackoverflow.com/questions/13204562/proper-format-for-drawing-polygon-data-in-d3 , https://d3-graph-gallery.com/graph/shape.html , 
   .append("svg")
   .attr("height", 300)
@@ -58,8 +72,10 @@ function cupType(element){
 }
 
 function addCoffee(element){
-  let iceCheck = document.querySelector('input[name="flexRadioDefault1"]:checked'); //Helped me determine how to figure out when something is checked: https://developer.mozilla.org/ru/docs/Web/CSS/:checked
   if (iceCheck === null){
+    lightClear.checked = false;
+    medClear.checked = false;
+    darkRoastClear.checked = false;
     alert("Please select whether you would like your drink iced or hot."); 
   }
   if ((element.value === "Light") && (iceCheck.value === "Iced")){
@@ -101,11 +117,15 @@ function addCoffee(element){
 }
 
 function addMilk(){
-  let iceCheck = document.querySelector('input[name="flexRadioDefault1"]:checked');
-  let milkType= document.getElementById("milk");
-  let milkText = milkType.options[milkType.selectedIndex].text;
   console.log(milkText); 
-  if ((milkText === "1% Milk") && (iceCheck.value === "Iced")){
+  if (iceCheck === null || (roastCheck === null)){
+    alert("Please check to ensure all previous entries have been selected.");
+    for(i = 0; i < milkSelection.options.length; i++){
+      milkSelection.selectedIndex = 0;
+    }
+  } 
+
+  else if ((milkText === "1% Milk") && (iceCheck.value === "Iced")){
     icedCoffeeCup
       .append("polygon")  
       .attr("points", "537,350 581,175 240,175 286,350")
@@ -156,11 +176,18 @@ function addMilk(){
 }
 
 function addSyrup(){
-  let iceCheck = document.querySelector('input[name="flexRadioDefault1"]:checked');
-  let syruptype= document.getElementById("syrup");
-  let syrupText = syruptype.options[syruptype.selectedIndex].text;
   console.log(syrupText); 
-  if (syrupText === "Caramel" && (iceCheck.value === "Iced")){
+  if (iceCheck === null || (milkText === "Select Milk Type") || (roastCheck === null)){
+    alert("Please check to ensure all previous entries have been selected.");
+    for(i = 0; i < syrupSelection.options.length; i++){
+      syrupSelection.selectedIndex = 0;
+    } 
+
+  }
+
+
+
+  else if (syrupText === "Caramel" && (iceCheck.value === "Iced")){
     icedCoffeeCup
       .append("polygon")  
       .attr("points", "600,100 581,175 240,175 220,100")
@@ -224,18 +251,11 @@ function addSyrup(){
 
 function clearAll(){
   d3.select("body").select("svg").remove();
-  let iceClear = document.getElementById('flexRadioDefault1'); // Inspirtation came from: https://linuxhint.com/check-uncheck-checkbox-using-javascript/#:~:text=uncheck%20the%20checkbox.-,Inside%20the%20body%20of%20the%20function%2C%20get%20the%20reference%20of,checked%E2%80%9D%20property%20%E2%80%9Cfalse%E2%80%9D.
-  let hotClear = document.getElementById('flexRadioDefault2');
-  let lightClear = document.getElementById('flexRadioDefault3');
-  let medClear = document.getElementById('flexRadioDefault4');
-  let darkRoastClear = document.getElementById('flexRadioDefault5');
   iceClear.checked = false;
   hotClear.checked = false;
   lightClear.checked = false;
   medClear.checked = false;
   darkRoastClear.checked = false;
-  let milkSelection = document.getElementById('milk'); // Inspirtation came from: https://linuxhint.com/check-uncheck-checkbox-using-javascript/#:~:text=uncheck%20the%20checkbox.-,Inside%20the%20body%20of%20the%20function%2C%20get%20the%20reference%20of,checked%E2%80%9D%20property%20%E2%80%9Cfalse%E2%80%9D.
-  let syrupSelection = document.getElementById('syrup');
     for(i = 0; i < milkSelection.options.length; i++){
       milkSelection.selectedIndex = 0;
     }

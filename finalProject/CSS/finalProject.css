@@ -93,6 +93,7 @@ svg{
     background-color:#F298A5; 
     border-radius: 20px;
     margin: 1%; 
+    flex-basis: 100%; 
 }
 
 .breadcrumb{

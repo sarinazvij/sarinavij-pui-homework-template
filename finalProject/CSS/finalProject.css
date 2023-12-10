@@ -10,7 +10,6 @@ body{
 .navbar-brand{
     flex: 1; 
     justify-content: right;
-    font-size: 0.5 em; 
     background-color: #FCEADE;  
 }
 

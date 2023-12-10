@@ -46,35 +46,39 @@
       <div class="cards">
         <div class="card-body">
           <h5 class="card-title">Step 1: Select whether you would like your drink hot or iced</h5>
+          <fieldset>
           <div class="form-check">
             <input class="form-check-input" type="radio" name="flexRadioDefault1"  id="flexRadioDefault1" onclick = "cupType(this)" value="Iced"/>
-            <label class="form-check-label" for="flexRadioDefault1"> Iced </label>
+            <label class="icedCoffee" for="flexRadioDefault1"> Iced </label>
             <br>
           </div>
           <div class="form-check">
             <input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefault2" onclick = "cupType(this)" value="Hot"/>
-            <label class="form-check-label" for="flexRadioDefault2"> Hot </label>
+            <label class="hotCoffee" for="flexRadioDefault2"> Hot </label>
             <br>
           </div>
+        </fieldset>
           <br>
           <br>
           <h5 class="card-title">Step 2: Select the type of coffee roasting you would prefer</h5>
+          <fieldset>
           <div class="form-check">
             <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioDefault3" onclick = "addCoffee(this)" value="Light"/>
-            <label class="form-check-label" for="flexRadioDefault1"> Light </label>
+            <label class="lightRoast" for="flexRadioDefault1"> Light </label>
           </div>
           <div class="form-check">
             <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioDefault4" onclick = "addCoffee(this)" value="Medium"/>
-            <label class="form-check-label" for="flexRadioDefault2"> Medium </label>
+            <label class="mediumRoast" for="flexRadioDefault1"> Medium </label>
           </div>
           <div class="form-check">
             <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioDefault5" onclick = "addCoffee(this)" value="Dark"/>
-            <label class="form-check-label" for="flexRadioDefault3"> Dark </label>
+            <label class="darkRoast" for="flexRadioDefault1"> Dark </label>
           </div>
+        </fieldset>
           <br>
           <br>
           <h5 class="card-title">Step 3: Select the type of milk you would prefer</h5> <!--The following two drop-down forms were made using the following Boostrap link: https://getbootstrap.com/docs/4.0/components/forms/-->
-          <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="milk" onchange = "addMilk()">
+          <select class="milkSelect form-select-sm" aria-label=".form-select-sm example" id="milk" onchange = "addMilk()">
             <option selected>Select Milk Type</option>
             <option value="1">1% Milk</option>
             <option value="2">Almond Milk</option>
@@ -84,7 +88,7 @@
           <br> 
           <br>
           <h5 class="card-title">Step 4: Select the type of syrup flavoring you would prefer (if any) </h5>
-          <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="syrup" onchange = "addSyrup()">
+          <select class="syrupSelect form-select-sm" aria-label=".form-select-sm example" id="syrup" onchange = "addSyrup()">
             <option selected>Select Syrup Type</option>
             <option id="Caramel"> Caramel</option>
             <option id="Hazelnut">Hazelnut</option>

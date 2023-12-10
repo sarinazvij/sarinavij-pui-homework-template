@@ -59,7 +59,7 @@ function cupType(element){
     hotCoffeeCup.append("polygon") // In general, this link helped me determine how to append shapes: https://stackoverflow.com/questions/32409136/d3-js-adding-polygon-inside-rectangle
       .attr("points", "90,100, 90,280, 250,280, 250,100")
       .style("stroke", "black")
-      .style("fill", "white")
+      .style("fill", "white");
   }
 }
 
@@ -94,13 +94,13 @@ function addCoffee(element){
       .append("polygon")  
       .attr("points", "90,250, 90,280, 250,280, 250,250")
       .style("fill", "#C3890C");
-    }
+  }
   else if ((iceCheck.value === "Hot") && (element.value === "Medium")) {
     hotCoffeeCup
       .append("polygon")  
       .attr("points", "90,250, 90,280, 250,280, 250,250")
       .style("fill", "#905B27");
-}
+  }  
   else if ((iceCheck.value === "Hot") && (element.value === "Dark")) {
     hotCoffeeCup
       .append("polygon")  

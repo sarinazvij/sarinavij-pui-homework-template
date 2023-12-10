@@ -71,7 +71,7 @@ function addCoffee(element){
     medClear.checked = false;
     darkRoastClear.checked = false;
   }
-  if ((element.value === "Light") && (iceCheck.value === "Iced")){
+  else if ((element.value === "Light") && (iceCheck.value === "Iced")){
     icedCoffeeCup
       .append("polygon")  
       .attr("points", "537,350 500,500 325,500 286,350") 

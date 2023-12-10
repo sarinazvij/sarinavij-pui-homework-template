@@ -2,9 +2,10 @@ let icedCoffeeCup = d3.select("#cup") // The following websites helped me to cre
   .append("svg")
   .attr("height", 300)
   .attr("width", 500)    
-  .attr("viewBox", `0 0 100 900`)
+  .attr("viewBox", `0 0 600 500`)
   .attr("preserveAspectRatio", "xMinYMin meet")
   .classed("svg-content", true); 
+
 let hotCoffeeCup = d3.select("#cup")
   .append("svg")
   .attr("width", 400)
@@ -19,7 +20,7 @@ function cupType(element){
     d3.select("body").select("svg").remove();
     icedCoffeeCup = d3.select("#cup")
       .append("svg")
-      .attr("viewBox", `0 0 600 400`) 
+      .attr("viewBox", `0 0 600 500`) 
       .attr("preserveAspectRatio", "xMinYMin meet")  
     icedCoffeeCup.append("polygon")
       .attr("points", "600,100 500,500 325,500 220,100")
@@ -40,8 +41,8 @@ function cupType(element){
       .attr("viewBox", `0 0 100 300`)
       .attr("preserveAspectRatio", "xMinYMin meet")
       .classed("svg-content", true)
-      .attr("points", "70,115, 70,85, 130,85, 130,115")  
-      .attr("transform", "translate(-70,-10), rotate(0)") 
+      .attr("points", "60,115, 60,70, 130,70, 130,115")  
+      .attr("transform", "translate(-10,100), rotate(0)") 
       .style("stroke", "black")  
       .style("fill", "none") 
       .attr("stroke-width", 10); 
@@ -50,7 +51,7 @@ function cupType(element){
       .attr("preserveAspectRatio", "xMinYMin meet")
       .classed("svg-content", true); 
     hotCoffeeCup.append("polygon") // In general, this link helped me determine how to append shapes: https://stackoverflow.com/questions/32409136/d3-js-adding-polygon-inside-rectangle
-      .attr("points", "10,50, 10,150, 100,150, 100,50")
+      .attr("points", "90,100, 90,280, 250,280, 250,100")
       .style("stroke", "black")
       .style("fill", "white")
   }
@@ -82,19 +83,19 @@ function addCoffee(element){
   else if ((iceCheck.value === "Hot") && (element.value === "Light")){
     hotCoffeeCup
       .append("polygon")  
-      .attr("points", "10,130, 10,150, 100,150, 100,130")
+      .attr("points", "90,250, 90,280, 250,280, 250,250")
       .style("fill", "#C3890C");
     }
   else if ((iceCheck.value === "Hot") && (element.value === "Medium")) {
     hotCoffeeCup
       .append("polygon")  
-      .attr("points", "10,130, 10,150, 100,150, 100,130")
+      .attr("points", "90,250, 90,280, 250,280, 250,250")
       .style("fill", "#905B27");
 }
   else if ((iceCheck.value === "Hot") && (element.value === "Dark")) {
     hotCoffeeCup
       .append("polygon")  
-      .attr("points", "10,130, 10,150, 100,150, 100,130")
+      .attr("points", "90,250, 90,280, 250,280, 250,250")
       .style("fill", "#401D01");
   }
 }
@@ -131,25 +132,25 @@ function addMilk(){
   else if ((milkText === "1% Milk") && (iceCheck.value === "Hot")){
     hotCoffeeCup
       .append("polygon")  
-      .attr("points", "10,130, 10,65, 100,65, 100,130")
+      .attr("points", "90,250, 90,140, 250,140, 250,250")
       .style("fill", "#F0ECE8");
   }
   else if ((milkText === "Almond Milk") && (iceCheck.value === "Hot")){
     hotCoffeeCup
       .append("polygon")  
-      .attr("points", "10,130, 10,65, 100,65, 100,130")
+      .attr("points", "90,250, 90,140, 250,140, 250,250")
       .style("fill", "#F9E9D3");
   }
   else if ((milkText === "Coconut Milk") && (iceCheck.value === "Hot")){
     hotCoffeeCup
       .append("polygon")  
-      .attr("points", "10,130, 10,65, 100,65, 100,130")
+      .attr("points", "90,250, 90,140, 250,140, 250,250")
       .style("fill", "#F2EFE7");
   }
   else if ((milkText === "Soy Milk") && (iceCheck.value === "Hot")){
     hotCoffeeCup
       .append("polygon")  
-      .attr("points", "10,130, 10,65, 100,65, 100,130")
+      .attr("points", "90,250, 90,140, 250,140, 250,250")
       .style("fill", "#D2C7BF");
   }
 }
@@ -192,31 +193,31 @@ function addSyrup(){
   else if (syrupText === "Caramel" && (iceCheck.value === "Hot")){
     hotCoffeeCup
       .append("polygon")  
-      .attr("points", "10,65, 10,50, 100,50, 100,65")
+      .attr("points", "90,100, 90,140, 250,140, 250,100")
       .style("fill", "#DB9C60");
   }
   else if (syrupText === "Hazelnut" && (iceCheck.value === "Hot")){
     hotCoffeeCup
       .append("polygon")  
-      .attr("points", "10,65, 10,50, 100,50, 100,65")
+      .attr("points", "90,100, 90,140, 250,140, 250,100")
       .style("fill", "#8F4E02");
   }
   else if (syrupText === "Mocha" && (iceCheck.value === "Hot")){
     hotCoffeeCup
       .append("polygon")  
-      .attr("points", "10,65, 10,50, 100,50, 100,65")
+      .attr("points", "90,100, 90,140, 250,140, 250,100")
       .style("fill", "#411900");
   }
   else if (syrupText === "Vanilla" && (iceCheck.value === "Hot")){
     hotCoffeeCup
       .append("polygon")  
-      .attr("points", "10,65, 10,50, 100,50, 100,65")
+      .attr("points", "90,100, 90,140, 250,140, 250,100")
       .style("fill", "#EBE2D3");
   }
   else if (syrupText === "No Syrup" && (iceCheck.value === "Hot")){
   hotCoffeeCup
     .append("polygon")  
-    .attr("points", "10,65, 10,50, 100,50, 100,65")
+    .attr("points", "90,100, 90,140, 250,140, 250,100")
     .style("fill", "white");  
   }
 }
